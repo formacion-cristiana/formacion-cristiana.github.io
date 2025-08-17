@@ -1,0 +1,96 @@
+{
+  "id": "C03",
+  "title": "Pecado original",
+    "date":"27/07/2025",
+      "comment":"",
+  "questions": [
+            {
+        "type": "matching",
+                   "image": "/images/adan-y-eva.webp", 
+        "questionText": "Unir los nombres con su etimología hebrea, significado y referencia bíblica:\n\nGn 2:8-9 : `\"El Señor Dios plantó un jardín en Edén ... hizo brotar del suelo toda clase de árboles, que eran atrayentes para la vista y apetitosos para comer;\"`\n\nGn 3:19 : `\"Ganarás el pan con el sudor de tu frente, hasta que vuelvas a la tierra, de donde fuiste sacado. ¡Porque eres polvo y al polvo volverás!\"`\n\nGn 3:20 : `\"El hombre dio a su mujer el nombre de Eva, por ser ella la madre de todos los vivientes\"`\n\nGn 11:9 : `Por eso se llamó Babel allí, en efecto, el Señor confundió la lengua de los hombres y los dispersó por toda la tierra.`",
+            "columns": ["Nombre", "Etimología", "Significado","Cita"],
+        "correctAnswer": [
+          ["Edén","ēden:= delicia","lugar paradisíaco","Gn 2:8-9"],
+          ["Adán","adamah:=tierra/suelo","Hombre/Humano","Gn 3:19"],
+          ["Eva","hava:=vida","madre de los vivientes","Gn 3:20"],
+          ["Babilonia","babel:=confusión","ciudad de la confusión","Gn 11:9"]
+        ]
+      },
+
+        {
+      "type": "true-false",
+           "image": "/images/adan-y-eva.webp", 
+      "questionText": "El fruto del arbol del conocimiento del bien y del mal era el único fruto en el Edén, atrayente para la vista y apetitoso para comer.",
+      "correctAnswer": false
+    },
+          {
+        "type": "matching",
+                   "image": "/images/adan-y-eva.webp", 
+        "questionText": "🐍  Gn 3:4-6 `La serpiente dijo a la mujer: «No, no morirán. Dios sabe muy bien que cuando ustedes coman de ese árbol, se les abrirán los ojos y serán como dioses, conocedores del bien y del mal». Cuando la mujer vio que el árbol era apetitoso para comer, agradable a la vista y deseable para adquirir conocimiento, tomó de su fruto y comió.`\n\nAsociar a cada tentación una categoría y un pecado capital:",
+          "columns": ["Primeras tentaciones", "Categoría de la tentación", "Pecado Capital"],
+        "correctAnswer": [
+          ["👑 serán como dioses", "PODER ", "SOBERBIA"],
+          ["🍎 apetitoso y agradable", "PLACER","GULA"],
+          ["📚 adquirir conocimiento", "POSEER","AVARICIA"]
+        ]
+    },
+  {
+    "type": "multiple-choice",
+    "questionText": "¿Cuál facultad humana ejercieron Adán y Eva al desobedecer a Dios?",
+    "answerOptions": [
+      { "answerText": "Capacidad de amar", "isCorrect": false },
+      { "answerText": "Capacidad de elegir", "isCorrect": true },
+      { "answerText": "Capacidad de pensar", "isCorrect": false }
+    ]
+  },
+        {
+    "type": "multiple-choice",
+    "questionText": "¿Cuál es el sacramento que borra la culpa heredada del pecado original?",
+    "answerOptions": [
+      { "answerText": "Bautismo", "isCorrect": true },
+      { "answerText": "Comunión", "isCorrect": false },
+      { "answerText": "Confirmación", "isCorrect": false },
+      { "answerText": "Matrimonio", "isCorrect": false },
+      { "answerText": "Orden Sagrado", "isCorrect": false },
+      { "answerText": "Unción de los enfermos", "isCorrect": false },
+      { "answerText": "Reconciliación/Confesión", "isCorrect": false }
+    ]
+  },
+    {
+    "type": "multiple-choice",
+    "questionText": "¿Cuáles son los efectos del pecado original?",
+    "answerOptions": [
+      { "answerText": "Alejar al Hombre del arbol de la vida (celestial)", "isCorrect": true },
+      { "answerText": "Inclinar la naturaleza humana hacia el pecado (concupiscencia)", "isCorrect": true },
+      { "answerText": "Introducir sufrimiento a la vida del Hombre", "isCorrect":  true  },
+      { "answerText": "Sentir pudor", "isCorrect":  true }
+    ]
+  },          {
+        "type": "matching",
+                   "image": "/images/adan-y-eva.webp", 
+        "questionText": "Gn 3:10 : `tuve miedo porque estaba desnudo. Por eso me escondí`\n\nGn 3:22 : `No vaya a ser que ahora extienda su mano, tome también del árbol de la vida, coma y viva para siempre. Entonces expulsó al hombre del jardín.`\n\nRm 5:20 `donde abundó el pecado, sobreabundó la gracia.`\n\nRm 7:20 : `cuando hago lo que no quiero, no soy yo quien lo hace, sino el pecado que reside en mí.`",
+          "columns": ["Primeras tentaciones", "Categoría de la tentación", "Pecado Capital"],
+        "correctAnswer": [
+          ["Inclinar la naturaleza humana hacia el pecado (concupiscencia)", "", "Rm 7:19-20"],
+          ["Experimentar la misericodia divina", "PLACER","Rm 5:20"],
+          ["Sentir pudor", "POSEER","Gn 3:10"],
+          ["Alejar al Hombre del arbol de la vida (celestial)","","Gn 3:22"]
+        ]
+    },
+      {
+    "type": "multiple-choice",
+    "questionText": "Piedad significa:",
+    "answerOptions": [
+      { "answerText": "Misericordia", "isCorrect": true },
+      { "answerText": "Devoción", "isCorrect": true },
+      { "answerText": "Perdón", "isCorrect": true },
+      { "answerText": "Perseverancia", "isCorrect": false }
+    ]
+  },
+        {
+      "type": "true-false",
+      "questionText": "Después del Bautismo en el Jordán, el DIABLO llevó a Jesús al desierto para ponerlo a prueba. (Mt 4 1)",
+      "correctAnswer": false
+    }     
+  ]
+}

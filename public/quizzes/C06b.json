@@ -1,0 +1,141 @@
+     
+       {
+    "type": "multiple-choice",
+    "questionText": "¿Quién conquistó JeruSHALEM (ciudad de la ...) y la estableció como capital del Israel?",
+      "image": "/images/primeros-reinos.png",
+      "answerOptions": [
+      { "answerText": "Abraham", "isCorrect": false },
+      { "answerText": "Israel", "isCorrect": false },
+      { "answerText": "David", "isCorrect": true },
+      { "answerText": "Salomón", "isCorrect": false },
+      { "answerText": "Jesús", "isCorrect": false }
+    ],
+        "_comment": "",
+        "tip":"",
+         "reflect":"2Sm 5,6 `El rey avanzó con sus hombres sobre Jerusalén, contra los jebuseos que habitaban en el país. Pero estos dijeron a David: «Tú no entrarás aquí. Los ciegos y los inválidos bastarán para impedírtelo». Con esto querían decir: «David nunca podrá entrar aquí». Sin embargo, David conquistó la fortaleza de Sión, es decir, la Ciudad de David.`\n\n---\n\nJerusalém, primero llamada Sion y luego Ciudad de David, es prefigura de la Jerusalém celestial, i.e. la ciudad donde viviremos en el cielo.\n\nAp 21,2 `Vi la Ciudad santa, la nueva Jerusalén, que descendía del cielo y venía de Dios, embellecida como una novia preparada para recibir a su esposo.`"
+  },           {
+    "type": "multiple-choice",
+    "image": "/images/jerusalem-moria-abram.png",
+    "questionText": "Por su gran devoción a Dios, ¿Quién comienza con los preparativos para construir el primer Templo de Jerusalén?",
+    "answerOptions": [
+      { "answerText": "Abraham", "isCorrect": false },
+      { "answerText": "Israel", "isCorrect": false },
+      { "answerText": "David", "isCorrect": true },
+      { "answerText": "Salomón", "isCorrect": false },
+      { "answerText": "Jesús", "isCorrect": false }
+    ],
+        "_comment": "",
+        "tip":"En el templo se realizaban sacrificios, ceremonias religiosas y se guardaban los objetos sagrados. Este templo será destruido en el destierro a Babilonia, prefigura de la pascua de Jesús.",
+         "reflect":"¿Sentís que los templos cristianos son casa de Dios?\n\nGn 22,16-19 `Jacob se despertó de su sueño y exclamó» «¡Verdaderamente el Señor está en este lugar, y yo no lo sabía!». Y lleno de temor, añadió: «¡Qué temible es este lugar! Es nada menos que la casa de Dios y la puerta del cielo». A la madrugada del día siguiente, Jacob tomó la piedra que la había servido de almohada, la erigió como piedra conmemorativa, y derramó aceite sobre ella. Y a ese lugar, que antes se llamaba luz, lo llamó Betel, que significa «Casa de Dios».`\n\n¿Recordás que significa Belén? (parecido a BetEL)"
+  },       {
+    "type": "multiple-choice",
+    "questionText": "Al volver de Babilonia, Israel se convirtió en un pueblo liderado por ...",
+    "answerOptions": [
+      { "answerText": "Reyes", "isCorrect": false },
+      { "answerText": "Profetas", "isCorrect": false },
+      { "answerText": "Sacerdotes", "isCorrect": true},
+      { "answerText": "Romanos", "isCorrect": false }
+    ],
+        "_comment": "",
+        "tip":"El rey Persa (Ciro) les permite reconstruir el templo. ",
+         "reflect":""
+  }, 
+          {
+        "type": "matching",
+        "image": "/images/timeline-historia-de-la-salvacion.jpeg", 
+        "questionText": "Caracterizar la historia del pueblo judio separada cada 14 generaciones:",
+            "columns": ["Época", "Ministerio","Nota","Emoji"],
+        "correctAnswer": [
+          ["Abraham-David","Patriarcas", "Formación de Israel ","⛓️‍💥🇮🇱⚔️"],
+          ["David-Babel","Profetas","Dioses falsos ","🫅🐂🔥"],
+          ["Babel-Jesús", "Sacerdotes ","Pueblo religioso ","📖👨‍⚖️📚"]
+        ]
+      },
+          {
+        "type": "matching",
+        "image": "/images/timeline-historia-de-la-salvacion.jpeg", 
+        "questionText": "Caracterizar a los profetas de Israel en cuanto a su época, función profética y un punto importante de sus mensajes (Ex 34:27-32; 1Re 18:21-24;Mt 3:7-10)",
+        "columns": ["Profeta","Época", "Función ","Señalaban"],
+        "correctAnswer": [
+          ["Moisés","Abraham-David", "educar al pueblo","La Ley de Dios"],
+          ["Elías","David-Babel","corregir a los Reyes","El Dios Verdadero"],
+          ["Juan Bautista","Babel-Jesús","corregir a los religiosos","El Juicio de Dios"]
+        ],
+        "tip": "Ex 34:27-32 `el Señor dijo a Moisés: consigna por escrito estas palabras, porque ellas son las cláusulas de la alianza que yo hago contigo y con Israel». Moisés estuvo allí con el Señor cuarenta días y cuarenta noches, sin comer ni beber. Y escribió sobre las tablas las palabras de la alianza, es decir, los diez Mandamientos. Cuando Moisés bajó de la montaña del Sinaí, * se acercaron Aarón y todos los jefes de la comunidad, y él les habló. Después se acercaron también todos los israelitas, y él les transmitió las órdenes que el Señor le había dado.`\n\n1Re 18:21-24 `Elías se acercó a todo el pueblo y dijo: «¿Hasta cuándo van a andar rengueando de las dos piernas? Si el Señor es Dios, síganlo; si es Baal, síganlo a él. Pero el pueblo no le respondió ni una palabra. Luego Elías dijo al pueblo: «Como profeta del Señor, he quedado yo solo, mientras que los profetas de Baal son cuatrocientos cincuenta. Traigamos dos novillos. *Ustedes invocarán el nombre de su dios y yo invocaré el nombre del Señor: el dios que responda enviándome fuego, ese es Dios». Todo el pueblo respondió diciendo: «¡Está bien!»`\n\nMt 3:7-10 `Al ver que muchos fariseos y saduceos se acercaban a recibir su bautismo, Juan les dijo: «Raza de víboras, ¿quién les enseñó a escapar de la ira de Dios que se acerca? Produzcan el fruto de una sincera conversión, y no se contenten con decir: «Tenemos por padre a Abraham». Porque yo les digo que de estas piedras Dios puede hacer surgir hijos de Abraham. El hacha ya está puesta a la raíz de los árboles: el árbol que no produce buen fruto será cortado y arrojado al fuego.`",
+        "reflect":""
+      },    
+            {
+    "type": "multiple-choice",
+              "image": "/images/una-voz-grita-en-el-desierto.jpeg", 
+    "questionText": "Sobre quién se refieren los siguientes versículos?`\n\nMt 3:`A él se refería el profeta Isaías cuando dijo: \"Una voz grita en el desierto: Preparen el camino del Señor, allanen sus senderos\"`\n\n Mt 11:10 `El es aquel de quien está escrito: \"Yo envío a mi mensajero delante de ti, para prepararte el camino\"`",
+    "answerOptions": [
+      { "answerText": "Abraham", "isCorrect": false },
+      { "answerText": "Moisés", "isCorrect": false },
+      { "answerText": "David", "isCorrect": false },
+      { "answerText": "Elías", "isCorrect": false },
+      { "answerText": "Juan Bautista", "isCorrect": true },
+      { "answerText": "Jesús", "isCorrect": false }
+      ]
+      },
+                  {
+    "type": "multiple-choice",
+              "image": "/images/una-voz-grita-en-el-desierto.jpeg", 
+    "questionText": "¿Qué profetas fueron salvados por sus padres de una matanza masiva a bebés por parte de los gobernántes de su época?\"`",
+    "answerOptions": [
+      { "answerText": "Abraham", "isCorrect": false },
+      { "answerText": "Moisés", "isCorrect": true },
+      { "answerText": "David", "isCorrect": false },
+      { "answerText": "Elías", "isCorrect": false },
+      { "answerText": "Juan Bautista", "isCorrect": false },
+      { "answerText": "Jesús", "isCorrect": true }
+      ],
+    "tip":"Hch 7:17-21 `Al acercarse el tiempo en que debía cumplirse la promesa que Dios había hecho a Abraham, el pueblo creció y se multiplicó en Egipto, hasta que vino un nuevo rey que no sabía nada acerca de José. Este rey, empleando la astucia contra nuestro pueblo, maltrató a nuestros padres y los obligó a que abandonaran a sus hijos recién nacidos para que no sobrevivieran. En ese tiempo nació Moisés, que era muy hermoso delante de Dios. Durante tres meses fue criado en la casa de su padre, y al ser abandonado, la hija del Faraón lo recogió y lo crió como a su propio hijo.`"
+      },
+      {
+    "type": "matching",
+    "image": "/images/timeline-historia-de-la-humanidad.png", 
+    "questionText": "Luego de haber superado las tentaciones del maligno -i.e. sin haber pecado- Jesús nos exhorta a convertirnos (Mt 4:17), santificarnos (Mt 5:45) y para salvarnos -ganar una vida celestial- seguirlo y perder nuestra vida terrenal a causa de el (Mt 16:25).\n\nPreviene sobre el juicio en la parusía (Mt 16:27) aunque también nos recuerda su compasión (Mt 18:23-27)\n\nAsociar a la Creación, Salvación y Juicio de Dios, eventos que le siguen temporalmente:",
+    "tip":"Conversión, santidad y salvación\n\nMt 4:17 `Jesús comenzó a proclamar: «Conviértanse, porque el Reino de los Cielos está cerca».`\n\nMt 5:45-48 `yo les digo: Amen a sus enemigos, rueguen por sus perseguidores; así serán hijos del Padre que está en el cielo, porque él hace salir el sol sobre malos y buenos y hace caer la lluvia sobre justos e injustos. Si ustedes aman solamente a quienes los aman, ¿qué recompensa merecen? ¿No hacen lo mismo los publicanos? Y si saludan solamente a sus hermanos, ¿qué hacen de extraordinario? ¿No hacen lo mismo los paganos? Por lo tanto, sean perfectos como es perfecto el Padre que está en el cielo.`\n\nMt 16:24-27 `Entonces Jesús dijo a sus discípulos: «El que quiera venir detrás de mí, que renuncie a sí mismo, que cargue con su cruz y me siga. Porque él que quiera salvar su vida, la perderá; y el que pierda su vida a causa de mí, la encontrará. ¿De qué le servirá al hombre ganar el mundo entero si pierde su vida? ¿Y qué podrá dar el hombre a cambio de su vida? Porque el Hijo del hombre vendrá en la gloria de su Padre, rodeado de sus ángeles, y entonces pagará a cada uno de acuerdo con sus obras».`\n\n---\n\nRey compasivo\n\nMt 18:23-27 `el Reino de los Cielos se parece a un rey que quiso arreglar las cuentas con sus servidores. Comenzada la tarea, le presentaron a uno que debía diez mil talentos. Como no podía pagar, el rey mandó que fuera vendido junto con su mujer, sus hijos y todo lo que tenía, para saldar la deuda. El servidor se arrojó a sus pies, diciéndole: \"Señor, dame un plazo y te pagaré todo\". El rey se compadeció, lo dejó ir y, además, le perdonó la deuda.`",
+    "reflect":"Para los judíos, la conversión y santidad era un llamado previo a la salvación, pués Jesús aún no había vencido a la muerte. Para los cristianos la conversión y santidad vienen después de la salvación.\n\n* ¿Vivís como salvado?\n\nAunque ya estamos redimidos por la pascua de Jesús, hasta el día del juicio nuestras obras tienen consecuencias. Si para entonces no hemos logrado un balance positivo con nuestras obras -como el servidor que debía 10mil talentos en Mt 18:23- debemos confiarnos a la infinita misericordia de Dios.\n\n* ¿Vivís la misericordia de Dios en el sacramento de la reconciliación?\n\nSi tenemos un balance positivo debemos buscar la santidad que nos propone Jesús, llendo más allá de la Ley Mosaica -de ahí la dificultad de seguirlo a Jesús- e.g. poner la otra mejilla (Mt 5:39) o amar a nuestros enemigos (Mt 5:44)\n\n* ¿Cuál propuesta de Jesús te resulta muy dificil?",
+    "columns": ["Evento 1", "Eventos 2","Evento 3"],
+    "correctAnswer": [
+          ["Creación 🗣️🌎 (α)","Tentación del maligno 🐍", "Pecado del Hombre 🍎"],
+          ["Salvación ☦ (τ)","Conversión de pecador a justo ⛓️‍💥","Santificación del justo 👼"],
+          ["Juicio Final ⚖️ (ω)", "Arrepentimiento del hijo pecador 🙏","Abrazo del padre 🫂"]
+        ]
+    },
+
+
+                    {
+        "type": "matching",
+        "image": "/images/dios-y-dinero.jpg", 
+        "questionText": "Mt 16:21 `Jesús comenzó a anunciar a sus discípulos que debía ir a Jerusalén, y sufrir mucho de parte de los ancianos, de los sumos sacerdotes y de los escribas; que debía ser condenado a muerte y resucitar al tercer día.`",
+            "columns": ["Ministerio","Funciones","","Judíos"],
+        "correctAnswer": [
+          ["Rey", "administrar los bienes","Honores al entrar en Jerusalén", "Anciano"],
+          ["Sacerdote","recuperar el bien perdido","Recupera la Vida eterna al resucitar","Caifás"],
+          ["Profetas", "crear bienes con esfuerzo","Sufrimiento al ser condenado","Escriba"]
+        ]
+      },
+                {
+        "type": "matching",
+        "questionText": "Unir cada nombre con su raiz etimológica (hebrea) y significado:",
+            "columns": ["Funcionario", "Función", "Poder","Objetivo Evangélico"],
+        "correctAnswer": [
+          ["Gobernante", "Conducir/Guiar","Ejecutivo","Progresar mediante la Paz"],
+          ["Legislador","Convertir/Rectificar","Legislativo", "Educar mediante la Palabra"],
+          ["Juez","Salvar/Condenar", "Judicial","Ajusticiar mediante la Misericordia"]
+        ]
+      },
+
+    {
+        "type": "matching",
+        "questionText": "Mt 6:24 `Nadie puede servir a dos señores, porque aborrecerá a uno y amará al otro, o bien, se interesará por el primero y menospreciará al segundo. No se puede servir a DIOS y al DINERO.`\n\nMt 6:20-21 `No acumulen tesoros en la TIERRA. * Acumulen, en cambio, tesoros en el CIELO, donde no hay polilla ni herrumbre que los consuma, ni ladrones que perforen y roben. Allí donde esté tu TESORO, estará también tu CORAZÓN.`\n\nMt 16:23 `«¡Retírate, ve detrás de mí, Satanás! Tú eres para mí un obstáculo, porque tus PENSAMIENTOS no son los de DIOS, sino los de los HOMBRES».`\n\n",
+            "columns": ["Ministerio Bautismal","Función Ministerial","Objeto Ministerial","Críticas al mundo"],
+        "correctAnswer": [
+          ["Rey", "administrar/organizar","servicio a Dios","servicio al Dinero 💰"],
+          ["Sacerdote","sentir/desear 💗","tesoros en el Cielo","tesoros en la Tierra 🌎"],
+          ["Profeta","señalar/enseñar","palabra de Dios 📖","pensamiento de los Hombres"]
+        ],
+        "reflect":"Los gobernántes cristianos deben servir a Dios"
+      }, 

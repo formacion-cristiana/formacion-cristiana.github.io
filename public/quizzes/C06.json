@@ -1,0 +1,84 @@
+{
+  "id": "C06",
+  "title": "Ministerios y Unción",
+    "date":"13/08/2025",
+      "comment":"Previo a Jesús",
+  "questions": [
+      {
+        "type": "matching",
+        "questionText": "Trabajo ofrendado a Dios (sacro-oficio) en el Génesis. (Gn 3:19; 4:3-4)",
+            "columns": ["Personaje", "Signo", "Ofrenda"],
+        "correctAnswer": [
+          ["Adán","🥖","Pan"],
+          ["Abel", "🐑","Animales"],
+          ["Caín","🍇","Cosecha"]
+        ],
+        "_comment": "",
+        "tip":"Cuando un trabajo/oficio se dedica a Dios, se hace sagrado y se convierte en sacrificio (sacro-oficio).\n\nEste es una de las actividades que realiza el ministerio sacerdotal i.e. sacralizar el trabajo ofreciéndoselo a Dios.\n\n'sacer' en latín significa `sagrado`. 'dote' podemos vincularlo con `don` o regalo ofrecido.",
+        "reflect":"¿Le dedicás/ofrecés tu trabajo a Dios?"
+      },
+      {
+        "type": "matching",
+        "questionText": "Prefiguras Cristianas en tiempos de Abraham (Gn 14:18; 18:12; 22:1)",
+        "columns": ["Personaje","Etimología", "Acto", "Prefigura de Jesús"],
+        "correctAnswer": [
+          ["Melquisedec","Rey de justicia","Ofrenda de pan y vino 🥖🍷","Última cena (Jueves Santo)"],
+          ["Sarah","Princesa","Embarazo milagroso 🤰🕊️","Concepción milagrosa (Navidad)"],
+          ["Abraham","Padre de multitudes","Inmolación de su hijo 🐑","Sacrificio Pascual (Viernes Santo)"]    
+        ],
+        "_comment": "",
+        "tip":"Gn 14:17-20 `Cuando Abram volvía de derrotar a Quedorlaomer y a los reyes que lo acompañaban, el rey de Sodoma salió a saludarlo en el valle de Savé, o sea el valle del Rey. Y Melquisedec, rey de Salem, que era sacerdote de Dios, el Altísimo, hizo traer pan y vino, y bendijo a Abram, diciendo: «¡Bendito sea Abram de parte de Dios, el Altísimo, creador del cielo y de la tierra! ¡Bendito sea Dios, el Altísimo, que entregó a tus enemigos en tus manos!». Y Abram le dio el diezmo de todo.`\n\nGn 18:10-14 ` «Volveré a verte sin falta en el año entrante, y para ese entonces Sara habrá tenido un hijo». Mientras tanto, Sara había estado escuchando a la entrada de la carpa, que estaba justo detrás de él. Abraham y Sara eran ancianos de edad avanzada, y los períodos de Sara ya habían cesado. Por eso, ella rió en su interior, pensando: «Con lo vieja que soy, ¿volveré a experimentar el placer? Además, ¡mi marido es tan viejo!». Pero el Señor dijo a Abraham: «¿Por qué se ha reído Sara, pensando que no podrá dar a luz, siendo tan vieja? ¿Acaso hay algo imposible para el Señor? Cuando yo vuelva a verte para esta época, en el año entrante, Sara habrá tenido un hijo»`\n\nGn 22:1-2 ` Después de estos acontecimientos, Dios puso a prueba a Abraham: «¡Abraham!», le dijo. El respondió: «Aquí estoy». Entonces Dios le siguió diciendo: «Toma a tu hijo único, el que tanto amas, a Isaac; ve a la región de Moria, y ofrécelo en holocausto sobre la montaña que yo te indicaré».`",
+         "reflect":"¿Le ofreces tus alimentos a Dios? Cada vez que ofreces los alimentos a Dios en acción de gracias y bendecís a los comensales ejercés tu ministerio sacerdotal."
+      },
+                {
+        "type": "matching",
+        "questionText": "Unir a cada ministerio con su relación divina y la persona que cumple dicho ministerio en Gn 22:9-18, donde justo antes del sacrificio el Ángel de Dios dice a Abraham:\n\n`'No le hagas nada que ahora sé que tienes temor de Dios, ya que no me has negado tu único hijo.'`",
+            "columns": [ "Ministerio", "Relación con Dios","Persona"],
+        "correctAnswer": [
+          ["Profeta","Mensajero de ...","Ángel"],
+          ["Religioso","Enamorado de ...","Abraham"],
+          ["Príncipe", "Hijo de ...","Isaac"]
+          ],
+        "_comment": "",
+        "tip":"¿Sabías que ángel significa mensajero?\n\nGn 22:9-18 `Cuando llegaron al lugar que Dios le había indicado, Abraham erigió un altar, dispuso la leña, ató a su hijo Isaac, y lo puso sobre el altar encima de la leña. Luego extendió su mano y tomó el cuchillo para inmolar a su hijo. Pero el Angel del Señor lo llamó desde el cielo: «¡Abraham, Abraham!». «Aquí estoy», respondió él. Y el Angel le dijo: «No pongas tu mano sobre el muchacho ni le hagas ningún daño. Ahora sé que temes a Dios, porque no me has negado ni siquiera a tu hijo único». Al levantar la vista, Abraham vio un carnero que tenía los cuernos enredados en una zarza. Entonces fue a tomar el carnero, y lo ofreció en holocausto en lugar de su hijo. Abraham llamó a ese lugar: «El Señor proveerá», y de allí se origina el siguiente dicho: «En la montaña del Señor se proveerá». Luego el Angel del Señor llamó por segunda vez a Abraham desde el cielo, y le dijo: «Juro por mí mismo –oráculo del Señor–: porque has obrado de esa manera y no me has negado a tu hijo único, yo te colmaré de bendiciones y multiplicaré tu descendencia como las estrellas del cielo y como la arena que está a la orilla del mar. Tus descendientes conquistarán las ciudades de sus enemigos, y por tu descendencia se bendecirán todas las naciones de la tierra, ya que has obedecido mi voz»`",
+         "reflect":"Dios nos habla a través de mensajeros. ¿Soles buscar la respuesta de Dios en las palabras de los demás?\n\n¿Has sentido alguna vez que Dios te pidió algo muy dificil?\n\n¿Le has ofrecido alguna vez tu vida a Dios?"
+      },
+      {
+    "type": "ordering",
+    "image": "/images/timeline-historia-de-la-salvacion.jpeg", 
+    "questionText": "Ordenar temporalmente la genealogía de Jesús separada cada 14 generaciones (Mt 1:17):",
+    "correctAnswer": ["Abraham-Padre", "David-Rey","Destierro a Babilonia-Babel", "Jesús-Cristo"],
+    "tip":"Mt 1:17 `El total de las generaciones es, por lo tanto: desde Abraham hasta David, catorce generaciones; desde David hasta el destierro en Babilonia, catorce generaciones; desde el destierro en Babilonia hasta Cristo, catorce generaciones.`"
+  },
+
+                    {
+        "type": "matching",
+        "questionText": "Unir a cada nombre con su significado:",
+          "columns": ["Nombre", "Significado"],
+        "correctAnswer": [
+          ["Belén", "casa/templo del pan"],
+          ["JeruSHALEM", "ciudad de la paz"],
+          ["Babel","confusión"],
+          ["EmanuEL", "Dios con nosotros"],
+          ["Cristo", "Úngido"]
+        ],
+        "_comment": "Jordán descender -          Judea, tierra de Judá",
+        "tip":"",
+         "reflect":""
+      },
+            {
+    "type": "multiple-choice",
+    "questionText": "¿Quienes fueron `ungidos` sacramentalmente por Dios? (tuvieron un acto religioso donde Dios les encomienda una misión/ministerio)",
+    "answerOptions": [
+      { "answerText": "Ábraham", "isCorrect": false },
+      { "answerText": "Israel", "isCorrect": false },
+      { "answerText": "David", "isCorrect": true },
+      { "answerText": "Salomón", "isCorrect": false },
+      { "answerText": "Jesús", "isCorrect": true }
+    ],
+        "_comment": "",
+        "tip":"Los reyes eran ungidos por sacerdotes o profetas. La unción era un rito que marca la consagración y la investidura del rey, indicando que ha recibido el favor y el poder de Dios para gobernar.\n\n2Sm 5:3 `Todos los ancianos de Israel *ungieron a David como rey de Israel.`",
+         "reflect":"¿Te considerás úngido de Dios?"
+  }
+  ]
+}
