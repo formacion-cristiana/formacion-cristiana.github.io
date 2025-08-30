@@ -7,7 +7,7 @@
 
       {
     "type": "ordering",
-    "image": "/images/timeline-historia-pueblo-israel-iglesia.png", 
+    "image": "images/timeline-historia-pueblo-israel-iglesia.png", 
     "questionText": "El evangelio de Mateo empieza `Genealogía de Jesucristo, hijo de David, hijo de Abraham:`\n\nCómo hijo de Abraham, Jesús hereda una familia numerosa como las estrellas, prometida por Dios a Abraham (Gn 22,17). \n\nComo hijo de David, Jesús hereda el linaje real, prometido por Dios a David (2Sm 7,11)\n\nOrdenar temporalmente la genealogía de Jesús separada cada 14 generaciones (Mt 1,17):",
     "correctAnswer": ["Abraham - Padre de multitudes", "David - Linaje eterno ","ZoroBabel - desterrado a Babilonia (resto de Israel)", "Jesús - Cristo (EL úngido predilecto)"],
     "tip":"Mt 1,17 `El total de las generaciones es, por lo tanto: desde Abraham hasta David, catorce generaciones; desde David hasta el destierro en Babilonia, catorce generaciones; desde el destierro en Babilonia hasta Cristo, catorce generaciones.`\n\nEl ángel le cuenta a María sobre su hijo:\n\nLc 1,32 `El Señor Dios le dará el trono de David, su padre, reinará sobre la casa de Jacob para siempre y su reino no tendrá fin».`(Jacob es Israel, nieto de Abraham.)\n\nDe todos los descendientes de Abraham (i.e. aquellos que creen en Jesús Salvador), los descendientes de David serán sus gobernantes (poseerán el trono).\n\n",
@@ -15,7 +15,7 @@
   },
       {
         "type": "matching",
-            "image": "/images/jerusalem-moria-abram.png",
+            "image": "images/jerusalem-moria-abram.png",
         "questionText": "Ministerio sacerdotal en tiempos de Abraham (Gn 14:18; 18:12; 22:1), donde se le ofrece a Dios los frutos del trabajo, el vientre de una madre y la vida de un hijo.\n\nUnir la persona que ejerce su ministerio sacerdotal, la etimología de su nombre, la ofrenda (acto sagrado) y la prefigura del acto en el cual participará Jesús.",
         "columns": ["Personaje sacerdotal","Etimología", "Acto sagrado", "Prefigura de Jesús"],
         "correctAnswer": [
@@ -29,7 +29,7 @@
       },
                 {
         "type": "matching",
-        "image": "/images/jerusalem-moria-abram.png",
+        "image": "images/jerusalem-moria-abram.png",
         "questionText": "Leer Gn 22,9-18, donde justo antes del sacrificio el Ángel le dice a Abraham:\n\n`'No le hagas nada que ahora sé que tienes temor de Dios, ya que no me has negado tu único hijo.'`\n\nUnir a cada ministerio con su relación divina, la persona que cumple dicho ministerio y su rol en el sacrificio. El sacerdote es quien ofrece la víctima (valiosa, inocente) a Dios. Considerar el simbolismo donde la palabra de Dios es la roca donde se apoya el sacerdote para hacer el sacrificio (i.e. el altar).",
             "columns": [ "Ministerio", "'Relación con Dios'","Persona","Función sacra"],
         "correctAnswer": [
@@ -43,7 +43,7 @@
       },
             {
     "type": "multiple-choice",
-    "image": "/images/rey-sacerdote-profeta-logos.jpg", 
+    "image": "images/rey-sacerdote-profeta-logos.jpg", 
     "questionText": "¿Quienes fueron `ungidos` sacramentalmente por Dios? (tuvieron un acto religioso donde Dios les encomienda una misión/ministerio)",
     "answerOptions": [
       { "answerText": "Ábraham", "isCorrect": false },
@@ -59,7 +59,7 @@
         {
     "type": "multiple-choice",
     "questionText": "¿Quién conquistó JeruSHALEM (ciudad de la ...) y la estableció como capital del Israel?",
-      "image": "/images/primeros-reinos.png",
+      "image": "images/primeros-reinos.png",
       "answerOptions": [
       { "answerText": "Abraham", "isCorrect": false },
       { "answerText": "Israel", "isCorrect": false },
@@ -74,7 +74,7 @@
   {
     "type": "multiple-choice",
     "questionText": "¿Quién subió a JeruSHALEM montado en un asna como el rey de los judíos?",
-      "image": "/images/jerusalem-moria-abram.png",
+      "image": "images/jerusalem-moria-abram.png",
       "answerOptions": [
       { "answerText": "Abraham", "isCorrect": false },
       { "answerText": "Israel", "isCorrect": false },
@@ -88,7 +88,7 @@
   },             
   {
     "type": "multiple-choice",
-    "image": "/images/jerusalem-moria-abram.png",
+    "image": "images/jerusalem-moria-abram.png",
     "questionText": "¿Quién construyó el primer Templo de Jerusalén? Este templo será destruido en el destierro a Babilonia, prefigura de la pascua de Jesús, cuyo cuerpo es EL Templo de Dios.",
     "answerOptions": [
       { "answerText": "Abraham", "isCorrect": false },
@@ -104,7 +104,7 @@
 
           {
         "type": "matching",
-        "image": "/images/timeline-historia-pueblo-israel-iglesia.png", 
+        "image": "images/timeline-historia-pueblo-israel-iglesia.png", 
         "questionText": "Caracterizar la historia del pueblo judio separada cada 14 generaciones:",
             "columns": ["Época", "Ministerio","Pueblo ...","Pueblo ..."],
         "correctAnswer": [
@@ -115,7 +115,7 @@
         "tip":"Primero se forma el pueblo en una nación/reino, luego se divide en dos (sur y norte) y luego es conquistado y se dispersa. Cuando su territorio es gobernado por otros pueblos (asirios, persas, romanos) se convierte en un pueblo religioso\n\nIdólatra: que venera dioses ajenos."
       },       {
         "type": "matching",
-        "image": "/images/timeline-historia-pueblo-israel-iglesia.png", 
+        "image": "images/timeline-historia-pueblo-israel-iglesia.png", 
         "questionText": "Caracterizar a los profetas de Israel en cuanto a su época, a los destinatarios de sus mensajes y un punto importante de sus mensajes (Ex 34:27-32; 1Re 18:21-24;Mt 3:7-10)",
         "columns": ["Época","Profeta", "¿A quién corregía?","Señalaban"],
         "correctAnswer": [
@@ -128,7 +128,7 @@
       },    
             {
     "type": "multiple-choice",
-              "image": "/images/una-voz-grita-en-el-desierto.jpeg", 
+              "image": "images/una-voz-grita-en-el-desierto.jpeg", 
     "questionText": "¿Sobre quién se refieren los siguientes versículos?`\n\nMt 3 `A él se refería el profeta Isaías cuando dijo: \"Una voz grita en el desierto: Preparen el camino del Señor, allanen sus senderos\"`\n\n Mt 11:10 `El es aquel de quien está escrito: \"Yo envío a mi mensajero delante de ti, para prepararte el camino\"`",
     "answerOptions": [
       { "answerText": "Abraham", "isCorrect": false },

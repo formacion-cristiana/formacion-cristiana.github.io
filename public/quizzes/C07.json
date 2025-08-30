@@ -6,7 +6,7 @@
   "questions": [
   {
     "type": "multiple-choice",
-    "image": "/images/rey-sacerdote-profeta-logos.jpg", 
+    "image": "images/rey-sacerdote-profeta-logos.jpg", 
     "questionText": "LA CONCEPCIÓN VIRGINAL Y EL NACIMIENTO DE JESÚS:\n\nMt 1,23 `La Virgen concebirá y dará a luz un hijo a quien pondrán el nombre de Emanuel.`\n\n¿Sobre quién habla el profeta?",
     "answerOptions": [
       { "answerText": "Un Rey: alguien que porta la sangre de Dios.", "isCorrect": true },
@@ -19,7 +19,7 @@
   },
   {
     "type": "multiple-choice",
-    "image": "/images/rey-sacerdote-profeta-logos.jpg", 
+    "image": "images/rey-sacerdote-profeta-logos.jpg", 
     "questionText": "LA VISITA DE LOS MAGOS\n\nMt 2,6 `Y tu Belén, tierra de Judá, ciertamente no eres la menor entre las principales ciudades de Judá, porque de ti surgirá un jefe que será el Pastor de mi pueblo, Israel.`\n\n¿Sobre quién habla el profeta?",
     "answerOptions": [
       { "answerText": "Un Rey: alguien responsable de guiar a un pueblo.", "isCorrect": true },
@@ -32,7 +32,7 @@
   },
   {
     "type": "multiple-choice",
-    "image": "/images/rey-sacerdote-profeta-logos.jpg", 
+    "image": "images/rey-sacerdote-profeta-logos.jpg", 
     "questionText": "EL EXILIO DE JESÚS EN EGIPTO\n\nMt 2,15 `Desde Egipto llamé a mi hijo.`\n\n¿Sobre quién habla el profeta?",
     "answerOptions": [
       { "answerText": "Un Rey: un 'hijo' de Dios.", "isCorrect": true },
@@ -45,7 +45,7 @@
   },
   {
     "type": "multiple-choice",
-    "image": "/images/rey-sacerdote-profeta-logos.jpg", 
+    "image": "images/rey-sacerdote-profeta-logos.jpg", 
     "questionText": "LA MATANZA DE LOS INOCENTES.\n\nMt 2,18 `En Ramá se oyó una voz, hubo lágrimas y gemidos: es Raquel, que llora a sus hijos y no quiere que la consuelen, poque ya no existen.`\n\n¿Sobre quién habla el profeta?",
     "answerOptions": [
       { "answerText": "Un Rey: alguien que porta la sangre de Dios.", "isCorrect": false },
@@ -58,7 +58,7 @@
   },
   {
     "type": "multiple-choice",
-    "image": "/images/rey-sacerdote-profeta-logos.jpg", 
+    "image": "images/rey-sacerdote-profeta-logos.jpg", 
     "questionText": "EL REGRESO DE EGIPTO\n\nMt 2,23 `Será llamado Nazareno.`\n\n¿Sobre quién habla el profeta?",
     "answerOptions": [
       { "answerText": "Un Rey: la máxima autoridad en una tierra/pueblo/familia.", "isCorrect": false },
@@ -71,7 +71,7 @@
   },
   {
     "type": "multiple-choice",
-    "image": "/images/rey-sacerdote-profeta-logos.jpg", 
+    "image": "images/rey-sacerdote-profeta-logos.jpg", 
     "questionText": "LA PREDICACIÓN DE JUAN EL BAUTISTA\n\nMt 3,3 `Una voz grita en el desierto: Preparen el camino del Señor, allanen sus senderos.`\n\n¿Sobre quién habla el profeta?",
     "answerOptions": [
       { "answerText": "Un Rey: la máxima autoridad en una tierra/pueblo/familia.", "isCorrect": false },
@@ -84,7 +84,7 @@
   },
   {
     "type": "multiple-choice",
-    "image": "/images/rey-sacerdote-profeta-logos.jpg", 
+    "image": "images/rey-sacerdote-profeta-logos.jpg", 
     "questionText": "EL BAUTISMO DE JESÚS\n\nMt 3,17 `Este es mi Hijo muy querido, en quien tengo puesta toda mi predilección.`\n\n¿Sobre quién habla la voz del cielo?",
     "answerOptions": [
       { "answerText": "Un Rey: un 'hijo' de Dios.", "isCorrect": true },
@@ -97,7 +97,7 @@
   },
   {
     "type": "multiple-choice",
-    "image": "/images/rey-sacerdote-profeta-logos.jpg", 
+    "image": "images/rey-sacerdote-profeta-logos.jpg", 
     "questionText": "LAS TENTACIONES DE JESÚS EN EL DESIERTO\n\nMt 4,4 `El hombre no vive solamente de pan, sino de toda palabra que sale de la boca de Dios.`\n\n¿Sobre la función de quién habla el profeta?",
     "answerOptions": [
       { "answerText": "De un Rey: encargado de satisfacer las necesidades de ser provistos materialmente por Dios.", "isCorrect": false },
@@ -110,7 +110,7 @@
   },
   {
     "type": "multiple-choice",
-    "image": "/images/rey-sacerdote-profeta-logos.jpg", 
+    "image": "images/rey-sacerdote-profeta-logos.jpg", 
     "questionText": "LAS TENTACIONES DE JESÚS EN EL DESIERTO\n\nMt 4,6 `Dios dará ordenes a sus ángeles, y ellos te llevarán en sus manos para que tu pie no tropiece con ninguna piedra.`\n\n¿A quién le habla el profeta?",
     "answerOptions": [
       { "answerText": "A un Rey: alguien que por ser de sangre divina tiene custodia especial.", "isCorrect": true },
@@ -123,7 +123,7 @@
   },
   {
     "type": "multiple-choice",
-    "image": "/images/rey-sacerdote-profeta-logos.jpg", 
+    "image": "images/rey-sacerdote-profeta-logos.jpg", 
     "questionText": "LAS TENTACIONES DE JESÚS EN EL DESIERTO\n\nMt 4,10 `Adorarás al Señor, tu dios, y a él solo rendirás culto.`\n\n¿A quién le habla el profeta?",
     "answerOptions": [
       { "answerText": "A un Rey: alguien que por ser hijo de Dios tiene privilegios.", "isCorrect": false },

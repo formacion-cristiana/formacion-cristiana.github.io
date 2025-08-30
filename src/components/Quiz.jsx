@@ -109,7 +109,7 @@ return (
     {currentQuestion.image && (
       <img
         src={import.meta.env.BASE_URL + currentQuestion.image}
-        alt="Ilustración de la pregunta"
+        alt={currentQuestion.image}
         style={{
           maxWidth: "100%",
           height: "auto",

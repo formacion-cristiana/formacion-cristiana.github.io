@@ -1,6 +1,6 @@
             {
     "type": "multiple-choice",
-              "image": "/images/cierva.webp", 
+              "image": "images/cierva.webp", 
     "questionText": "Si Diós es TodoPoderoso/Omnipotente, ¿por qué tuvo que morir cómo hombre?",
     "answerOptions": [
       { "answerText": "", "isCorrect": false },
@@ -13,7 +13,7 @@
       },
                   {
     "type": "multiple-choice",
-              "image": "/images/cierva.webp", 
+              "image": "images/cierva.webp", 
     "questionText": "Si Dios lo sabe todo (omnisapiente), ¿por qué tengo que contarle mis cosas, pedirle lo que ya sabe?",
     "answerOptions": [
       { "answerText": "", "isCorrect": false }
@@ -27,7 +27,7 @@
       },
                   {
     "type": "multiple-choice",
-              "image": "/images/cierva.webp", 
+              "image": "images/cierva.webp", 
     "questionText": "Si Dios está en todos lados (omnipresente), ¿por qué me tengo que arrodillar ante la eucaristía?",
     "answerOptions": [
       { "answerText": "", "isCorrect": false },

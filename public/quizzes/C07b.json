@@ -30,7 +30,7 @@ La familia de Abraham: Esta familia, inicialmente formada por la fe en el único
       },  
                     {
         "type": "matching",
-        "image": "/images/palestina.png",
+        "image": "images/palestina.png",
         "questionText": "Unir a cada nombre con su significado:",
           "columns": ["Nombre", "Significado","Evento"],
         "correctAnswer": [
@@ -47,7 +47,7 @@ La familia de Abraham: Esta familia, inicialmente formada por la fe en el único
 ,
   {
     "type": "multiple-choice",
-    "image": "/images/una-voz-grita-en-el-desierto.jpeg", 
+    "image": "images/una-voz-grita-en-el-desierto.jpeg", 
     "questionText": "¿Qué profetas fueron salvados por sus padres de una matanza masiva a bebés por parte de los gobernántes de su época? (Hch 7,17-21) (Mt 2,13;16)",
     "answerOptions": [
       { "answerText": "Abraham", "isCorrect": false },
@@ -128,7 +128,7 @@ La familia de Abraham: Esta familia, inicialmente formada por la fe en el único
       },  
                   {
         "type": "matching",
-        "image": "/images/evolucion-cristianismo.png", 
+        "image": "images/evolucion-cristianismo.png", 
         "questionText": "Unir a cada religión/pueblo con su sobrenombre, referente y lugar de origen (o característico).",
             "columns": [ "Religión", "Sobrenombre","Referente","Independencia","Cede","Expansión"],
         "correctAnswer": [
@@ -144,7 +144,7 @@ La familia de Abraham: Esta familia, inicialmente formada por la fe en el único
       },  
                             {
         "type": "matching",
-        "image": "/images/evolucion-cristianismo.png", 
+        "image": "images/evolucion-cristianismo.png", 
         "questionText": "Unir a cada religión/pueblo con su sobrenombre, referente y lugar de origen (o característico).",
             "columns": [ "Religión", "Sobrenombre","Referente","Independencia","Cede","Expansión"],
         "correctAnswer": [

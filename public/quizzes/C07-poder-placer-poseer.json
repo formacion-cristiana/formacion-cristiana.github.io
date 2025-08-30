@@ -25,7 +25,7 @@
   "questions": [
      {
         "type": "matching",
-          "image": "/images/rey-sacerdote-profeta-logos.jpg", 
+          "image": "images/rey-sacerdote-profeta-logos.jpg", 
         "questionText": "Rm 13:1 `Todos deben someterse a las autoridades constituidas, porque no hay autoridad que no provenga de Dios y las que existen han sido establecidas por él.`\n\nAsociar a cada autoridad una de las Bienaventuranza de Mateo 5:7-12. Considerar estas preguntas como guía:\n\nEn nombre de Dios,\n\n1) ¿quién tiene que trabajar por la paz?\n\n2) ¿quién tiene que enseñar la verdad?\n\n3) ¿quién tiene que perdonar (los pecados)?\n\n ",
           "columns": ["Autoridad","Dichosos", "Dicha"],
         "correctAnswer": [
@@ -36,7 +36,7 @@
     },
             {
         "type": "matching",
-          "image": "/images/tentaciones-de-jesus.jpg", 
+          "image": "images/tentaciones-de-jesus.jpg", 
         "questionText": "Vincular los deseos humanos con los mayores dones divinos en la tierra asociados a cada persona de la trinidad ⚜",
           "columns": ["Deseo humano","Don divino", "Persona divina"],
         "correctAnswer": [
@@ -47,7 +47,7 @@
     },
             {
         "type": "matching",
-          "image": "/images/tentaciones-de-jesus.jpg", 
+          "image": "images/tentaciones-de-jesus.jpg", 
         "questionText": "Vincular los deseos humanos con los mayores dones divinos asociados a cada persona de la trinidad ⚜",
           "columns": ["Deseo humano","Don divino", "Persona divina"],
         "correctAnswer": [
@@ -57,13 +57,13 @@
         ]
     }, {
     "type": "ordering",
-    "image": "/images/señal-de-la-cruz.png", 
+    "image": "images/señal-de-la-cruz.png", 
     "questionText": "En los últimos versículos del evangelio de Mateo Jesús dice:\n\nMt 28:19 `Vayan y hagan que todos los pueblos sean mis discípulos, bautizándolos en el nombre del:` ",
     "correctAnswer": ["Padre", "Hijo", "Espiritu Santo"]
   },
     {
         "type": "matching",
-          "image": "/images/tentaciones-de-jesus.jpg", 
+          "image": "images/tentaciones-de-jesus.jpg", 
         "questionText": "Asociar a cada persona de la trinidad ⚜ una imagen (evangélica), acción (fundamental) y elemento (identificador)",
           "columns": ["Persona de la trinidad","Imagen", "Acción", "Elemento"],
         "correctAnswer": [
@@ -74,7 +74,7 @@
     },
     {
         "type": "matching",
-          "image": "/images/tentaciones-de-jesus.jpg", 
+          "image": "images/tentaciones-de-jesus.jpg", 
         "questionText": "Asociar a cada persona de la trinidad ⚜ una imagen (evangélica), acción (fundamental) y elemento (identificador)",
           "columns": ["Persona de la trinidad","Imagen", "Acción", "Elemento"],
         "correctAnswer": [

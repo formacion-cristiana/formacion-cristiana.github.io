@@ -6,7 +6,7 @@
   "questions": [
      {
     "type": "ordering",
-    "image": "/images/timeline-historia-pueblo-israel-iglesia.png", 
+    "image": "images/timeline-historia-pueblo-israel-iglesia.png", 
     "questionText": "",
     "correctAnswer": ["Abraham - Sacerdote", "David - Rey ","Juan Bautista - Profeta", "Jesús - Sacerdote-Rey-Profeta"],
     "tip":""

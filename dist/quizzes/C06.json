@@ -1,0 +1,143 @@
+{
+  "id": "C06",
+  "title": "Ministerios y Unción",
+    "date":"13/08/2025",
+      "comment":"Abraham-Israel-David-Salomón-Jesús",
+  "questions": [
+
+      {
+    "type": "ordering",
+    "image": "/images/timeline-historia-pueblo-israel-iglesia.png", 
+    "questionText": "El evangelio de Mateo empieza `Genealogía de Jesucristo, hijo de David, hijo de Abraham:`\n\nCómo hijo de Abraham, Jesús hereda una familia numerosa como las estrellas, prometida por Dios a Abraham (Gn 22,17). \n\nComo hijo de David, Jesús hereda el linaje real, prometido por Dios a David (2Sm 7,11)\n\nOrdenar temporalmente la genealogía de Jesús separada cada 14 generaciones (Mt 1,17):",
+    "correctAnswer": ["Abraham - Padre de multitudes", "David - Linaje eterno ","ZoroBabel - desterrado a Babilonia (resto de Israel)", "Jesús - Cristo (EL úngido predilecto)"],
+    "tip":"Mt 1,17 `El total de las generaciones es, por lo tanto: desde Abraham hasta David, catorce generaciones; desde David hasta el destierro en Babilonia, catorce generaciones; desde el destierro en Babilonia hasta Cristo, catorce generaciones.`\n\nEl ángel le cuenta a María sobre su hijo:\n\nLc 1,32 `El Señor Dios le dará el trono de David, su padre, reinará sobre la casa de Jacob para siempre y su reino no tendrá fin».`(Jacob es Israel, nieto de Abraham.)\n\nDe todos los descendientes de Abraham (i.e. aquellos que creen en Jesús Salvador), los descendientes de David serán sus gobernantes (poseerán el trono).\n\n",
+    "reflect":"Natán profetiza sobre Jesús Rey, descendiente de David\n\n2Sm 7,11-17 `Y el Señor te ha anunciado que él mismo te hará una casa. Sí, cuando hayas llegado al término de tus días y vayas a descansar con tus padres, yo elevaré después de ti a uno de tus descendientes, a uno que saldrá de tus entrañas, y afianzaré su realeza. El edificará una casa para mi Nombre, y yo afianzaré para siempre su trono real. Seré un padre para él, y él será para mí un hijo. Si comete una falta, lo corregiré con varas y golpes, como lo hacen los hombres. Pero mi fidelidad no se retirará de él, como se la retiré a Saúl, al que aparté de tu presencia. Tu casa y tu reino durarán eternamente delante de mí, y su trono será estable para siempre». Natán comunicó a David toda esta visión y todas estas palabras.`\n\nVolve a leer las palabras de Natán, interpretando a la casa prometida como:\n\n* el cuerpo de Jesús\n\n* la iglesia universal (cuerpo místico de Jesús)"
+  },
+      {
+        "type": "matching",
+            "image": "/images/jerusalem-moria-abram.png",
+        "questionText": "Ministerio sacerdotal en tiempos de Abraham (Gn 14:18; 18:12; 22:1), donde se le ofrece a Dios los frutos del trabajo, el vientre de una madre y la vida de un hijo.\n\nUnir la persona que ejerce su ministerio sacerdotal, la etimología de su nombre, la ofrenda (acto sagrado) y la prefigura del acto en el cual participará Jesús.",
+        "columns": ["Personaje sacerdotal","Etimología", "Acto sagrado", "Prefigura de Jesús"],
+        "correctAnswer": [
+          ["Melquisedec","Rey de justicia","Ofrenda de pan y vino 🥖🍷","Última cena (Jueves Santo)"],
+          ["Sarah","Princesa","Embarazo milagroso 🤰🕊️","Concepción milagrosa (Navidad)"],
+          ["Abraham","Padre de multitudes","Inmolación de su hijo 🐑","Sacrificio Pascual (Viernes Santo)"]    
+        ],
+        "_comment": "",
+        "tip":"Melquisedec era el rey de Salem, lo que después será JeruSALEM, la ciudad Santa, Gn 14,17-20 `Cuando Abram volvía de derrotar a Quedorlaomer y a los reyes que lo acompañaban, el rey de Sodoma salió a saludarlo en el valle de Savé, o sea el valle del Rey. Y Melquisedec, rey de Salem, que era sacerdote de Dios, el Altísimo, hizo traer pan y vino, y bendijo a Abram, diciendo: «¡Bendito sea Abram de parte de Dios, el Altísimo, creador del cielo y de la tierra! ¡Bendito sea Dios, el Altísimo, que entregó a tus enemigos en tus manos!». Y Abram le dio el diezmo de todo.`\n\nGn 18,10-14 ` «Volveré a verte sin falta en el año entrante, y para ese entonces Sara habrá tenido un hijo». Mientras tanto, Sara había estado escuchando a la entrada de la carpa, que estaba justo detrás de él. Abraham y Sara eran ancianos de edad avanzada, y los períodos de Sara ya habían cesado. Por eso, ella rió en su interior, pensando: «Con lo vieja que soy, ¿volveré a experimentar el placer? Además, ¡mi marido es tan viejo!». Pero el Señor dijo a Abraham: «¿Por qué se ha reído Sara, pensando que no podrá dar a luz, siendo tan vieja? ¿Acaso hay algo imposible para el Señor? Cuando yo vuelva a verte para esta época, en el año entrante, Sara habrá tenido un hijo»`\n\nGn 22,1-2 ` Después de estos acontecimientos, Dios puso a prueba a Abraham: «¡Abraham!», le dijo. El respondió: «Aquí estoy». Entonces Dios le siguió diciendo: «Toma a tu hijo único, el que tanto amas, a Isaac; ve a la región de Moria, y ofrécelo en holocausto sobre la montaña que yo te indicaré».`",
+         "reflect":"Cada personaje le hace una ofrenda a Dios, Melquisede los frutos del trabajo, pan y vino, prefigura de la eucaristía. Sarah le ofrece su cuerpo, prefigura de María. Abraham le ofrece a su Hijo, prefigura de la ofrenda que Dios Padre hace a la humanidad para salvarnos.\n\n* ¿Qué le ofreces a Dios? ¿Le has ofrecido tu trabajo, tu cuerpo, tu familia?.\n\n* Cada vez que le presentas ofrendas a Dios ejercés tu ministerio sacerdotal."
+      },
+                {
+        "type": "matching",
+        "image": "/images/jerusalem-moria-abram.png",
+        "questionText": "Leer Gn 22,9-18, donde justo antes del sacrificio el Ángel le dice a Abraham:\n\n`'No le hagas nada que ahora sé que tienes temor de Dios, ya que no me has negado tu único hijo.'`\n\nUnir a cada ministerio con su relación divina, la persona que cumple dicho ministerio y su rol en el sacrificio. El sacerdote es quien ofrece la víctima (valiosa, inocente) a Dios. Considerar el simbolismo donde la palabra de Dios es la roca donde se apoya el sacerdote para hacer el sacrificio (i.e. el altar).",
+            "columns": [ "Ministerio", "'Relación con Dios'","Persona","Función sacra"],
+        "correctAnswer": [
+          ["Profeta","Mensajero de ...","Ángel","altar"],
+          ["Religioso","Enamorado / Amigo de ...","Abraham","sacerdote"],
+          ["Príncipe", "Hijo de ...","Isaac","víctima"]
+          ],
+        "_comment": "",
+        "tip":"¿Sabías que ángel significa mensajero?\n\nGn 22,9-18 `Cuando llegaron al lugar que Dios le había indicado, Abraham erigió un altar, dispuso la leña, ató a su hijo Isaac, y lo puso sobre el altar encima de la leña. Luego extendió su mano y tomó el cuchillo para inmolar a su hijo. Pero el Angel del Señor lo llamó desde el cielo: «¡Abraham, Abraham!». «Aquí estoy», respondió él. Y el Angel le dijo: «No pongas tu mano sobre el muchacho ni le hagas ningún daño. Ahora sé que temes a Dios, porque no me has negado ni siquiera a tu hijo único». Al levantar la vista, Abraham vio un carnero que tenía los cuernos enredados en una zarza. Entonces fue a tomar el carnero, y lo ofreció en holocausto en lugar de su hijo. Abraham llamó a ese lugar: «El Señor proveerá», y de allí se origina el siguiente dicho: «En la montaña del Señor se proveerá». Luego el Angel del Señor llamó por segunda vez a Abraham desde el cielo, y le dijo: «Juro por mí mismo –oráculo del Señor–: porque has obrado de esa manera y no me has negado a tu hijo único, yo te colmaré de bendiciones y multiplicaré tu descendencia como las estrellas del cielo y como la arena que está a la orilla del mar. Tus descendientes conquistarán las ciudades de sus enemigos, y por tu descendencia se bendecirán todas las naciones de la tierra, ya que has obedecido mi voz»`",
+         "reflect":"Dios nos habla a través de mensajeros. ¿Soles buscar la respuesta de Dios en las palabras de los demás?\n\n¿Has sentido alguna vez que Dios te pidió algo muy dificil?\n\n¿Le has ofrecido alguna vez tu vida a Dios?\n\n* Cada vez que das un buen consejo, recomendación o palabra de aliento ejercés tu ministerio profético. Como un altar, son palabras sobre las cuales otras personas pueden apoyar y descansar sus problemas ofreciéndoselos a Dios."
+      },
+            {
+    "type": "multiple-choice",
+    "image": "/images/rey-sacerdote-profeta-logos.jpg", 
+    "questionText": "¿Quienes fueron `ungidos` sacramentalmente por Dios? (tuvieron un acto religioso donde Dios les encomienda una misión/ministerio)",
+    "answerOptions": [
+      { "answerText": "Ábraham", "isCorrect": false },
+      { "answerText": "Israel", "isCorrect": false },
+      { "answerText": "David", "isCorrect": true },
+      { "answerText": "Salomón", "isCorrect": true },
+      { "answerText": "Jesús", "isCorrect": true }
+    ],
+        "_comment": "",
+        "tip":"Los reyes eran ungidos por sacerdotes o profetas. La unción era un rito que marca la consagración y la investidura del rey, indicando que ha recibido el favor y el poder de Dios para gobernar.\n\n2Sm 5,3 `Todos los ancianos de Israel *ungieron a David como rey de Israel.`\n\n1Re 1,39 `El sacerdote tomó de la Carpa el cuerno de aceite y ungió a Salomón. Entonces sonó la trompeta y todo el pueblo exclamó: ¡Viva el rey Salomón!`\n\nMt 3,13 `Jesús fue desde Galilea hasta el Jordán y se presentó a Juan para ser bautizado por él.`",
+         "reflect":"¿Te considerás úngido de Dios?"
+  },
+        {
+    "type": "multiple-choice",
+    "questionText": "¿Quién conquistó JeruSHALEM (ciudad de la ...) y la estableció como capital del Israel?",
+      "image": "/images/primeros-reinos.png",
+      "answerOptions": [
+      { "answerText": "Abraham", "isCorrect": false },
+      { "answerText": "Israel", "isCorrect": false },
+      { "answerText": "David", "isCorrect": true },
+      { "answerText": "Salomón", "isCorrect": false },
+      { "answerText": "Jesús", "isCorrect": false }
+    ],
+        "_comment": "",
+        "tip":"2Sm 5,6 `El rey avanzó con sus hombres sobre Jerusalén, contra los jebuseos que habitaban en el país. Pero estos dijeron a '______': «Tú no entrarás aquí. Los ciegos y los inválidos bastarán para impedírtelo». Con esto querían decir: «'______' nunca podrá entrar aquí». Sin embargo, '______' conquistó la fortaleza de Sión, es decir, la Ciudad de '______'.`",
+         "reflect":"Tres generaciones más tarde el reino de Israel se separará en el reino del sur (Judea) y el reino del norte (Israel). Jerusalén permanece como la ciudad Santa de Judea y después del destierro será la ciudad santa del pueblo Judío, desde allí gobernará el Sanedrín (la jerarquía religiosa).\n\n¿Cual es la capital donde vive y reina el 'rey' de la Iglesia Católica Apostólica Romana? ¿Has hablado con alguién que haya ido?"
+  },
+  {
+    "type": "multiple-choice",
+    "questionText": "¿Quién subió a JeruSHALEM montado en un asna como el rey de los judíos?",
+      "image": "/images/jerusalem-moria-abram.png",
+      "answerOptions": [
+      { "answerText": "Abraham", "isCorrect": false },
+      { "answerText": "Israel", "isCorrect": false },
+      { "answerText": "David", "isCorrect": true },
+      { "answerText": "Salomón", "isCorrect": false },
+      { "answerText": "Jesús", "isCorrect": false }
+    ],
+        "_comment": "",
+        "tip":"Mt 21,1-11 `Cuando se acercaron a Jerusalén '______' les dijo: 'Vayan al pueblo que está enfrente, e inmediatamente encontrarán una asna atada, junto con su cría. Desátenla y tráiganmelos'. Esto sucedió para que se cumpliera lo anunciado por el Profeta: 'Digan a la hija de Sion: Mira que tu rey viene hacia ti, humilde y montado sobre un asna, sobre la cría de un animal de carga'... Trajeron el asna y su cría, pusieron sus mantos sobre ellos y '______' se montó. Entonces ... la gente comenzó a extender sus mantos sobre el camino, y otros cortaban ramas de los árboles y lo cubrían con ellas. La multitud ... gritaba: '¡Hosana al Hijo de David! ¡Bendito el que viene en nombre del Señir!¡Hosana en las alturas!'. Cuando entró en Jerusalen, toda la ciudad se conmovió, y preguntaban '¿Quién es este?'.`\n\nLa Iglesia Católica conmemora este hecho el Domingo anterior al Domingo de Pascua (Domingo de ramos). ¿Sabías que mundialmente es el día de mayor asistencia a misa?",
+         "reflect":"Jerusalém, primero llamada Sion y luego Ciudad de David, es prefigura de la Jerusalém celestial, i.e. la ciudad donde viviremos en el cielo, donde Reinará Jesús.\n\nAp 21,2 `Vi la Ciudad santa, la nueva Jerusalén, que descendía del cielo y venía de Dios, embellecida como una novia preparada para recibir a su esposo.`"
+  },             
+  {
+    "type": "multiple-choice",
+    "image": "/images/jerusalem-moria-abram.png",
+    "questionText": "¿Quién construyó el primer Templo de Jerusalén? Este templo será destruido en el destierro a Babilonia, prefigura de la pascua de Jesús, cuyo cuerpo es EL Templo de Dios.",
+    "answerOptions": [
+      { "answerText": "Abraham", "isCorrect": false },
+      { "answerText": "Israel", "isCorrect": false },
+      { "answerText": "David", "isCorrect": true },
+      { "answerText": "Salomón", "isCorrect": false },
+      { "answerText": "Jesús", "isCorrect": false }
+    ],
+        "_comment": "",
+        "tip":"En el templo, los sacerdotes realizaban sacrificios, ceremonias religiosas y guardaban los objetos sagrados, prefigura del sacratísimo cuerpo de Jesús:\n\nJn 2 19 `Jesús les respondió: «Destruyan este templo y en tres días lo volveré a levantar». Los judíos le dijeron: «Han sido necesarios cuarenta y seis años para construir este Templo, ¿y tú lo vas a levantar en tres días?». Pero él se refería al templo de su cuerpo.`",
+         "reflect":"¿Sentís que los templos cristianos son casa de Dios?\n\nPodés ejercer tu ministerio sacerdotal, creando y custodiando un lugar sagrado en tu casa (altar)."
+  },       
+
+          {
+        "type": "matching",
+        "image": "/images/timeline-historia-pueblo-israel-iglesia.png", 
+        "questionText": "Caracterizar la historia del pueblo judio separada cada 14 generaciones:",
+            "columns": ["Época", "Ministerio","Pueblo ...","Pueblo ..."],
+        "correctAnswer": [
+          ["Abraham-David","Patriarcas", "unido, en formación","confiado en los milagros de Dios"],
+          ["David-Babel","Profetas","dividido, idólatra","mezclado con los pueblos vecinos"],
+          ["Babel-Jesús", "Sacerdotes ","disperso, religioso, conquistado","estricto seguidor de la ley de Dios"]
+        ],
+        "tip":"Primero se forma el pueblo en una nación/reino, luego se divide en dos (sur y norte) y luego es conquistado y se dispersa. Cuando su territorio es gobernado por otros pueblos (asirios, persas, romanos) se convierte en un pueblo religioso\n\nIdólatra: que venera dioses ajenos."
+      },       {
+        "type": "matching",
+        "image": "/images/timeline-historia-pueblo-israel-iglesia.png", 
+        "questionText": "Caracterizar a los profetas de Israel en cuanto a su época, a los destinatarios de sus mensajes y un punto importante de sus mensajes (Ex 34:27-32; 1Re 18:21-24;Mt 3:7-10)",
+        "columns": ["Época","Profeta", "¿A quién corregía?","Señalaban"],
+        "correctAnswer": [
+          ["Abraham-David","Moisés", "al pueblo","vivan la Ley de Dios"],
+          ["David-Babel","Elías","al pueblo y al Rey","eligan al Dios Verdadero"],
+          ["Babel-Jesús","Juan Bautista","al pueblo, al Rey y a los religiosos","teman el Juicio de Dios"]
+        ],
+        "tip": "Ex 34:27-32 `el Señor dijo a Moisés: consigna por escrito estas palabras, porque ellas son las cláusulas de la alianza que yo hago contigo y con Israel». Moisés estuvo allí con el Señor cuarenta días y cuarenta noches, sin comer ni beber. Y escribió sobre las tablas las palabras de la alianza, es decir, los diez Mandamientos. Cuando Moisés bajó de la montaña del Sinaí, * se acercaron Aarón y todos los jefes de la comunidad, y él les habló. Después se acercaron también todos los israelitas, y él les transmitió las órdenes que el Señor le había dado.`\n\n1Re 18:21-24 `Elías se acercó a todo el pueblo y dijo: «¿Hasta cuándo van a andar rengueando de las dos piernas? Si el Señor es Dios, síganlo; si es Baal, síganlo a él. Pero el pueblo no le respondió ni una palabra. Luego Elías dijo al pueblo: «Como profeta del Señor, he quedado yo solo, mientras que los profetas de Baal son cuatrocientos cincuenta. Traigamos dos novillos. *Ustedes invocarán el nombre de su dios y yo invocaré el nombre del Señor: el dios que responda enviándome fuego, ese es Dios». Todo el pueblo respondió diciendo: «¡Está bien!»`\n\nMt 3:7-10 `Al ver que muchos fariseos y saduceos se acercaban a recibir su bautismo, Juan les dijo: «Raza de víboras, ¿quién les enseñó a escapar de la ira de Dios que se acerca? Produzcan el fruto de una sincera conversión, y no se contenten con decir: «Tenemos por padre a Abraham». Porque yo les digo que de estas piedras Dios puede hacer surgir hijos de Abraham. El hacha ya está puesta a la raíz de los árboles: el árbol que no produce buen fruto será cortado y arrojado al fuego.`",
+        "reflect":"¿Has usado los Diez Mandamientos como guía para tu examen de conciencia previo a una confesión?\n\n---\n\n¿Has rendido culto a un Dios falso?\n\n---\n\n¿Te imaginas un mundo donde Dios no juzge?"
+      },    
+            {
+    "type": "multiple-choice",
+              "image": "/images/una-voz-grita-en-el-desierto.jpeg", 
+    "questionText": "¿Sobre quién se refieren los siguientes versículos?`\n\nMt 3 `A él se refería el profeta Isaías cuando dijo: \"Una voz grita en el desierto: Preparen el camino del Señor, allanen sus senderos\"`\n\n Mt 11:10 `El es aquel de quien está escrito: \"Yo envío a mi mensajero delante de ti, para prepararte el camino\"`",
+    "answerOptions": [
+      { "answerText": "Abraham", "isCorrect": false },
+      { "answerText": "Moisés", "isCorrect": false },
+      { "answerText": "David", "isCorrect": false },
+      { "answerText": "Elías", "isCorrect": false },
+      { "answerText": "Juan Bautista", "isCorrect": true },
+      { "answerText": "Jesús", "isCorrect": false }
+      ]
+      }
+  ]
+}

@@ -6,7 +6,7 @@
   "questions": [          
     {
     "type": "ordering",
-    "image": "/images/timeline-historia-de-la-humanidad.png", 
+    "image": "images/timeline-historia-de-la-humanidad.png", 
     "questionText": "En Mateo 1,21 el ángel le anuncia a José que su hijo será el Salvador.\n\nEn Mateo 3,10 Juan Bautista anuncia que el que viene detrás de el hará justicia.\n\nEn la carta a los Colosenses 1,16 Pablo dice que en Dios Hijo fueron creadas todas las cosas.\n\nOrdenar temporalmente el camino cristiano de la Humanidad:",
     "correctAnswer": ["Dios crea: Creación 🗣️🌎 (α)", "Dios salva: Salvación ☦ (τ)","Dios juzga: Parusía ⚖️ (ω)"],
     "tip":"Gn 1:1 `En el principio Dios creó el cielo y la tierra`\n\nCol 1 16,18 `porque en él fueron creadas todas las cosas, tanto en el cielo como en la tierra * todo fue creado por medio de él y para él. El existe antes que todas las cosas y todo subsiste en él. *El es el Principio, `\n\n---\n\nEl ángel le dice a José: Mt 1,21 `Ella dará a luz un hijo, a quien pondrás el nombre de Jesús, porque él salvará a su Pueblo de todos sus pecados».`\n\nÉl nómbre Jesús viene de JeSHUA, 'SHUA' en hebreo significa 'salvación', Jesús significa 'Dios salva'\n\n---\n\nJuan Bautista anuncia la parusía y juicio final en Mt 3,10-12 `el árbol que no produce buen fruto será cortado y arrojado al fuego. * El que viene detrás de mi * los bautizará en el Espíritu Santo y en el fuego. Tiene en su mano la horquilla y limpiará su era: recogerá su trigo en el granero y quemará la paja en un fuego inextinguible».`\n\n",
@@ -14,7 +14,7 @@
     },
     {
     "type": "matching",
-    "image": "/images/timeline-historia-de-la-humanidad.png", 
+    "image": "images/timeline-historia-de-la-humanidad.png", 
     "questionText": "Asociar a la Creación, Salvación y Juicio de Dios, un ministerio que lo caracterice, basándose en su función (en nombre de Dios) y objeto de acción",
     "tip":"",
     "reflect":"",

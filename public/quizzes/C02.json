@@ -7,7 +7,7 @@
         {
     "type": "multiple-choice",
     "questionText": "Alrededor del año 1900 a.C., ¿a quién le prometió Dios que le daría a el y a sus descendientes la tierra de Canaán?  (tierra Santa/Prometida)",
-      "image": "/images/palestina-arabia.png",
+      "image": "images/palestina-arabia.png",
       "answerOptions": [
       { "answerText": "Abraham", "isCorrect": true },
       { "answerText": "Israel", "isCorrect": false },
@@ -22,7 +22,7 @@
           {
     "type": "multiple-choice",
     "questionText": "Las 12 tribus llevan el nombre de 10 hijos y 2 nietos de:",
-      "image": "/images/12tribus.png",
+      "image": "images/12tribus.png",
       "answerOptions": [
       { "answerText": "Abraham", "isCorrect": false },
       { "answerText": "Israel", "isCorrect": true },
@@ -36,7 +36,7 @@
   },
     {
       "type": "true-false",
-           "image": "/images/12tribus.png", 
+           "image": "images/12tribus.png", 
       "questionText": "La Tierra Prometida por Dios al pueblo de Israel estaba deshabitada, por lo que les resulto sencillo instalarse.",
       "correctAnswer": false,
         "_comment": "",
@@ -46,7 +46,7 @@
         {
     "type": "multiple-choice",
     "questionText": "Completar el versículo\n\nGn 22,1 `Dios puso a prueba a _________. Le dijo: Toma a tu hijo, a tu único, al que amas... ve a la región de Moria y ofrécelo allí en holocausto'.`\n\n Unos mil años más tarde, en el monte Moria se construirá el Templo de Israel.",
-    "image": "/images/jerusalem-moria.png",
+    "image": "images/jerusalem-moria.png",
     "answerOptions": [
       { "answerText": "Abraham", "isCorrect": true },
       { "answerText": "Israel", "isCorrect": false },
@@ -61,7 +61,7 @@
           {
     "type": "multiple-choice",
     "questionText": "Completar el versículo en donde justo antes del sacrificio el Ángel de Dios dice a Abraham:\n\nGn 22,12 `'No le hagas nada que ahora sé que tienes _________ de Dios, ya que no me has negado tu único hijo.'`",
-    "image": "/images/jerusalem-moria-abram.png",
+    "image": "images/jerusalem-moria-abram.png",
         "answerOptions": [
       { "answerText": "Piedad", "isCorrect": false },
       { "answerText": "Sabiduría", "isCorrect": false },
@@ -74,7 +74,7 @@
          "reflect":""
   },          {
     "type": "multiple-choice",
-    "image": "/images/jerusalem-moria-abram.png",
+    "image": "images/jerusalem-moria-abram.png",
     "questionText": "Por su gran devoción a Dios, ¿Quién comienza con los preparativos para construir el primer Templo de Jerusalén? (será construido por su hijo en la región de Moria)",
     "answerOptions": [
       { "answerText": "Abraham", "isCorrect": false },
@@ -90,7 +90,7 @@
             {
     "type": "multiple-choice",
     "questionText": "Completar el versículo: \"La reina de Sabá oyó hablar de la fama de _________, y fue a ponerlo a prueba, proponiéndole unos enigmas. Llegó a Jerusalén con un séquito imponente, con camellos cargados de perfumes, de gran cantidad de oro y de piedras preciosas.\" (2Cro 9,1) ",
-      "image": "/images/palestina-arabia.png",
+      "image": "images/palestina-arabia.png",
       "answerOptions": [
       { "answerText": "Abraham", "isCorrect": false },
       { "answerText": "Israel", "isCorrect": false },
