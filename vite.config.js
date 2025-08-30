@@ -7,7 +7,7 @@ import react from "@vitejs/plugin-react-swc";
 //Replace `your-repo-name` with your repo's name
 //If you deploy to a custom domain, set base: "/".
 export default defineConfig({
-  base: "/formacion-cristiana.github.io/",
+  base: "/formacion-cristiana.github.io/formacion-cristiana.github.io/",
   plugins: [react()],
   build: {
     outDir: "dist",
