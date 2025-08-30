@@ -11,7 +11,7 @@ useEffect(() => {
     const loaded = await Promise.all(
       qIds.map(async (id) => {
         try {
-          const res = await fetch(`${import.meta.env.BASE_URL}/quizzes/${id}.json`);
+          const res = await fetch(`${import.meta.env.BASE_URL}quizzes/${id}.json`);
           if (!res.ok) {
             throw new Error(`HTTP ${res.status}`);
           }
@@ -41,15 +41,7 @@ useEffect(() => {
         <li>
                   <Link to="/print-all">📄 Imprimir todos los quizzes</Link>
         </li>
-        {quizzes.map((quiz) => (
-          <li key={quiz.id}>
-            <button onClick={() => navigate(`/printable/quizzes/${quiz.id}`)}>
-              Quiz {quiz.date}<br />
-              {quiz.title}<br />
-              {quiz.comment}
-            </button>
-          </li>
-        ))}
+
       </ul>
     </div>
   ) ;

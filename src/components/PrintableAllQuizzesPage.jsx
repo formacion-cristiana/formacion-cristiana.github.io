@@ -11,7 +11,7 @@ function PrintableAllQuizzesPage() {
     const loadQuizzes = async () => {
       const loaded = [];
       for (const id of qIds) {
-        const res = await fetch(`${import.meta.env.BASE_URL}/quizzes/${id}.json`);
+        const res = await fetch(`${import.meta.env.BASE_URL}quizzes/${id}.json`);
         const data = await res.json();
         loaded.push(data);
       }
