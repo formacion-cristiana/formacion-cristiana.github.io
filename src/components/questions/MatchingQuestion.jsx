@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "../../styles/MatchingQuestion.css";
-
 import { prepareMatchingQuestion } from "../../utils/prepareMatchingQuestion";
-const COLORS = ["lightblue", "#fee9be", "#CBC3E3", "#9CAF88", "#FED8B1", "#9bcdff"];
+import SmartTable from "../SmartTable"; // import SmartTable
 
+const COLORS = ["lightblue", "#fee9be", "#CBC3E3", "#9CAF88", "#FED8B1", "#9bcdff"];
 
 function MatchingQuestion({ question, onSubmit }) {
   const [columns, setColumns] = useState([]);
@@ -32,19 +32,16 @@ function MatchingQuestion({ question, onSubmit }) {
   };
 
   useEffect(() => {
-    if (selections.length === 0) return;
-    if (!selections.every(item => item !== null)) return;
+    if (selections.length === 0 || !selections.every(item => item !== null)) return;
 
     const currentSelections = [...selections];
-
     setSets(prevSets => {
       const filteredSets = prevSets.filter(
         set => !set.items.some(item => currentSelections.includes(item))
       );
       const usedColors = filteredSets.map(s => s.color);
-      const availableColor = COLORS.find(color => !usedColors.includes(color));
+      const availableColor = COLORS.find(c => !usedColors.includes(c));
       if (!availableColor) return filteredSets;
-
       return [...filteredSets, { items: currentSelections, color: availableColor }];
     });
 
@@ -52,7 +49,7 @@ function MatchingQuestion({ question, onSubmit }) {
   }, [selections]);
 
   const getButtonColor = item => {
-    const set = sets.find(set => set.items.includes(item));
+    const set = sets.find(s => s.items.includes(item));
     return set ? set.color : "white";
   };
 
@@ -62,13 +59,31 @@ function MatchingQuestion({ question, onSubmit }) {
     onSubmit(userGroups, isCorrect, effectiveAnswer);
   };
 
+  const renderCellContent = item => {
+    if (typeof item === "string" && /\.(png|jpe?g|gif|svg)$/.test(item)) {
+      return (
+        <img
+          src={`${import.meta.env.BASE_URL}/images/${item}`}
+          alt=""
+          style={{ maxWidth: "80px", maxHeight: "60px", display: "block", margin: "0 auto" }}
+        />
+      );
+    }
+    if (typeof item === "string") {
+      return item.split(" ").map((word, i) => <span key={i} className="word">{word} </span>);
+    }
+    return item;
+  };
+
   const renderGrid = () => (
     <>
       {columns.length > 0 && (
         <>
           {rowHeaders.length > 0 && <div className="matching-cell header" />}
           {columns.map((header, i) => (
-            <div className="matching-cell header" key={`header-${i}`}>{header}</div>
+            <div className="matching-cell header" key={`header-${i}`}>
+              {renderCellContent(header)}
+            </div>
           ))}
         </>
       )}
@@ -77,7 +92,7 @@ function MatchingQuestion({ question, onSubmit }) {
         <React.Fragment key={`row-${rowIndex}`}>
           {rowHeaders.length > 0 && (
             <div className="matching-cell header" key={`rowheader-${rowIndex}`}>
-              {rowHeaders[rowIndex]}
+              {renderCellContent(rowHeaders[rowIndex])}
             </div>
           )}
           {options.map((colItems, colIndex) => {
@@ -92,7 +107,7 @@ function MatchingQuestion({ question, onSubmit }) {
                   className={`matching-btn${selected ? " selected" : ""}`}
                   style={{ backgroundColor: bg }}
                 >
-                  {renderItem(item)}
+                  {renderCellContent(item)}
                 </button>
               </div>
             );
@@ -107,28 +122,36 @@ function MatchingQuestion({ question, onSubmit }) {
   if (!effectiveAnswer.length) return <div>Error: Matching question data is invalid.</div>;
 
   return (
-    <div className="matching-grid" style={{ gridTemplateColumns: `repeat(${colSpan}, 1fr)` }}>
-      {renderGrid()}
-      <div className="submit-wrapper" style={{ gridColumn: `span ${colSpan}` }}>
-        <button onClick={handleSubmit} className="submit-btn" disabled={sets.length !== effectiveAnswer.length}>
+    <div>
+      {columns.length > 3 ? (
+        <div className="matching-grid-wrapper">
+          <div className="matching-grid" style={{ gridTemplateColumns: `repeat(${colSpan}, min-content)` }}>
+            {renderGrid()}
+          </div>
+        </div>
+      ) : (
+        <SmartTable
+          columns={columns}
+          rowHeaders={rowHeaders}
+          options={options}
+          selections={selections}
+          onSelect={handleSelect}
+          getButtonColor={getButtonColor}
+          renderCellContent={renderCellContent}
+        />
+      )}
+
+      <div className="submit-wrapper">
+        <button
+          onClick={handleSubmit}
+          className="submit-btn"
+          disabled={sets.length !== effectiveAnswer.length}
+        >
           Responder
         </button>
       </div>
     </div>
   );
-}
-
-function renderItem(item) {
-  if (typeof item === "string" && /\.(png|jpe?g|gif|svg)$/.test(item)) {
-    return (
-      <img
-        src={`${import.meta.env.BASE_URL}/images/${item}`}
-        alt=""
-        style={{ maxWidth: "80px", maxHeight: "60px", display: "block", margin: "0 auto" }}
-      />
-    );
-  }
-  return item;
 }
 
 function arraysEqualIgnoringOrder(arr1, arr2) {

@@ -50,19 +50,36 @@ export function renderQuestion(q, qIdx) {
       )}
 
       {/* Matching */}
-      {q.type === "matching" && q.shuffledColumns && (
-        <table style={tableStyle}>
-          <tbody>
-            {q.shuffledColumns[0].map((_, rowIdx) => (
-              <tr key={rowIdx}>
-                {q.shuffledColumns.map((col, cIdx) => (
-                  <td key={cIdx} style={tdStyle}>{col[rowIdx]}</td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
+{q.type === "matching" && q.shuffledColumns && (
+  <table style={tableStyle}>
+    <thead>
+      <tr>
+        {q.columns?.map((header, hIdx) => (
+          <th
+            key={hIdx}
+            style={{
+              ...tdStyle,
+              fontWeight: "bold",
+              backgroundColor: "#f5f5f5",
+            }}
+          >
+            {header}
+          </th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+      {q.shuffledColumns[0].map((_, rowIdx) => (
+        <tr key={rowIdx}>
+          {q.shuffledColumns.map((col, cIdx) => (
+            <td key={cIdx} style={tdStyle}>{col[rowIdx]}</td>
+          ))}
+        </tr>
+      ))}
+    </tbody>
+  </table>
+)}
+
     </div>
   );
 }

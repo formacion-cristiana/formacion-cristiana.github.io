@@ -17,8 +17,6 @@ If you are developing a production application, we recommend using TypeScript wi
 ## Installing vite react javascript + SWC:
 
 	npm create vite@latest my-vite-app
-    cd my-vite-app
-    npm run dev	
 
 
 ### Dependencies
@@ -26,6 +24,13 @@ npm install @dnd-kit/core @dnd-kit/sortable @dnd-kit/modifiers
 npm install react react-dom react-router-dom html2pdf.js react-markdown react-helmet
 
 
-## Deploying a React App* to GitHub Pages
+### Deploying a React App* to GitHub Pages
 
 [link](https://github.com/gitname/react-gh-pages)
+
+
+### Run
+    
+    cd my-vite-app
+    npm run dev 
+
