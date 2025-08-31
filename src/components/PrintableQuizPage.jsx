@@ -9,7 +9,7 @@ function PrintableQuizPage() {
 
   useEffect(() => {
     const load = async () => {
-      const res = await fetch(`${import.meta.env.BASE_URL}/quizzes/${quizId}.json`);
+      const res = await fetch(`${import.meta.env.BASE_URL}quizzes/${quizId}.json`);
       const data = await res.json();
       setQuiz(data);
     };

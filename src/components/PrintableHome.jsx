@@ -41,7 +41,15 @@ useEffect(() => {
         <li>
                   <Link to="/print-all">📄 Imprimir todos los quizzes</Link>
         </li>
-
+        {quizzes.map((quiz) => (
+          <li key={quiz.id}>
+            <button onClick={() => navigate(`/printable/quizzes/${quiz.id}`)}>
+              Quiz {quiz.date}<br />
+              {quiz.title}<br />
+              {quiz.comment}
+            </button>
+          </li>
+        ))}
       </ul>
     </div>
   ) ;
