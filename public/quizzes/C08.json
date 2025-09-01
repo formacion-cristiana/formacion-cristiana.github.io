@@ -1,13 +1,13 @@
 {
   "id": "C08",
-  "title": "EL SERMÓN DE LA MONTAÑA - Mt 5-7",
+  "title": "EL SERMÓN DE LA MONTAÑA\n\n(Mt 5-7)",
   "date":"31/08/2025",
   "comment":"Jesús Maestro: escuchar y practicar sus enseñanzas",
   "questions": [
     {
     "type": "ordering",
     "image": "images/bienaventuranzas.jpg", 
-    "questionText": "NECESIDAD DE PRACTICAR LA PALABRA DE DIOS\n\nEn Mateo 7,24-25 Jesús termina el sermón de la montaña: `Así, todo el que ESCUCHA las palabras que acabo de decir y las pone en PRÁCTICA, puede compararse a Un hombre sensato que ...`\n\nOrdenar la parábola:",
+    "questionText": "NECESIDAD DE PRACTICAR LA PALABRA DE DIOS\n\nEn Mateo 7,24-25 Jesús termina el sermón de la montaña: `Así, todo el que ESCUCHA las palabras que acabo de decir y las pone en PRÁCTICA, puede compararse a un hombre sensato que ...`\n\nOrdenar la parábola:",
     "correctAnswer": ["edificó su casa sobre ROCA;", "cayeron las lluvias, soplaron los vientos;","sacudieron la casa pero no se derrumbó;", "estaba construida sobre ROCA;"],
     "tip":"La parábola termina:\n\nMt 7,26-27 `Al contrario, el que escucha mis palabras y no las practica, puede compararse a un homre insensato, que edificó sucasa sobre arena. Cayeron las lluvias, se precipitaron los torrentes, soplaron los vientos y sacudieron la casa: esta se derrumbó, y su ruina fue grande.`",
     "reflect": "¿Qué enseñanza de Jesús te ha llamado la atención?\n\n¿Has cambiado una forma de pensar u obrar (hábito) debido a una de las enseñanzas de Jesús?"
@@ -36,7 +36,7 @@
       { "answerText": "A los afligidos", "isCorrect": false },
       { "answerText": "A los perseguidos por practicar la justicia", "isCorrect": true }
     ],
-        "tip":"Los que tiene alma de pobres les falta algo en el alma. Si se abren a Jesús el les promete bienes, no en este mundo sino en el venidero.\n\nLos pacientes, i.e. aquellos que perseveran en las buenas obras, serán recompensados en este mundo ya sea en su vida o en la de sus descendientes. Los afligidos pueden buscar venganza, justicia, o consuelo. Jesús les promete consuelo, en este mundo y en el venidero.\n\nEn el antiguo testamento Dios exhorta al pueblo judío a ser hombres justos. Aquí Jesús nos alienta a no bajar los brazos cuando somos perseguidos por practicar la justicia pues recibiremos nuestra recompensa en el mundo venidero.",
+        "tip":"Los que tienen `alma de pobres` les falta algo en el alma. Si se abren a Jesús el les promete bienes, no en este mundo sino en el venidero.\n\nLos `pacientes`, i.e. aquellos que perseveran en las buenas obras, serán recompensados en este mundo ya sea en su vida o en la de sus descendientes. Los afligidos pueden buscar venganza, justicia, o consuelo. Jesús les promete consuelo, en este mundo y en el venidero.\n\nEn el antiguo testamento Dios exhorta al pueblo judío a ser hombres justos. Aquí Jesús nos alienta a no bajar los brazos cuando somos `perseguidos por practicar la justicia` pués recibiremos nuestra recompensa en el mundo venidero.",
          "reflect":"¿Te consideras alguien con alma de pobre?, e.g. alguien que busca que Jesús lo nutra, incluso con gente con la que sentís rechazo.\n\n¿Buscás obrar con justicia hoy, aquí y ahora?, ¿lo hacés porque sabés que Dios te recompensará en el Reino de los Cielos? ¿O porque te parece que es lo que está bien, sin buscar recompenza?"
     },
     {
@@ -46,13 +46,13 @@
       "columns": ["Dichosos los ...","porque ..."],
       "correctAnswer": [
         ["afligidos","serán consolados"],
-        ["que tiene hambre y sed de justicia","serán saciados"],
+        ["que tienen hambre y sed de justicia","serán saciados"],
         ["misericordiosos","obtendrán misericordia"] ,
         ["que tienen un corazón puro","verán a Dios"]
       ],
       "_comment": "",
-      "tip":"",
-       "reflect":""
+      "tip":"Hay dolores tan grande que el hombre no puede consolar. Esto lo vimos en la profecía de la matanza a los inocentes en Mt 2,18 `En Ramá se oyó una voz, hubo lágrimas y gemidos: es Raquel, que llora a sus hijos y no quiere que la consuelen, poque ya no existen.` En este [link](https://press.vatican.va/content/salastampa/es/bollettino/pubblico/2017/01/04/raquel.html) el papa Francisco analiza sutilmente esta profecía, enseñandonos como acompañar cuando las palabras no alcanzan. Solo Jesús nos promete consuelo.\n\n---\n\nJesús es el gran Juez, solo en el podemos descanzar cuando sufrimos una injusticia.\n\n---\n\n¿Qué parte de la oración de Padre Nuestro podés vincular a una de estas bienaventuranzas?",
+       "reflect":"Cuando te afligís, ¿qué o quién te consuela?\n\nCuando sufrís una injusticia, ¿cómo descargás tu bronca?\n\n¿Sos capaz de pasar por tu corazón la miseria de aquel que te hizo daño?\n\n¿Le deseas el mal a alguien? capaz que maldiciendolo con palabras cuando te hacen un mal (e.g. un conductor que casi te choca)"
     },
     {
       "type": "true-false",

@@ -56,7 +56,7 @@
 .smart-table-header-cell,
 .smart-table-cell {
   flex: 1 1 0;             /* distribute equally */
-  padding: 8px;
+  padding: 2px;
   border-bottom: 1px solid #eee;
   display: flex;
   align-items: center;

@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import Quiz from "./Quiz";
 import { qTitle } from "../data/quizInfo";
 import { Helmet } from "react-helmet";
+import ReactMarkdown from 'react-markdown';
 
 function QuizLoader() {
 
@@ -35,8 +36,8 @@ function QuizLoader() {
       </Helmet>
 
     <div className="App">
-      <h2 >{quizData.title}</h2>
-      <h3 style={{          marginBottom: "4rem",}}>{quizData.comment}</h3>
+      <h2 ><ReactMarkdown>{quizData.title}</ReactMarkdown></h2>
+      <h3 style={{          marginBottom: "4rem",}}><ReactMarkdown>{quizData.comment}</ReactMarkdown></h3>
       <Quiz quiz={quizData} />
     </div>
     </>

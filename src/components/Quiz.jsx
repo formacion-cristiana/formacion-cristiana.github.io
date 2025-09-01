@@ -104,7 +104,7 @@ function goToPrevQuestion() {
 return (
   <div >
       <div ref={questionRef}>
-      <h3  style={{textAlign: "center"}}>({currentQuestion.num+1})</h3>
+      <h3  style={{textAlign: "center"}}>[{currentQuestion.num+1}]</h3>
 
     {currentQuestion.image && (
       <img
@@ -191,7 +191,7 @@ return (
   <button
     onClick={goToPrevQuestion}
     disabled={navigationLocked || currentIndex === 0}
-    style={{ fontSize: "2rem", padding: "0.5rem 1rem" }}
+    style={{ fontSize: "1.5rem", padding: "0.5rem 1rem" }}
   >
     ⬅
   </button>

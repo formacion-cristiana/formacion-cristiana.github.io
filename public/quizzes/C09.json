@@ -1,8 +1,8 @@
 {
   "id": "C09",
   "title": "Pecado",
-    "date":"31/08/2025",
-      "comment":"",
+  "date":"03/09/2025",
+  "comment":"",
   "questions": [
      {
     "type": "ordering",
@@ -35,7 +35,7 @@
         "correctAnswer": [
           ["Capataz","Desconfianza en el arquitecto","Capacidad de trabajar"],
           ["Enamorado","Infidelidad a su amado","Capacidad de amar"],
-          ["Profesor","Mentir a su alumno","Capacidad de conocer"],
+          ["Profesor","Mentir a su alumno","Capacidad de conocer"]
         ],
         "_comment": "",
         "tip":"",

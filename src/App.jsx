@@ -8,6 +8,7 @@ import { qIds, qTitle } from "./data/quizInfo";
 import PrintableHome from "./components/PrintableHome";
 import PrintableQuizPage from "./components/PrintableQuizPage";
 import PrintableAllQuizzesPage from "./components/PrintableAllQuizzesPage";
+import ReactMarkdown from 'react-markdown';
 
 function Home() {
   const [quizzes, setQuizzes] = useState([]);
@@ -39,10 +40,15 @@ function Home() {
         {quizzes.map((quiz) => (
           <li key={quiz.id}>
             <button onClick={() => navigate(`quizzes/${quiz.id}`)}>
-              Quiz {quiz.date}
+              {quiz.date}
+
               <br />
-              {quiz.title} <br />
-              {quiz.comment}
+              <br />
+              <div style={{fontSize:"1rem"}}>{quiz.title}</div> 
+              <br />
+              <ReactMarkdown>
+                            {quiz.comment}
+            </ReactMarkdown>
             </button>
           </li>
         ))}
