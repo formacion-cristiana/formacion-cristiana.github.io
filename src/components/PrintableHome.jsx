@@ -2,9 +2,10 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate,Link } from "react-router-dom";
 import { qIds } from "../data/quizInfo";
+import {QuizButtons} from "./QuizButtons"
+
 function PrintableHome() {
   const [quizzes, setQuizzes] = useState([]);
-  const navigate = useNavigate();
 
 useEffect(() => {
   const loadTitles = async () => {
@@ -41,15 +42,7 @@ useEffect(() => {
         <li>
                   <Link to="/print-all">📄 Imprimir todos los quizzes</Link>
         </li>
-        {quizzes.map((quiz) => (
-          <li key={quiz.id}>
-            <button onClick={() => navigate(`/printable/quizzes/${quiz.id}`)}>
-              Quiz {quiz.date}<br />
-              {quiz.title}<br />
-              {quiz.comment}
-            </button>
-          </li>
-        ))}
+        {QuizButtons(quizzes,'/printable/quizzes/')}
       </ul>
     </div>
   ) ;

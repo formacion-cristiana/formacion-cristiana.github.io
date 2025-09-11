@@ -1,0 +1,61 @@
+{
+  "id": "C11",
+  "title": "El Hombre es capaz de Dios",
+  "date":"03/09/2025",
+  "comment":"La fe es la repuesta del hombre a Dios que se revela y se entrega a él.",
+  "questions": [
+   {
+      "type": "matching",
+      "image": "images/adan-y-eva.webp", 
+      "questionText": "EL DESEO DE DIOS\n\n",
+      "columns": ["Nombre", "Etimología", "Significado"],
+      "correctAnswer": [
+        ["Edén","ēden:= delicia","lugar paradisíaco"],
+        ["Adán","adamah:=tierra/suelo","Hombre/Humano"],
+        ["Eva","hava:=vida","madre de los vivientes"]
+      ],
+      "tip":""
+    },
+
+        {
+      "type": "true-false",
+           "image": "", 
+      "questionText": "EL DESEO DE DIOS\n\nEl Hombre es un ser religioso, i.e. que está en su naturaleza buscar a Dios.",
+      "correctAnswer": true,
+      "tip":"Hch 17,26-28",
+      "reflect":"¿Sabías que religión significar re-ligarse?, i.e. volver a unir algo que se separó: el Hombre y Dios."
+    },
+  {
+    "type": "multiple-choice",
+    "questionText": "EL DESEO DE DIOS\n\n(CIC 29-30) La unión íntima y vital con Dios puede ser olvidada, desconocida e incluso rechazada por el hombre debido:",
+    "answerOptions": [
+      { "answerText": "a que Dios se cansa y cesa de llamar al Hombre.", "isCorrect": false },
+      { "answerText": "a que Dios nos creó libres para que nos independicemos de El.", "isCorrect": false },
+      { "answerText": "a los afanes del mundo y de las riquezas.", "isCorrect": true },
+      { "answerText": "al mal ejemplo de los creyentes.", "isCorrect": true },
+      { "answerText": "al miedo del pecador (quien sabe que obra mal).", "isCorrect": true }
+    ]
+  },
+    {
+    "type": "multiple-choice",
+    "questionText": "EL CONOCIMIENTO DE DIOS\n\n(CIC 31-34) Seleccione 'pruebas' visibles de la existencia de Dios (primeras vias de acceso)",
+    "answerOptions": [
+      { "answerText": "La bondad y el amor en el Hombre (persona humana)", "isCorrect": true },
+      { "answerText": "El mal ejemplo de los creyentes.", "isCorrect": false },
+      { "answerText": "El miedo del pecador (quien sabe que obra mal).", "isCorrect": false },
+      { "answerText": "El orden y la belleza en el Mundo/Cosmos", "isCorrect": true }
+          ],
+    "tip":"Al decir pruebas, no nos referimos a pruebas científicas sino a argumentos convergentes y convincentes que despiertan la intuición del hombre de buena voluntad.\n\nRm 1,19-20\n\nSan Agustín, Sermones 241,2:PL 38, 1134 `Interroga a la belleza de la tierra ... sujeta a cambio, ¿quién las ha hecho sino la Suma Belleza, no sujeta a cambio?`\n\nSb 13,5 `pues de la grandeza y hermosura de las criaturas se llega, por analogía, a contemplar a su Autor`."
+  },
+  {
+    "type": "multiple-choice",
+    "questionText": "EL CONOCIMIENTO DE DIOS\n\n(CIC 38-41) Seleccione las afirmaciones verdaderas acerca del conocimiento de Dios.",
+    "answerOptions": [
+      { "answerText": "Todas las criaturas poseen un cierta semejanza con Dios.", "isCorrect": true },
+      { "answerText": "El Hombre como ser racional, no necesita ser iluminado por Dios mediante revelaciones para conocer verdades religiosas y morales.", "isCorrect": false },
+      { "answerText": "La santa Iglesia como madre, se encarga de dar a conocer revelaciones de Dios con una certeza firme y sin mezcla de error.", "isCorrect": true }
+          ],
+    "tip":""
+  }
+  ]
+}

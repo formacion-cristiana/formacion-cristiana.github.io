@@ -1,6 +1,6 @@
 // src/App.jsx
 import React, { useEffect, useState } from "react";
-import { HashRouter as Router, Routes, Route, useNavigate, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 import QuizLoader from "./components/QuizLoader";
@@ -8,11 +8,13 @@ import { qIds, qTitle } from "./data/quizInfo";
 import PrintableHome from "./components/PrintableHome";
 import PrintableQuizPage from "./components/PrintableQuizPage";
 import PrintableAllQuizzesPage from "./components/PrintableAllQuizzesPage";
-import ReactMarkdown from 'react-markdown';
+
+import {QuizButtons} from "./components/QuizButtons"
+
+
 
 function Home() {
   const [quizzes, setQuizzes] = useState([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const loadTitles = async () => {
@@ -37,21 +39,7 @@ function Home() {
   return (
     <>
       <ul style={{ paddingLeft: "0rem" }}>
-        {quizzes.map((quiz) => (
-          <li key={quiz.id}>
-            <button onClick={() => navigate(`quizzes/${quiz.id}`)}>
-              {quiz.date}
-
-              <br />
-              <br />
-              <div style={{fontSize:"1rem"}}>{quiz.title}</div> 
-              <br />
-              <ReactMarkdown>
-                            {quiz.comment}
-            </ReactMarkdown>
-            </button>
-          </li>
-        ))}
+        {QuizButtons(quizzes,'/quizzes/')}
       </ul>
 
       <div style={{ marginTop: "2rem", textAlign: "center" }}>

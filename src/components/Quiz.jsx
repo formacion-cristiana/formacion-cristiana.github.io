@@ -104,7 +104,37 @@ function goToPrevQuestion() {
 return (
   <div >
       <div ref={questionRef}>
+            {/* Question navigation arrows */}
+<div style={{
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  margin: "2rem 0 1rem",
+}}>
+  <button
+    onClick={goToPrevQuestion}
+    disabled={navigationLocked || currentIndex === 0}
+    style={{ fontSize: "1.5rem", padding: "0.5rem 1rem" }}
+  >
+    ⬅
+  </button>
+
+  <div     style={{   display: "block", marginRight: "2rem",marginLeft: "2rem" }}
+>
       <h3  style={{textAlign: "center"}}>[{currentQuestion.num+1}]</h3>
+  </div>
+
+<button
+  onClick={goToNextQuestion}
+  disabled={navigationLocked}
+  style={{ fontSize: "1.5rem", padding: "0.5rem 1rem" }}
+>
+  ➡
+</button>
+
+</div>
+
+
 
     {currentQuestion.image && (
       <img
@@ -210,6 +240,7 @@ return (
 </button>
 
 </div>
+
   </div>
 );
 

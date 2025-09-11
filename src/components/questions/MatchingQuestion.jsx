@@ -123,7 +123,7 @@ function MatchingQuestion({ question, onSubmit }) {
 
   return (
     <div>
-      {columns.length > 3 ? (
+      {columns.length > 4 ? (
         <div className="matching-grid-wrapper">
           <div className="matching-grid" style={{ gridTemplateColumns: `repeat(${colSpan}, min-content)` }}>
             {renderGrid()}
