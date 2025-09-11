@@ -19,12 +19,12 @@
         "tip":"Gn 2,8-9 `El Señor Dios plantó un jardín en Edén ... hizo brotar del suelo toda clase de árboles, que eran atrayentes para la vista y apetitosos para comer;`\n\nGn 2,17 Dios dijo: `el día que comas de él, morirás`. Gn 3,4 `La serpiente replicó: 'De ninguna manera morirán...'`\n\nGn 3,19 `Ganarás el pan con el sudor de tu frente, hasta que vuelvas a la tierra, de donde fuiste sacado. ¡Porque eres polvo y al polvo volverás!`\n\nGn 3,20 `El hombre dio a su mujer el nombre de Eva, por ser ella la madre de todos los vivientes`\n\nGn 11,9 `Por eso se llamó Babel allí, en efecto, el Señor confundió la lengua de los hombres y los dispersó por toda la tierra.`",
         "reflect":"¿Sabías que los hebreos le han dado mucha importancia al significado de los nombres?\n\n¿Has nombrado algo? ¿En que te has basado?"
       },
-        {
+      {
       "type": "true-false",
      "image": "images/adan-y-eva.webp", 
       "questionText": "El fruto del arbol del conocimiento del bien y del mal era el único fruto en el Edén, atrayente para la vista y apetitoso para comer.",
       "correctAnswer": false,
-        "tip":"Gn 2,8-9 `El Señor Dios plantó un jardín en Edén ... hizo brotar del suelo toda clase de árboles, que eran atrayentes para la vista y apetitosos para comer;`",
+      "tip":"Gn 2,8-9 `El Señor Dios plantó un jardín en Edén ... hizo brotar del suelo toda clase de árboles, que eran atrayentes para la vista y apetitosos para comer;`",
       "reflect":"¿Te ha sucedido que entre varias opciones te dan ganas de elegir la prohibida?"
     },
           {
@@ -36,7 +36,9 @@
           ["👑 serán como dioses", "PODER ", "SOBERBIA"],
           ["🍎 apetitoso y agradable", "PLACER","GULA"],
           ["📚 adquirir conocimiento", "POSEER","AVARICIA"]
-        ]
+        ],
+        "tip":"La soberbia esta vinculada con el valor sobre el poder y su deseo de ejercerlo.\n\nPensar al conocimiento como un objeto (o poseción), i.e. algo que se puede adquirir.",
+              "reflect":""
     },
               {
         "type": "matching",
@@ -48,7 +50,8 @@
           ["Caín", "CELOS","ENVIDIA"],
           ["Lamec","VENGANZA","IRA"]
         ],
-        "tip":"Gn 2,15 `Yavé tomó, pués, al hombre y lo puso en el jardín del Edén para que lo cultivara y lo cuidara.`"
+        "tip":"Gn 2,15 `Yavé tomó, pués, al hombre y lo puso en el jardín del Edén para que lo cultivara y lo cuidara.`",
+              "reflect":""
     },
   {
     "type": "multiple-choice",
@@ -111,7 +114,7 @@
       { "answerText": "Introducir pudor a la vida del Hombre", "isCorrect":  true },
       { "answerText": "Introducir sufrimiento/muerte a la vida del Hombre", "isCorrect":  true  }
     ],
-    "tip":"Cuando nos referimos al Hombre, nos referimos a todos los seres humanos.\n\nGn 3:22 : `No vaya a ser que ahora extienda su mano, tome también del árbol de la vida, coma y viva para siempre. Entonces expulsó al hombre del jardín.`\n\n(CIC 405) Rm 7:20 : `cuando hago lo que no quiero, no soy yo quien lo hace, sino el pecado que reside en mí.`\n\nGn 3:10 : `tuve miedo porque estaba desnudo. Por eso me escondí`.\n\nGn 2,17 Dios dijo: `el día que comas de él, morirás`.",
+    "tip":"Cuando nos referimos al Hombre, nos referimos a todos los seres humanos.\n\nGn 3:22 : `No vaya a ser que ahora extienda su mano, tome también del árbol de la vida, coma y viva para siempre. Entonces expulsó al hombre del jardín.`\n\nSb 19,22 `Por todos los medios, Señor, tu has engrandecido y glorificado a tu pueblo, y no has dejado de asistirlo en todo tiempo y lugar`\n\n(CIC 405) Rm 7:20 : `cuando hago lo que no quiero, no soy yo quien lo hace, sino el pecado que reside en mí.`\n\nGn 3:10 : `tuve miedo porque estaba desnudo. Por eso me escondí`.\n\nGn 2,17 Dios dijo: `el día que comas de él, morirás`.\n\nSb 2,23 `Pero Dios creó al hombre para que no pereciera, y lo hizo inmortal igual que él; por envidia del diablo entró la muerte en el mundo, y los que se pusieron de su lado padecerán.`",
     "reflect":"CIC 389 nos enseña que la doctrina del pecado original es importante para reconocer que TODOS los seres humanos necesitan ser salvados; por ende necesitan reconocerlo a Jesús.\n\n¿Rezás por aquellos seres queridos que no reconocen a Jesús como EL único salvador?"
     },
          {
