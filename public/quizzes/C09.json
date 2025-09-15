@@ -108,7 +108,7 @@
     {
     "type": "multiple-choice",
     "image": "images/adan-y-eva.webp",     
-    "questionText": "¿Cuáles son los efectos del pecado original?",
+    "questionText": "¿Cuales son los efectos del pecado original?",
     "answerOptions": [
       { "answerText": "Alejar al Hombre del arbol de la vida (celestial)", "isCorrect": true },
       { "answerText": "El Hombre es abandonado por Dios", "isCorrect":  false },

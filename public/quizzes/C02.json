@@ -63,11 +63,13 @@
     "questionText": "Completar el versículo en donde justo antes del sacrificio el Ángel de Dios dice a Abraham:\n\nGn 22,12 `'No le hagas nada que ahora sé que tienes _________ de Dios, ya que no me has negado tu único hijo.'`",
     "image": "images/jerusalem-moria-abram.png",
         "answerOptions": [
-      { "answerText": "Piedad", "isCorrect": false },
-      { "answerText": "Sabiduría", "isCorrect": false },
+      { "answerText": "Fe", "isCorrect": false },
       { "answerText": "Fortaleza", "isCorrect": false },
+      { "answerText": "Sabiduría", "isCorrect": false },
+      { "answerText": "Salvación", "isCorrect": false },
       { "answerText": "Temor", "isCorrect": true },
-      { "answerText": "Consejo", "isCorrect": false }
+      { "answerText": "Piedad", "isCorrect": false }
+      
     ],
         "_comment": "",
         "tip":"",
