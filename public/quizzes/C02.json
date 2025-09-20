@@ -35,10 +35,15 @@
          "reflect":""
   },
     {
-      "type": "true-false",
+    "type": "multiple-choice",
            "image": "images/12tribus.png", 
-      "questionText": "La Tierra Prometida por Dios al pueblo de Israel estaba deshabitada, por lo que les resulto sencillo instalarse.",
-      "correctAnswer": false,
+      "questionText": "La Tierra Prometida por Dios al pueblo de Israel:",
+        "answerOptions": [
+      { "answerText": "cuenta con la superficie más baja del planeta (por debajo del nivel del mar)", "isCorrect": true },
+      { "answerText": "estaba deshabitada, por lo que les resulto sencillo instalarse.", "isCorrect": false },
+      { "answerText": "es en su mayoría desértica", "isCorrect": true },
+      { "answerText": "incluye Egipto y Babilonia", "isCorrect": false }
+    ],
         "_comment": "",
         "tip":"",
          "reflect":""
