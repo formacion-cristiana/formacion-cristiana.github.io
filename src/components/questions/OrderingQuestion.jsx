@@ -19,26 +19,19 @@ import {
 import { CSS } from "@dnd-kit/utilities";
 
 function SortableItem({ id }) {
-  const {
-    attributes,
-    listeners,
-    setNodeRef,
-    transform,
+  const { attributes, listeners, setNodeRef, transform, transition } = useSortable({ id });
+
+  const style = {
+    transform: CSS.Transform.toString(transform),
     transition,
-  } = useSortable({ id });
-
-const style = {
-  transform: CSS.Transform.toString(transform),
-  transition,
-  padding: "10px",
-  margin: "4px 0",
-  backgroundColor: "#f0f0f0",
-  border: "1px solid #ccc",
-  borderRadius: "5px",
-  cursor: "grab",
-  touchAction: "manipulation", // ✅ necessary for touch drag to behave correctly
-};
-
+    padding: "10px",
+    margin: "4px 0",
+    backgroundColor: "#f0f0f0",
+    border: "1px solid #ccc",
+    borderRadius: "5px",
+    cursor: "grab",
+    touchAction: "manipulation",
+  };
 
   return (
     <li ref={setNodeRef} style={style} {...attributes} {...listeners}>
@@ -49,30 +42,31 @@ const style = {
 
 function OrderingQuestion({ question, onSubmit }) {
   const [items, setItems] = useState([]);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
-useEffect(() => {
-  const sourceItems = question.correctAnswer;
-  const shuffled = shuffleArray(sourceItems);
-  setItems(shuffled);
-}, [question]);
+  // Shuffle items on mount
+  useEffect(() => {
+    const sourceItems = question.correctAnswer;
+    const shuffled = shuffleArray(sourceItems);
+    setItems(shuffled);
 
+    // Detect touch device on client
+    if (typeof window !== "undefined" && typeof navigator !== "undefined") {
+      setIsTouchDevice('ontouchstart' in window || navigator.maxTouchPoints > 0);
+    }
+  }, [question]);
 
-const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
-const sensors = useSensors(
-  useSensor(isTouchDevice ? TouchSensor : PointerSensor, {
-    activationConstraint: {
-      delay: 100,
-      tolerance: 2,
-    },
-  }),
-  useSensor(KeyboardSensor, {
-    coordinateGetter: sortableKeyboardCoordinates,
-  })
-);
-
-
-
+  const sensors = useSensors(
+    useSensor(isTouchDevice ? TouchSensor : PointerSensor, {
+      activationConstraint: {
+        delay: 100,
+        tolerance: 2,
+      },
+    }),
+    useSensor(KeyboardSensor, {
+      coordinateGetter: sortableKeyboardCoordinates,
+    })
+  );
 
   const handleDragEnd = (event) => {
     const { active, over } = event;
@@ -92,12 +86,7 @@ const sensors = useSensors(
 
   return (
     <div>
-
-      <DndContext
-        sensors={sensors}
-        collisionDetection={closestCenter}
-        onDragEnd={handleDragEnd}
-      >
+      <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
         <SortableContext items={items} strategy={verticalListSortingStrategy}>
           <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
             {items.map((item) => (

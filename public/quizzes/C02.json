@@ -48,7 +48,24 @@
         "tip":"Dios le cambió el nombre luego de un enfrentamiento con un Angel.\n\nLos dos nietos son hijos de José: Efraím y Manasés.",
          "reflect":"Levi también fue hijo, pero no recibió tierra en herencia por que a su descendencia se le encomendó el ministerio sacerdotal. ¿Le encontrás sentido?"
   },
+<<<<<<< HEAD
 
+=======
+    {
+    "type": "multiple-choice",
+           "image": "images/12tribus.png", 
+      "questionText": "La Tierra Prometida por Dios al pueblo de Israel:",
+        "answerOptions": [
+      { "answerText": "cuenta con la superficie más baja del planeta (por debajo del nivel del mar)", "isCorrect": true },
+      { "answerText": "estaba deshabitada, por lo que les resulto sencillo instalarse.", "isCorrect": false },
+      { "answerText": "es en su mayoría desértica", "isCorrect": true },
+      { "answerText": "incluye Egipto y Babilonia", "isCorrect": false }
+    ],
+        "_comment": "",
+        "tip":"",
+         "reflect":""
+    },
+>>>>>>> refs/remotes/origin/main
         {
     "type": "multiple-choice",
     "questionText": "Completar el versículo\n\nGn 22,1 `Dios puso a prueba a _________. Le dijo: Toma a tu hijo, a tu único, al que amas... ve a la región de Moria y ofrécelo allí en holocausto'.`\n\n Unos mil años más tarde, en el monte Moria se construirá el Templo de Israel.",
