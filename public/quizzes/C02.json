@@ -19,9 +19,23 @@
         "tip":"",
          "reflect":""
   },
-          {
+    {
     "type": "multiple-choice",
-    "questionText": "Las 12 tribus llevan el nombre de 10 hijos y 2 nietos de:",
+    "image": "images/palestina-arabia.png",
+      "questionText": "La Tierra Prometida por Dios al pueblo de Israel:",
+        "answerOptions": [
+      { "answerText": "cuenta con la superficie más baja del planeta (por debajo del nivel del mar)", "isCorrect": true },
+      { "answerText": "estaba deshabitada, por lo que les resulto sencillo instalarse.", "isCorrect": false },
+      { "answerText": "es en su mayoría desértica", "isCorrect": true },
+      { "answerText": "incluye Egipto y Babilonia", "isCorrect": false }
+    ],
+        "_comment": "",
+        "tip":"Dt 32,8 `Cuando el Altísimo dio una herencia a cada nación, cuando distribuyó a los hombres, él fijó las fronteras de los pueblos según el número de los hijos de Dios. Pero la parte del Señor es su pueblo. la porción de su herencia es Jacob. Lo encontró en una tierra desierta. en la soledad rugiente de la estepa: lo rodeó y lo cuidó. lo protegió como a la pupila de sus ojos.`",
+         "reflect":""
+    },
+    {
+    "type": "multiple-choice",
+    "questionText": "Las 12 tribus de Israel llevan el nombre de 10 hijos y 2 nietos de:",
       "image": "images/12tribus.png",
       "answerOptions": [
       { "answerText": "Abraham", "isCorrect": false },
@@ -31,18 +45,10 @@
       { "answerText": "Jesús", "isCorrect": false }
     ],
         "_comment": "",
-        "tip":"",
-         "reflect":""
+        "tip":"Dios le cambió el nombre luego de un enfrentamiento con un Angel.\n\nLos dos nietos son hijos de José: Efraím y Manasés.",
+         "reflect":"Levi también fue hijo, pero no recibió tierra en herencia por que a su descendencia se le encomendó el ministerio sacerdotal. ¿Le encontrás sentido?"
   },
-    {
-      "type": "true-false",
-           "image": "images/12tribus.png", 
-      "questionText": "La Tierra Prometida por Dios al pueblo de Israel estaba deshabitada, por lo que les resulto sencillo instalarse.",
-      "correctAnswer": false,
-        "_comment": "",
-        "tip":"",
-         "reflect":""
-    },
+
         {
     "type": "multiple-choice",
     "questionText": "Completar el versículo\n\nGn 22,1 `Dios puso a prueba a _________. Le dijo: Toma a tu hijo, a tu único, al que amas... ve a la región de Moria y ofrécelo allí en holocausto'.`\n\n Unos mil años más tarde, en el monte Moria se construirá el Templo de Israel.",
