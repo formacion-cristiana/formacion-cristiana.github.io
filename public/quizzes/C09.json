@@ -38,7 +38,7 @@
           ["📚 adquirir conocimiento", "POSEER","AVARICIA"]
         ],
         "tip":"La SOBERBIA es el pecado capital a partir del cual la identidad individual se sobrevalora resultando en egoismo y orgullo egoico. En este caso las obras individuales buscan la propia voluntad y favorecer el bien propio sin considerar el bien del prójimo. Para poder ejercer la propia voluntad, la búsqueda de poder pasa a ser prioridad.\n\nPro 16,5.18 `Yavé odia el corazón altanero, que seguramente no quedará sin castigo...Antes de la ruina hubo orgullo; antes de la caida, espíritu altanero.`\n\nLa GULA es el pecado capital a partir del cual la búsqueda del bienestar (placer) que uno encuentra al satisfacer las necesidades naturales de nuestro cuerpo nos aleja de un estado de salud. Por otro lado suele dificultar la consideración de las necesidad básicas del prójimo.\n\nPro 23,2.20 `clava un cuchillo en tu garganta, si tienes mucho apetito... No te juntes con los borrachos ni con los que se hartan de carne, porque el borracho y el glotón se empobrecen, y la modorra hace andar vestido con harapos.`\n\nPensar al conocimiento como un objeto (o poseción), i.e. algo que se puede adquirir.\n\nPro 16,16 `Más vale adquirir la sabiduría que el oro`.",
-        "reflect":"¿El poder de cual super-heroe te gustaría tener? (hoy o cuando eras chico) ¿Has usado una capacidad tuya para humillar o dejar mal parado a alguien?\n\n¿Cual es tu comida favorita? ¿Hay alguna comida que te hace mal y la comés igual?\n\n¿Qué conocimiento tenés que para vos es tan valioso que te gustaría dejarselo en herencia a tus hijos? ¿Hay algún conocimiento que no quisieras compartir?"
+        "reflect":"`PODER`\n¿El poder de cual super-heroe te gustaría tener? (hoy o cuando eras chico) ¿Has usado una capacidad tuya para humillar o dejar mal parado a alguien?\n\n`PLACER`\n¿Cual es tu comida favorita? ¿Hay alguna comida que te hace mal y la comés igual?\n\n`POSEER`\n¿Qué conocimiento tenés que para vos es tan valioso que te gustaría dejarselo en herencia a tus hijos? ¿Hay algún conocimiento que no quisieras compartir?"
     },
               {
         "type": "matching",
@@ -51,7 +51,7 @@
           ["Lamec","VENGANZA","IRA"]
         ],
         "tip":"Gn 2,15 `Yavé tomó, pués, al hombre y lo puso en el jardín del Edén para que lo cultivara y lo cuidara.`\n\nSb 9,1 `Dios de nuestros padres y Señor de la misericordia que con tu palabra hicicste todas las cosas; con tu sabiduría formaste al hombre, para que dominase sobre tus criaturas, y para que rigiese el mundo con santidad y justicia y lo gobernase con rectitud de corazón.`\n\nGn 4,5 `A Yavé le agradó Abel y su ofrenda, mientras que le desagradó Caín y la suya. Caín entonces se enojo mucho y su rostro se descompuso.`\n\nGn 4,23 `Dijo, pues, Lamec a sus mujeres Ada y Sella: 'Escúchenme ustedes, mujeres de Lamec, pongan atención a mis palabras: yo he muerto a un hombre por la herida que me hizo y a un muchacho po un moretón que recibí. Si Cain ha de ser vengado siete veces, Lamec ha de serlo setenta y siete veces.'`",
-        "reflect":"¿Te es fácil cumplir con tus responsabilidades o te da pereza?\n\nCuando a un compañero (de trabajo, familia, etc.) le ha ido bien y a vos no, ¿te has desanimadpo? ¿te ha dado envidia?\n\nCuando alguien te hace daño, ¿buscás justicia por tus propios medios?, ¿cómo te sentís si el agresor sale impune?"
+        "reflect":"> ¿Te es fácil cumplir con tus responsabilidades o te da pereza?\n\n> Cuando a un compañero (de trabajo, familia, etc.) le ha ido bien y a vos no, ¿te has desanimadpo? ¿te ha dado envidia?\n\n> Cuando alguien te hace daño, ¿buscás justicia por tus propios medios?, ¿cómo te sentís si el agresor sale impune?"
     },
   {
     "type": "multiple-choice",
@@ -65,7 +65,7 @@
       { "answerText": "Satanás", "isCorrect": false }
     ],
     "tip":"(CIC 388) En esta carta de Pablo, la iglesia encuentra la clave interpretativa del pecado original, basándose en la gracia salvadora que solo Cristo trae a todos los hombres.",
-    "reflect":"¿Has vivido una experiencia de grupo donde la mala acción de uno perjudicó al resto?\n\n¿Te parece justo que 'la falta de uno solo causó la condenación de todos'?\n\n¿Te resulta natural que la buena acción de uno amerite la salvación de todos? ¿Se te ocurre algún juego de equipo donde la acción de uno lleva al resto a la gloria?"
+    "reflect":"> ¿Has vivido una experiencia de grupo donde la mala acción de uno perjudicó al resto?\n\n| ¿Te parece justo que 'la falta de uno solo causó la condenación de todos'?\n\n> ¿Te resulta natural que la buena acción de uno amerite la salvación de todos?\n¿Se te ocurre algún juego de equipo donde la acción de uno lleva al resto a la gloria?"
   },    
   {
     "type": "multiple-choice",
@@ -124,7 +124,7 @@
     "image": "images/adan-y-eva.webp",       
       "questionText": "La redención de Cristo, luego de la parusía, lleva al Hombre al mismo estado original del Edén.",
       "correctAnswer": false,
-        "tip":"Rm 5,20 `Donde abundó el pecado, sobreabundó la gracia.`\n\n(CIC 412) Dios es evolución, de manera que permite que los males resulten en un mayor bien.",
+        "tip":"Dios es evolución, de manera que permite que los males resulten en un mayor bien.\n\nRm 5,20 `Donde abundó el pecado, sobreabundó la gracia.`\n\n (CIC 412) Ante la pregunta ¿por qué Dios no impidió que el primer hombre pecara? San León Magno responde: 'La gracia inefable de Cristo nos ha dado bienes mejores que los que nos quitó la envidia del demonio' (Sermones, 73,4: PL 54, 396)",
       "reflect":"¿Has tenido una experiencia desagradable/dolorosa que te ha fortalecido o ayudado a madurar?"
     }
     ]
