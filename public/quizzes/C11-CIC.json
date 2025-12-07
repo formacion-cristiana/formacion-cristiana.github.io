@@ -6,17 +6,27 @@
   "questions": [
    {
       "type": "matching",
-      "image": "images/adan-y-eva.webp", 
-      "questionText": "EL DESEO DE DIOS\n\n",
-      "columns": ["Nombre", "Etimología", "Significado"],
+      "image": "images/", 
+      "questionText": "Formular tres preguntas vinculadas a las virtudes teologales cristianas y asociar cada una con un momento temporal característico.\n\n",
+      "columns": ["Pregunta", "Virtud CRISTIANA", "Tiempo"],
       "correctAnswer": [
-        ["Edén","ēden:= delicia","lugar paradisíaco"],
-        ["Adán","adamah:=tierra/suelo","Hombre/Humano"],
-        ["Eva","hava:=vida","madre de los vivientes"]
+        ["¿Cuál es ","la FE?","viene del pasado"],
+        ["¿Cómo vivimos","la CARIDAD?","se vive en el presente"],
+        ["¿Dónde está","la ESPERANZA?","esta futuro"]
+      ],
+      "tip":"Si bien las tres virtudes se viven en el presente, hay una que en relación a los cristianos, que nos viene del pasado -i.e. nos ha sido transmitida por la tradición-. Hay otra que siempres tiene puesta la mirada en el futuro.     Aquello que se vive en el presente, se refiere a la ayuda a los demás, que la necesitan hoy."
+    },   {
+      "type": "matching",
+      "image": "images/", 
+      "questionText": "EL CATECISMO esta dividido en cuatro partes que podemos asociar a las tres virtudes teologales\n\n",
+      "columns": ["Virtud", "Catecismo", "Significado"],
+      "correctAnswer": [
+        ["¿Cuál es la FE?","CREDO","tradición"],
+        ["¿Cómo vivimos el AMOR?","DERECHOS Y DEBERES","gracia y ley"],
+        ["¿Dónde está la ESPERANZA?","ORACIÓN","cielo"]
       ],
       "tip":""
     },
-
         {
       "type": "true-false",
            "image": "", 
