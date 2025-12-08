@@ -1,5 +1,3 @@
-Una pregunta por cada profecía en Mt 1-4
-
 Dios le prometió a abraham: tierra, descendencia, hijo
 
 diferencia entre la descendencia numerosa de abraham y numerosa
@@ -10,7 +8,7 @@ diferencia entre la descendencia numerosa de abraham y numerosa
 
  Sb 1,1 `Amen la justicia, ustedes, los que gobiernan la tierra, piensen rectamente acerca del Señor y búsquenlo con sencillez de corazón.`
 
- Eclo 15,1 ` el que se aferra a la Ley logrará la sabiduría`
+Eclo 15,1 ` el que se aferra a la Ley logrará la sabiduría`
 
 La familia de Abraham: Esta familia, inicialmente formada por la fe en el único Dios verdadero, continua por la fe en Dios Uno y Trino predicado por Jesús.
 
@@ -129,32 +127,66 @@ La familia de Abraham: Esta familia, inicialmente formada por la fe en el único
                   {
         "type": "matching",
         "image": "images/evolucion-cristianismo.png", 
-        "questionText": "Unir a cada religión/pueblo con su sobrenombre, referente y lugar de origen (o característico).",
-            "columns": [ "Religión", "Sobrenombre","Referente","Independencia","Cede","Expansión"],
+        "questionText": "Unir a cada religión/pueblo con su sobrenombre, referente y fecha de su independencia.",
+            "columns": [ "Religión", "Sobrenombre","Referente","Independencia"],
         "correctAnswer": [
-        ["Iglesia católica apostólica romana", "católicos", "San Pedro","333", "Italia (Roma)","España"],
-["Iglesia católica apostólica asiria","asirios","Santo Tomás","420","Irak","India, China"] ,     
-["Iglesias ortodoxas orientales", "orientales/coptos", "San Marcos", "451", "Egipto (Alejandría)","Armenia"],
-["Iglesia católica apostólica ortodoxa", "ortodoxos", "San Andrés",  "Gran cisma 1000", "Turquía (Constantinopla)"," Rusia"],
-["Iglesia Evangélica", "Protestantes/reformistas", "Luthero",  "Reforma 1500", "Alemania","Inglaterra"]
+        ["Iglesia católica apostólica romana", "católicos", "Pedro","333"],
+["Iglesia católica apostólica asiria","asirios","Tomás","420"] ,     
+["Iglesias ortodoxas orientales", "orientales/coptos", "Marcos", "451"],
+["Iglesia católica apostólica ortodoxa", "ortodoxos", "Andrés",  "Gran cisma 1000"],
+["Iglesia Evangélica", "Protestantes/reformistas", "Luthero",  "Reforma 1500"]
           ],
         "_comment": "",
         "tip":"",
         "reflect":""
       },  
-                            {
+                  {
         "type": "matching",
         "image": "images/evolucion-cristianismo.png", 
-        "questionText": "Unir a cada religión/pueblo con su sobrenombre, referente y lugar de origen (o característico).",
-            "columns": [ "Religión", "Sobrenombre","Referente","Independencia","Cede","Expansión"],
+        "questionText": "Unir a cada religión/pueblo con su referente y lugar de origen (o característico).",
+            "columns": [ "Religión","Independencia","Cede","Expansión"],
         "correctAnswer": [
-        ["Iglesia católica apostólica romana", "católicos", "San Pedro","333", "Italia (Roma)","España"],
-["Iglesia católica apostólica asiria","asirios","Santo Tomás","420","Irak","India, China"] ,     
-["Iglesias ortodoxas orientales", "orientales/coptos", "San Marcos", "451", "Egipto (Alejandría)","Armenia"],
-["Iglesia católica apostólica ortodoxa", "ortodoxos", "San Andrés",  "Gran cisma 1000", "Turquía (Constantinopla)"," Rusia"],
-["Iglesia Evangélica", "Protestantes/reformistas", "Luthero",  "Reforma 1500", "Alemania","Inglaterra"]
+[ "católicos","300", "Italia (Roma)","Iberia -> LatinoAmerica"],
+["asirios","420","Irak","India, China"] ,     
+[ "orientales/coptos",  "451", "Egipto (Alejandría)","Armenia"],
+["ortodoxos", "1000", "Turquía (Constantinopla)","Rusia"],
+["Protestantes/reformistas",  "1500", "Alemania","Inglaterra -> NorteAmerica"]
           ],
         "_comment": "",
         "tip":"",
         "reflect":""
       },
+                            {
+        "type": "matching",
+        "image": "images/evolucion-cristianismo.png", 
+        "questionText": "Unir a cada religión/pueblo con su sobrenombre, referente y lugar de origen (o característico).",
+            "columns": [ "Religión","Apostol","Independencia","Cede"],
+        "correctAnswer": [
+        ["católicos", "Pedro","300", "Lo que ates en la tierra quedará atado en el cielo"],
+["asirios","Tomás","400","Señor mío y Dios mio"] , 
+["ortodoxos", "Andrés",  "1000", "A su hermano le dijo 'Hemos encontrado al Mesías'"], 
+["Reformistas", "Pablo",  "1500","Todos tenemos dones diferentes"],
+         ["Marianos", "Juan",  "1900","Hijo ahi tienes a tu madre"],
+         ["Franciscanos", "Felipe",  "?","Ustedes harán cosas aún mayores"]
+        ],
+        "_comment": "",
+        "tip":"",
+        "reflect":""
+      },
+                            {
+        "type": "matching",
+        "image": "images/evolucion-cristianismo.png", 
+        "questionText": "Unir a cada religión/pueblo con su sobrenombre, referente y lugar de origen (o característico).",
+            "columns": [ "Religión","Apostol","Independencia","Cede"],
+        "correctAnswer": [
+        ["católicos", "Pedro","300", "Judios vs. Gentiles"],
+["asirios","Tomás","400","Razón vs. Milagro"] , 
+["ortodoxos", "Andrés",  "1000", "Pentarquía vs. Monarquía"], 
+["Reformistas", "Pablo",  "1500","Dones vs. Sacramentos"],
+         ["Marianos", "Juan",  "1900","Libertad vs. Dogma"],
+         ["Franciscanos", "Felipe",  "?","Órganos vs. Rebaño"]
+        ],
+        "_comment": "",
+        "tip":"",
+        "reflect":""
+      }
