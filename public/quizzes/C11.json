@@ -56,9 +56,46 @@ La familia de Abraham: Esta familia, inicialmente formada por la fe en el único
       { "answerText": "Jesús", "isCorrect": true }
       ],
     "tip":"Hch 7:17-21 `Al acercarse el tiempo en que debía cumplirse la promesa que Dios había hecho a Abraham, el pueblo creció y se multiplicó en Egipto, hasta que vino un nuevo rey que no sabía nada acerca de José. Este rey, empleando la astucia contra nuestro pueblo, maltrató a nuestros padres y los obligó a que abandonaran a sus hijos recién nacidos para que no sobrevivieran. En ese tiempo nació Moisés, que era muy hermoso delante de Dios. Durante tres meses fue criado en la casa de su padre, y al ser abandonado, la hija del Faraón lo recogió y lo crió como a su propio hijo.`\n\n---\n\nMt 2,13 `Después de la partida de los magos, el Angel del Señor se apareció en sueños a José y le dijo: «Levántate, toma al niño y a su madre, huye a Egipto y permanece allí hasta que yo te avise, porque Herodes va a buscar al niño para matarlo».\n\nMt 2,16 `Al verse engañado por los magos, Herodes se enfureció y mandó matar, en Belén y sus alrededores, a todos los niños menores de dos años, de acuerdo con la fecha que los magos le habían indicado.`"
-  }
-
-
+  },
+   {
+        "type": "matching",
+        "questionText": "Distinguir entre las personas, las regiones y los lugares santos a lo largo de la historia de la salvación:",
+            "columns": [ "-1900", "-1600","-1000","-600","-500","33"],
+        "correctAnswer": [
+          ["Abraham","Jacob","David","Josías","Zorobabel","Pedro"],
+          ["Babilonia","Egipto","Israel","Babilonia","Judá","Galilea"],
+          ["Altar", "Tabernáculo","Templo 1","Sinagogas","Templo 2","Senaculo"]
+          ],
+        "_comment": "",
+        "tip":"`",
+        "reflect":" "
+      },  
+   {
+        "type": "matching",
+        "questionText": "Unir los eventos que conforman una historia:",
+            "columns": [ "Concepción", "Inicio","Desafío/Prueba","Resurgir"],
+        "correctAnswer": [
+         ["Hijos de Jacob","Primera Pascua","Cruce del mar rojo","Arca de la Alianza"],
+         ["Tabernáculo del Sinaí","Construcción del Templo","Destierro a Babilonia","Reconstrucción del Templo"],
+          ["Templo de Jerusalem","Pesebre de Belén","Exilio a Egipto","Hogar de Nazareth"],
+          ],
+        "_comment": "",
+        "tip":"`",
+        "reflect":" "
+      },  
+   {
+        "type": "matching",
+        "questionText": "Unir los eventos que conforman una historia:",
+            "columns": [ "Concepción", "Inicio","Desafío/Prueba","Resurgir"],
+        "correctAnswer": [
+          ["Esclavitud en Egipto","Canasta en el Nilo","Exilio a Maidian","Zarza Ardiente"],
+         ["Tierra Prometida","Victoria de David","Exilio a Filistea","Reinado de David"]
+          ["Hogar en Nazareth", "Bautismo en el Jordán","Tentasiones del Desierto","Misión a Galilea"]
+          ],
+        "_comment": "",
+        "tip":"`",
+        "reflect":" "
+      },  
       {
         "type": "matching",
         "questionText": "La Tierra Santa es la tierra que tuvo el honor de recibir a Dios encarnado. \n\nUnir a cada persona elegida por Dios, la promesa que Dios le hace",
