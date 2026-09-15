@@ -9,6 +9,7 @@ Juego estático para GitHub Pages, sin servidor.
 - `app.js`: lógica del juego.
 - `palabras-es.js`: datos de las palabras.
 - `texto-es.js`: textos visibles de la interfaz.
+- `soluciones.html`: muestra las soluciones (estan desordenadas)
 
 ## Otro idioma
 
