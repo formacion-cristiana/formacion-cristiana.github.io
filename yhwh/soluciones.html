@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Categorías y Palabras Objetivo</title>
+  <style>
+    :root {
+      --bg-color: #f4f6f9;
+      --card-bg: #ffffff;
+      --text-color: #2c3e50;
+      --accent-color: #3498db;
+      --border-color: #e2e8f0;
+      --muted-color: #64748b;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      margin: 0;
+      padding: 24px;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 8px 0;
+      color: var(--text-color);
+      font-size: 2rem;
+    }
+
+    .subtitle {
+      color: var(--muted-color);
+      font-size: 1rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+
+    .category-card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 18px;
+      border: 1px solid var(--border-color);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .category-header {
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 8px;
+    }
+
+    .category-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: 0 0 4px 0;
+      color: #1e293b;
+    }
+
+    .category-fortext {
+      font-size: 0.88rem;
+      color: var(--muted-color);
+      font-style: italic;
+    }
+
+    .subcategory-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .subcategory-item {
+      background: #f8fafc;
+      border-radius: 8px;
+      padding: 10px;
+      border: 1px solid #edf2f7;
+    }
+
+    .subcategory-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #334155;
+      margin-bottom: 4px;
+    }
+
+    .subcategory-fortext {
+      font-size: 0.8rem;
+      color: #64748b;
+      margin-bottom: 6px;
+    }
+
+    .words-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .word-badge {
+      background: #e0f2fe;
+      color: #0369a1;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <a href="#" onclick="history.back(); return false;">YHWH</a>
+
+  <div class="container">
+    <header>
+      <h1 id="title"></h1>
+      <div class="subtitle" id="subtitle"></div>
+    </header>
+    <main class="grid" id="soluciones-grid"></main>
+  </div>
+
+  <script type="module">
+    let currentLang = 'es';
+
+    async function renderSoluciones(lang) {
+      const grid = document.getElementById('soluciones-grid');
+      if (!grid) return;
+      grid.innerHTML = '';
+
+      try {
+        const wordMod = await import(`./palabras-${lang}.js`);
+        const WORD_DATA = wordMod.WORD_DATA || [];
+
+        WORD_DATA.forEach(cat => {
+          const card = document.createElement('article');
+          card.className = 'category-card';
+
+          let subcategoriesHTML = '';
+          cat.words.forEach(sub => {
+            const wordsBadges = sub.words.map(w => `<span class="word-badge">${w}</span>`).join('');
+            subcategoriesHTML += `
+              <div class="subcategory-item">
+                <div class="subcategory-name">${sub.category}</div>
+                ${sub.fortext ? `<div class="subcategory-fortext">${sub.fortext}</div>` : ''}
+                <div class="words-flex">${wordsBadges}</div>
+              </div>
+            `;
+          });
+
+          card.innerHTML = `
+            <div class="category-header">
+              <div class="category-title">${cat.category}</div>
+              ${cat.fortext ? `<div class="category-fortext">${cat.fortext}</div>` : ''}
+            </div>
+            <div class="subcategory-list">
+              ${subcategoriesHTML}
+            </div>
+          `;
+
+          grid.appendChild(card);
+        });
+      } catch (e) {
+        console.error("Error cargando las soluciones:", e);
+      }
+    }
+
+    window.addEventListener('message', (e) => {
+      if (e.data && e.data.type === 'CHANGE_LANG') {
+        currentLang = e.data.lang;
+        renderSoluciones(currentLang);
+      }
+    });
+
+    renderSoluciones(currentLang);
+  </script>
+</body>
+</html>

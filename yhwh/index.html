@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YHWH</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-main-row">
+      <div class="header-title-container">
+        <h1>YHWH</h1>
+      </div>
+    </div>
+    <p id="subtitle"></p>
+  </header>
+
+  <main id="app">
+    <section id="screen-start" class="screen">
+      <div class="start-top-bar">
+        <div class="start-controls-left">
+          <button id="start-game" class="primary"></button>
+          <div class="players-inline-selection">
+            <label><span id="players-label"></span>
+              <select id="players"></select>
+            </label>
+          </div>
+        </div>
+        <div class="header-controls-right">
+          <button id="config-btn" class="config-btn" aria-label="Configuración">⚙️</button>
+          <button id="info-btn" class="info-btn" aria-label="Reglas del juego">ℹ</button>
+          <div class="lang-selector">
+            <select id="lang-scroll" aria-label="Seleccionar idioma">
+              <option value="es">🇪🇸 ES</option>
+              <option value="it">🇮🇹 IT</option>
+              <option value="en">🇬🇧 EN</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div id="config-panel" class="config-panel hidden">
+        <div class="settings-grid">
+          <label><span id="time-label"></span>
+            <input id="turn-time" type="number" min="10" max="3600" step="10" value="120">
+          </label>
+          <label><span id="rounds-label"></span>
+            <input id="round-total" type="number" min="1" max="20" value="3">
+          </label>
+          <label><span>Cantidad de categorías (sugeridas)</span>
+            <input id="config-cat-count" type="number" min="1" max="20" value="3">
+          </label>
+          <label><span id="sort-categories-label"></span>
+      <select id="config-cat-sort">
+        <option value="az" id="sort-opt-az"></option>
+        <option value="difficulty" id="sort-opt-difficulty"></option>
+        <option value="random" id="sort-opt-random"></option>
+      </select>
+    </label>
+        </div>
+
+        <div class="player-color-selection">
+          <h3 id="player-colors-title">Nombres y colores de los jugadores</h3>
+          <div id="player-colors" class="player-colors"></div>
+          <div id="player-color-options" class="player-color-options"></div>
+        </div>
+      </div>
+
+      <div class="tags-selection-container">
+        <h3>Tags</h3>
+        <div id="tags-cloud" class="tags-cloud"></div>
+      </div>
+
+      <div class="category-selection">
+        <div class="section-heading">
+          <h3 id="categories-title"></h3>
+          <button id="random-categories" class="secondary"></button>
+        </div>
+        <p id="category-count"></p>
+        <div id="categories" class="category-grid"></div>
+      </div>
+
+      <p id="start-error" class="error"></p>
+
+      <!-- Glosario ubicado únicamente dentro de la landing page -->
+      <a href="soluciones.html">Ver las categorías con sus contenidos</a>
+
+<!-- Glosario de Categorías -->
+<details id="glossary-categories-details" style="margin-top: 15px; text-align: left;">
+  <summary style="font-weight: bold; cursor: pointer; padding: 10px 0; font-size: 1.1rem; color: var(--primary, #2b6cb0);">
+    Glosario de Categorías
+  </summary>
+  <div id="categories-alphabet-nav" class="alphabet-nav" style="display: flex; flex-wrap: wrap; gap: 4px; margin: 10px 0;"></div>
+  <div id="glossary-categories-container" class="glossary-container" style="padding: 10px 0;"></div>
+</details>
+
+<!-- Glosario de Nombres -->
+<details id="glossary-names-details" style="margin-top: 20px; text-align: left;">
+  <summary style="font-weight: bold; cursor: pointer; padding: 10px 0; font-size: 1.1rem; color: var(--primary, #2b6cb0);">
+          <span id="glos-name-title"></span>    
+  </summary>
+  <div id="names-alphabet-nav" class="alphabet-nav" style="display: flex; flex-wrap: wrap; gap: 4px; margin: 10px 0;"></div>
+  <div id="glossary-names-container" class="glossary-container" style="padding: 10px 0;"></div>
+</details>
+
+<!-- Glosario de Palabras -->
+<details id="glossary-words-details" style="margin-top: 15px; text-align: left;">
+  <summary style="font-weight: bold; cursor: pointer; padding: 10px 0; font-size: 1.1rem; color: var(--primary, #2b6cb0);">
+    <span id="glos-title"></span> 
+  </summary>
+  <div id="words-alphabet-nav" class="alphabet-nav" style="display: flex; flex-wrap: wrap; gap: 4px; margin: 10px 0;"></div>
+  <div id="glossary-words-container" class="glossary-container" style="padding: 10px 0;"></div>
+</details>
+
+    </section>
+
+    <section id="screen-game" class="screen hidden">
+      <div class="game-left-column">
+        <div id="game-active-panel">
+          <div id="scoreboard" class="scoreboard"></div>
+
+          <div class="game-top">
+            <div>
+              <div id="round-label"></div>
+              <div id="turn-label"></div>
+            </div>
+            <div class="timer-controls">
+              <div id="timer" class="timer">00:40</div>
+              <button id="pause-time" class="secondary"></button>
+            </div>
+          </div>
+
+          <div id="round-card" class="round-card">
+            <div id="clue-stage" class="clue-stage"></div>
+            <div id="attempt-status" class="attempt-status"></div>
+
+            <div class="guess-form-container">
+              <div class="guess-inputs-row">
+                <div id="guess-words" class="guess-words"></div>
+                <div class="action-buttons-col">
+                  <button id="reveal-hint-btn" class="secondary">REVELAR PISTA (-1 pts)</button>
+                  <button id="submit-guess" class="primary">RESPONDER</button>
+                </div>
+              </div>
+              <div id="guess-categories" class="guess-categories" role="group" aria-label="Categorías"></div>
+            </div>
+            <div id="feedback" class="feedback"></div>
+            <div id="feedback-modal" class="feedback-modal hidden" role="alertdialog" aria-live="assertive">
+              <div class="feedback-box">
+                <div id="feedback-message" class="feedback"></div>
+                <button id="feedback-continue" class="primary"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="reveal-in-column" class="computer-reveal hidden">
+          <div class="computer-badge" id="computer-badge"></div>
+          <h2 id="reveal-title"></h2>
+          <div class="reveal-table">
+            <div class="reveal-row"><span class="reveal-label">Categoría / subcategoría</span><strong id="revealed-category"></strong></div>
+            <div class="reveal-row"><span class="reveal-label">Fortext</span><span id="reveal-fortext"></span></div>
+            <div class="reveal-row"><span class="reveal-label">Palabra</span><strong id="revealed-word" class="revealed-word"></strong></div>
+            <div class="reveal-row"><span class="reveal-label">Ayuda / sinónimo</span><span id="reveal-help"></span></div>
+          </div>
+          <button id="continue-reveal" class="primary"></button>
+        </div>
+      </div>
+
+      <div class="board">
+        <div class="board-header">
+          <h2 id="board-title">
+            <span id="board-title-text">Palabras descubiertas</span>
+            <span id="discovered-count" class="small-counter">0</span>
+          </h2>
+          <div id="in-game-header-controls" class="header-controls-right"></div>
+        </div>
+        <div id="board-categories"></div>
+      </div>
+    </section>
+
+    <section id="screen-end" class="screen hidden">
+      <h2 id="end-title"></h2>
+      <div id="final-scores"></div>
+      <button id="new-game" class="primary"></button>
+    </section>
+
+    <div id="rules-modal" class="feedback-modal hidden">
+      <div class="feedback-box rules-box">
+        <h2>Reglas del Juego</h2>
+        <div class="rules-content">
+          <p>1. Intenta adivinar la palabra o palabras objetivo y la categoría a la que pertenecen.</p>
+          <p>2. Si aciertas solo la categoría o parte de una palabra compuesta, sumarás puntos parciales y el turno pasará al siguiente jugador.</p>
+          <p>3. Las conectores y palabras en minúsculas son visibles; solo debes adivinar las palabras escritas en MAYÚSCULAS.</p>
+          <p>4. Con el avance de las rondas se irán revelando pistas y vocales.</p>
+          <p>5. Puedes usar el botón "REVELAR PISTA" para forzar una pista inmediata a cambio de 1 punto.</p>
+        </div>
+        <button id="close-rules" class="primary">Cerrar</button>
+      </div>
+    </div>
+  </main>
+
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
