@@ -1,4 +1,4 @@
-# formacion-cristiana.github.io
+![image](logo-titulo.png)
 
 Recursos para acompañar la catequesis
 
