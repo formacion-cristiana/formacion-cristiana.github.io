@@ -23,16 +23,22 @@ body {
   cursor: pointer;
   font-weight: bold;
   padding: 0.8rem 1rem;
-  margin: 1rem;
+  margin: 1rem auto;
   background-color: #4a6fa5;
   color: white;
   border-radius: 10px;
   border: none;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
   text-transform: uppercase;
-  list-style-position: inside;
+  max-width: 700px;
+  text-align: center;
 }
-
+.blueBotton span {
+  white-space: nowrap;
+}
+.blueBotton p {
+  margin: 1px;
+}
 /* ---------------- HEADER ---------------- */
 
 .site-header {
@@ -40,6 +46,7 @@ body {
   padding: 30px 16px 10px;
   max-width: 100%;
   margin: 0 auto;
+
 }
 
 .site-logo {
