@@ -19,6 +19,19 @@ body {
   background: var(--bg);
 }
 
+.blueBotton {
+  cursor: pointer;
+  font-weight: bold;
+  padding: 0.8rem 1rem;
+  margin: 1rem;
+  background-color: #4a6fa5;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  list-style-position: inside;
+}
 
 /* ---------------- HEADER ---------------- */
 
