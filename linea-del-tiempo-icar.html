@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea del Tiempo: La Iglesia desde 1500</title>
+    <style>
+        :root {
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --border-light: #cbd5e1;
+
+            /* Colores por carril temático */
+            --c-est: #334155;      /* Gobierno · Estado - Pizarra */
+            --bg-est: #f1f5f9;
+            --c-igl: #1e3a8a;      /* Gobierno · Iglesia - Azul profundo */
+            --bg-igl: #eff6ff;
+            --c-sec: #991b1b;      /* Secularización - Rojo carmesí */
+            --bg-sec: #fef2f2;
+            --c-for: #065f46;      /* Formación - Verde esmeralda */
+            --bg-for: #ecfdf5;
+            --c-mis: #6b21a8;      /* Mística - Púrpura */
+            --bg-mis: #faf5ff;
+            --c-msn: #b45309;      /* Misión - Ámbar/Ocre */
+            --bg-msn: #fffbeb;
+            --c-tec: #0369a1;      /* Tecnología - Azul cian oscuro */
+            --bg-tec: #f0f9ff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            padding: 14px;
+            line-height: 1.25;
+        }
+
+        .timeline-wrapper {
+            max-width: 1480px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 14px 18px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+
+        header h1 {
+            font-size: 1.3rem;
+            color: #0f172a;
+            letter-spacing: -0.02em;
+        }
+
+        header p {
+            font-size: 0.82rem;
+            font-style: italic;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* Estructura de Matriz Cronológica */
+        .matrix-grid {
+            display: grid;
+            grid-template-columns: 125px repeat(6, 1fr);
+            gap: 7px;
+            align-items: stretch;
+        }
+
+        /* Encabezados de Épocas (Eje X) */
+        .axis-corner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.72rem;
+            text-transform: uppercase;
+            color: var(--text-muted);
+            background: #f1f5f9;
+            border-radius: 6px;
+            padding: 6px;
+            text-align: center;
+        }
+
+        .era-header {
+            background: #1e293b;
+            color: #ffffff;
+            border-radius: 6px;
+            padding: 6px 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.15s ease, background-color 0.15s ease;
+        }
+
+        .era-header:hover {
+            background: #334155;
+            transform: translateY(-1px);
+        }
+
+        .era-year {
+            display: inline-block;
+            background: #38bdf8;
+            color: #0f172a;
+            font-weight: 800;
+            font-size: 0.68rem;
+            padding: 1px 6px;
+            border-radius: 10px;
+            margin-bottom: 2px;
+        }
+
+        .era-title {
+            font-size: 0.78rem;
+            font-weight: 700;
+            line-height: 1.15;
+        }
+
+        /* Etiquetas de Carriles Temáticos (Eje Y) */
+        .track-label {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 6px 9px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.76rem;
+            border-left: 4px solid;
+        }
+
+        .track-label small {
+            font-size: 0.63rem;
+            font-weight: 600;
+            opacity: 0.85;
+        }
+
+        .track-est { background: var(--bg-est); color: var(--c-est); border-color: var(--c-est); }
+        .track-igl { background: var(--bg-igl); color: var(--c-igl); border-color: var(--c-igl); }
+        .track-sec { background: var(--bg-sec); color: var(--c-sec); border-color: var(--c-sec); }
+        .track-for { background: var(--bg-for); color: var(--c-for); border-color: var(--c-for); }
+        .track-mis { background: var(--bg-mis); color: var(--c-mis); border-color: var(--c-mis); }
+        .track-msn { background: var(--bg-msn); color: var(--c-msn); border-color: var(--c-msn); }
+        .track-tec { background: var(--bg-tec); color: var(--c-tec); border-color: var(--c-tec); }
+
+        /* Tarjetas de Eventos (compatibles con arbol/info-panel.js) */
+        .node {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-top: 3px solid;
+            border-radius: 6px;
+            padding: 6px 8px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.15s ease;
+        }
+
+        .node:hover {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+            transform: translateY(-1px);
+        }
+
+        .node.est { border-top-color: var(--c-est); background-color: #f8fafc; }
+        .node.igl { border-top-color: var(--c-igl); background-color: #fafcff; }
+        .node.sec { border-top-color: var(--c-sec); background-color: #fffafa; }
+        .node.for { border-top-color: var(--c-for); background-color: #f9fefb; }
+        .node.mis { border-top-color: var(--c-mis); background-color: #fcfaff; }
+        .node.msn { border-top-color: var(--c-msn); background-color: #fffdf7; }
+        .node.tec { border-top-color: var(--c-tec); background-color: #f4fbfd; }
+
+        .main-text {
+            font-weight: 700;
+            font-size: 0.74rem;
+            color: #0f172a;
+            margin-bottom: 2px;
+        }
+
+        .sub-text {
+            font-size: 0.66rem;
+            color: #475569;
+            line-height: 1.2;
+        }
+
+        .event-tag {
+            align-self: flex-start;
+            margin-top: 4px;
+            font-size: 0.58rem;
+            font-weight: 600;
+            padding: 1px 5px;
+            border-radius: 4px;
+            background: #f1f5f9;
+            color: #334155;
+        }
+
+        /* Panel flotante de información (idéntico al original) */
+        #info-panel {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 380px;
+            max-width: calc(100vw - 40px);
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-left: 5px solid #1e293b;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+        }
+
+        #info-panel button {
+            float: right;
+            background: #f1f5f9;
+            border: none;
+            border-radius: 4px;
+            padding: 3px 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            color: #334155;
+        }
+
+        #panel-title {
+            font-size: 1rem;
+            color: #0f172a;
+            margin-bottom: 8px;
+            padding-right: 60px;
+        }
+
+        #panel-desc {
+            font-size: 0.85rem;
+            color: #334155;
+            line-height: 1.45;
+        }
+
+        /* Optimización estricta para impresión A4 Horizontal */
+        @media print {
+            @page {
+                size: A4 landscape;
+                margin: 5mm;
+            }
+            body {
+                background: #ffffff;
+                padding: 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .timeline-wrapper {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                max-width: 100%;
+            }
+            header {
+                margin-bottom: 5px;
+                padding-bottom: 3px;
+            }
+            header h1 {
+                font-size: 1.05rem;
+            }
+            header p {
+                font-size: 0.68rem;
+            }
+            .matrix-grid {
+                gap: 3px;
+                grid-template-columns: 95px repeat(6, 1fr);
+            }
+            .era-header {
+                padding: 3px;
+            }
+            .era-title {
+                font-size: 0.66rem;
+            }
+            .track-label {
+                padding: 3px 5px;
+                font-size: 0.66rem;
+            }
+            .node {
+                padding: 3px 4px;
+                break-inside: avoid;
+            }
+            .main-text {
+                font-size: 0.64rem;
+            }
+            .sub-text {
+                font-size: 0.56rem;
+            }
+            .event-tag {
+                font-size: 0.52rem;
+                margin-top: 1px;
+            }
+            #info-panel {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="timeline-wrapper">
+    <header>
+        <h1>Línea del Tiempo: Estado, Secularización, Tecnología e Iglesia (1500 – Presente)</h1>
+        <p>«Id, pues, y haced discípulos a todas las gentes... y sabed que yo estoy con vosotros todos los días hasta el fin del mundo» (Mt 28, 19-20)</p>
+    </header>
+
+    <div class="matrix-grid">
+        <!-- FILA 0: EJE TEMPORAL (Hitos) -->
+        <div class="axis-corner">Ejes / Hitos</div>
+
+        <div class="era-header" data-era="1500 – 1600" data-title="Reforma y Concilio de Trento" data-info="Auge de las monarquías nacionales, ruptura protestante en Europa y expansión hacia América y Asia. La Iglesia responde con una profunda reforma doctrinal y disciplinar en Trento (1545-1563).">
+            <span class="era-year">1500</span>
+            <div class="era-title">Reforma &amp; Trento</div>
+        </div>
+
+        <div class="era-header" data-era="1600 – 1700" data-title="Siglo XVII: Barroco y Ciencia" data-info="Consolidación post-tridentina, nacimiento de la ciencia experimental moderna, conflictos en torno a la gracia y el rigorismo, y centralización de las misiones globales.">
+            <span class="era-year">1600</span>
+            <div class="era-title">Barroco &amp; Ciencia</div>
+        </div>
+
+        <div class="era-header" data-era="1700 – 1800" data-title="Ilustración y Revoluciones" data-info="Siglo de las Luces, absolutismo ilustrado que intenta controlar a la Iglesia (regalismo) y estallido de la Revolución Francesa (1789), que rompe con la cristiandad tradicional.">
+            <span class="era-year">1700</span>
+            <div class="era-title">Ilustración &amp; Rev.</div>
+        </div>
+
+        <div class="era-header" data-era="1800 – 1914" data-title="Siglo XIX: Cuestión Social y Vaticano I" data-info="Revolución Industrial, pérdida de los Estados Pontificios (1870), definición de la infalibilidad papal, nacimiento de la Doctrina Social y gran despertar mariano.">
+            <span class="era-year">1800</span>
+            <div class="era-title">Vaticano I &amp; Social</div>
+        </div>
+
+        <div class="era-header" data-era="1914 – 1989" data-title="Siglo XX y Concilio Vaticano II" data-info="Guerras mundiales, totalitarismos y renovación pastoral del Vaticano II (1962-1965): apertura al mundo, reforma litúrgica, ecumenismo y protagonismo del laicado.">
+            <span class="era-year">1900</span>
+            <div class="era-title">Vaticano II</div>
+        </div>
+
+        <div class="era-header" data-era="1989 – Presente" data-title="Siglo XXI: Era Global y Sinodal" data-info="Globalización digital, desplazamiento demográfico del catolicismo hacia el Sur global y camino de sinodalidad y Nueva Evangelización.">
+            <span class="era-year">XXI</span>
+            <div class="era-title">Iglesia Sinodal</div>
+        </div>
+
+        <!-- =========================================================
+             CARRIL 1: GOBIERNO · ESTADO (Formas políticas del mundo)
+             ========================================================= -->
+        <div class="track-label track-est">
+            <span>🏛️ Gobierno</span>
+            <small>Estado / Mundo</small>
+        </div>
+
+        <div class="node est" data-title="Gobierno (Estado): Monarquías Nacionales e Imperios" data-info="Consolidación de las monarquías autoritarias y los imperios ultramarinos (España, Portugal) frente a la fragmentación política del Sacro Imperio Romano Germánico (Paz de Augsburgo: 'Cuius regio, eius religio').">
+            <div class="main-text">Monarquías Nacionales</div>
+            <div class="sub-text">Imperios coloniales y fragmentación del Sacro Imperio.</div>
+            <span class="event-tag">Antiguo Régimen</span>
+        </div>
+
+        <div class="node est" data-title="Gobierno (Estado): Absolutismo Monárquico" data-info="Concentración total del poder político en el rey por supuesto 'derecho divino' (Luis XIV en Francia) y nacimiento del sistema moderno de Estados soberanos tras la Paz de Westfalia (1648).">
+            <div class="main-text">Absolutismo Real</div>
+            <div class="sub-text">«El Estado soy yo» y soberanía estatal (Westfalia, 1648).</div>
+            <span class="event-tag">1648</span>
+        </div>
+
+        <div class="node est" data-title="Gobierno (Estado): Revoluciones Liberales y Constitucionalismo" data-info="Caída del Antiguo Régimen tras la Revolución Francesa (1789) e independencias americanas: soberanía nacional, división de poderes, repúblicas constitucionales e Imperio Napoleónico.">
+            <div class="main-text">Estados Constitucionales</div>
+            <div class="sub-text">Soberanía popular, repúblicas liberales y códigos civiles.</div>
+            <span class="event-tag">1789</span>
+        </div>
+
+        <div class="node est" data-title="Gobierno (Estado): Estados-Nación e Imperialismo Industrial" data-info="Unificación de Italia y Alemania, expansión colonial europea en África y Asia, parlamentarismo burgués y surgimiento del movimiento obrero y socialista ante la Revolución Industrial.">
+            <div class="main-text">Estados-Nación</div>
+            <div class="sub-text">Parlamentarismo liberal, unificaciones e imperialismo.</div>
+            <span class="event-tag">Siglo XIX</span>
+        </div>
+
+        <div class="node est" data-title="Gobierno (Estado): Totalitarismos y Estado del Bienestar" data-info="Choque entre democracias liberales y regímenes totalitarios (fascismo, nazismo, comunismo soviético). Tras 1945 surgen la ONU, los Derechos Humanos, la descolonización y el Estado del Bienestar.">
+            <div class="main-text">Totalitarismos &amp; ONU</div>
+            <div class="sub-text">Guerra Fría, descolonización y democracias sociales.</div>
+            <span class="event-tag">1917–1989</span>
+        </div>
+
+        <div class="node est" data-title="Gobierno (Estado): Globalización y Multipolaridad" data-info="Estados-nación debilitados ante corporaciones tecnológicas globales, migraciones masivas hacia Occidente, crisis de las democracias representativas y reconfiguración geopolítica multipolar.">
+            <div class="main-text">Orden Global Multipolar</div>
+            <div class="sub-text">Poder tecnológico supranacional, migraciones y crisis democrática.</div>
+            <span class="event-tag">Presente</span>
+        </div>
+
+        <!-- =========================================================
+             CARRIL 2: GOBIERNO · IGLESIA (Autoridad y organización eclesial)
+             ========================================================= -->
+        <div class="track-label track-igl">
+            <span>👑 Gobierno</span>
+            <small>Iglesia</small>
+        </div>
+
+        <div class="node igl" data-title="Gobierno (Iglesia): Concilio de Trento y Curia Romana" data-info="Reforma de la disciplina eclesiástica, obligación de residencia de los obispos, creación de las Congregaciones Romanas por Sixto V y defensa de la Tradición y los 7 sacramentos.">
+            <div class="main-text">Trento y Curia</div>
+            <div class="sub-text">Reforma del clero y centralización romana de la reforma.</div>
+            <span class="event-tag">1545–1563</span>
+        </div>
+
+        <div class="node igl" data-title="Gobierno (Iglesia): Propaganda Fide (1622)" data-info="Gregorio XV crea la Congregación de Propaganda Fide para dirigir directamente las misiones mundiales, emancipando el gobierno eclesial del control político de las coronas coloniales.">
+            <div class="main-text">Propaganda Fide</div>
+            <div class="sub-text">Dirección pontificia directa de las misiones y clero nativo.</div>
+            <span class="event-tag">1622</span>
+        </div>
+
+        <div class="node igl" data-title="Gobierno (Iglesia): Resistencia y Concordatos" data-info="El papado resiste las presiones de las cortes ilustradas (que forzaron la supresión temporal de los jesuitas en 1773) y reorganiza las diócesis tras la tormenta revolucionaria mediante concordatos.">
+            <div class="main-text">Resistencia &amp; Concordatos</div>
+            <div class="sub-text">Preservación de la comunión papal tras la Revolución.</div>
+            <span class="event-tag">1801</span>
+        </div>
+
+        <div class="node igl" data-title="Gobierno (Iglesia): Concilio Vaticano I (1870)" data-info="Al perder los Estados Pontificios, el papado concentra su autoridad puramente espiritual: el Concilio Vaticano I define el primado de jurisdicción universal y la infalibilidad pontificia.">
+            <div class="main-text">Vaticano I</div>
+            <div class="sub-text">Primado e infalibilidad papal; fin del poder temporal (1870).</div>
+            <span class="event-tag">1870</span>
+        </div>
+
+        <div class="node igl" data-title="Gobierno (Iglesia): Colegialidad Episcopal (Vaticano II)" data-info="El Concilio Vaticano II equilibra el primado papal con la colegialidad de los obispos (Lumen Gentium), crea el Sínodo de los Obispos, impulsa las conferencias episcopales y reforma la liturgia.">
+            <div class="main-text">Colegialidad</div>
+            <div class="sub-text">Sínodo de los Obispos, conferencias episcopales y liturgia vernácula.</div>
+            <span class="event-tag">Aggiornamento</span>
+        </div>
+
+        <div class="node igl" data-title="Gobierno (Iglesia): Sinodalidad e Iglesia Policéntrica" data-info="Reforma de la Curia (Praedicate Evangelium) orientada a la evangelización; ejercicio de la sinodalidad (escucha y corresponsabilidad de todo el Pueblo de Dios) y mayor peso del Sur global en el colegio cardenalicio.">
+            <div class="main-text">Iglesia Sinodal</div>
+            <div class="sub-text">Corresponsabilidad bautismal y descentralización policéntrica.</div>
+            <span class="event-tag">Presente</span>
+        </div>
+
+        <!-- =========================================================
+             CARRIL 3: SECULARIZACIÓN (Frontera y tensión Estado–Iglesia)
+             ========================================================= -->
+        <div class="track-label track-sec">
+            <span>⚖️ Secularización</span>
+            <small>Estado vs. Iglesia</small>
+        </div>
+
+        <div class="node sec" data-title="Secularización (1500): Patronato Regio e Iglesias Nacionales" data-info="Heredera de la distinción jurídica inaugurada por la Reforma Gregoriana, la tensión se desplaza hacia el control estatal de lo sagrado: en los países protestantes el rey pasa a ser cabeza de su Iglesia nacional (cesaropapismo), mientras en los católicos las coronas ejercen el Patronato Regio para nombrar obispos y controlar bulas.">
+            <div class="main-text">Patronato Regio</div>
+            <div class="sub-text">Monarquías controlan nombramientos; iglesias nacionales en el norte.</div>
+            <span class="event-tag">Cesaropapismo</span>
+        </div>
+
+        <div class="node sec" data-title="Secularización (1600): Regalismo y Galicanismo" data-info="Los monarcas absolutos (especialmente en Francia con el galicanismo) subordinan los asuntos administrativos de la Iglesia al interés de la Corona (razón de Estado), reduciendo la jurisdicción externa del Papa.">
+            <div class="main-text">Regalismo &amp; Galicanismo</div>
+            <div class="sub-text">Subordinación administrativa del clero a la «razón de Estado».</div>
+            <span class="event-tag">Siglo XVII</span>
+        </div>
+
+        <div class="node sec" data-title="Secularización (1789): Desamortización y Laicismo Revolucionario" data-info="La Revolución Francesa rompe la alianza trono-altar: nacionaliza los bienes eclesiásticos (desamortización), exige juramento civil al clero, seculariza el registro civil y el matrimonio, e intenta sustituir el culto cristiano.">
+            <div class="main-text">Desamortización &amp; Laicismo</div>
+            <div class="sub-text">Confiscación de bienes, matrimonio civil y ruptura Estado-Iglesia.</div>
+            <span class="event-tag">1789</span>
+        </div>
+
+        <div class="node sec" data-title="Secularización (1850): Leyes Laicistas y Cuestión Romana" data-info="Los Estados liberales (Kulturkampf en Alemania, leyes laicas en Francia, toma de Roma en 1870) expulsan órdenes religiosas, secularizan la escuela pública y suprimen los Estados Pontificios.">
+            <div class="main-text">Kulturkampf &amp; Leyes Laicas</div>
+            <div class="sub-text">Escuela estatal laica, expulsión de órdenes y toma de Roma.</div>
+            <span class="event-tag">1870–1905</span>
+        </div>
+
+        <div class="node sec" data-title="Secularización (1962): Sana Laicidad y Fin de Confesionalidad" data-info="El Vaticano II (Dignitatis Humanae) reconoce la libertad religiosa y la justa autonomía de las realidades temporales. Los Estados dejan de ser confesionales y, frente a los regímenes comunistas, la Iglesia exige libertad frente al ateísmo de Estado.">
+            <div class="main-text">Libertad Religiosa</div>
+            <div class="sub-text">Fin de los Estados confesionales y sana laicidad (Vaticano II).</div>
+            <span class="event-tag">1965</span>
+        </div>
+
+        <div class="node sec" data-title="Secularización (Siglo XXI): Autofinanciamiento y Pluralismo Post-Cristiano" data-info="El Estado deja de sostener económicamente a la Iglesia (paso al autofinanciamiento de los fieles), leyes civiles se apartan de la moral cristiana y el pluralismo religioso lleva incluso a los primeros gobernantes musulmanes en países históricamente cristianos.">
+            <div class="main-text">Autofinanciamiento &amp; Pluralismo</div>
+            <div class="sub-text">Fin del sostén económico estatal y gobernantes musulmanes en Occidente.</div>
+            <span class="event-tag">Post-Cristiandad</span>
+        </div>
+
+        <!-- =========================================================
+             CARRIL 4: TECNOLOGÍA (Innovación técnica y su impacto en la fe)
+             ========================================================= -->
+        <div class="track-label track-tec">
+            <span>💻 Tecnología</span>
+            <small>Técnica &amp; Difusión</small>
+        </div>
+
+        <div class="node tec" data-title="Tecnología (1500): La Imprenta de Gutenberg y Difusión Bíblica" data-info="La imprenta (inventada a fines del siglo XV pero masificada en el XVI) multiplica la producción de Biblias, catecismos y panfletos teológicos. Permite tanto la fulminante difusión de las tesis de Lutero y traducciones vernáculas como la rápida impresión de los decretos tridentinos.">
+            <div class="main-text">La Imprenta</div>
+            <div class="sub-text">Masificación de textos bíblicos, panfletos y catecismos.</div>
+            <span class="event-tag">Gutenberg</span>
+        </div>
+
+        <div class="node tec" data-title="Tecnología (1600): El Telescopio y la Revolución Científica" data-info="El perfeccionamiento del telescopio por Galileo Galilei revoluciona la astronomía y altera la visión geocéntrica tradicional del cosmos, generando un profundo debate teológico sobre la interpretación literal de las Escrituras.">
+            <div class="main-text">El Telescopio</div>
+            <div class="sub-text">Revolución astronómica, cosmos infinito y exégesis bíblica.</div>
+            <span class="event-tag">Galileo</span>
+        </div>
+
+        <div class="node tec" data-title="Tecnología (1700): Prensa Periódica y Enciclopedismo" data-info="Auge de la prensa escrita, los panfletos ilustrados y las gacetas científicas. La Iglesia utiliza la imprenta periódica para la apologética y la defensa doctrinal frente a la crítica racionalista.">
+            <div class="main-text">Prensa &amp; Imprenta Periódica</div>
+            <div class="sub-text">Panfletos de la Ilustración y respuesta apologética católica.</div>
+            <span class="event-tag">Siglo XVIII</span>
+        </div>
+
+        <div class="node tec" data-title="Tecnología (1850): Ferrocarril, Telégrafo y Prensa Masiva" data-info="La Revolución Industrial conecta el mundo con ferrocarriles, barcos de vapor y telégrafos eléctricos. La Iglesia aprovecha estas redes de transporte y los rotativos masivos para organizar peregrinaciones a escala nacional y difundir enciclopedias papales.">
+            <div class="main-text">Ferrocarril y Telégrafo</div>
+            <div class="sub-text">Redes de transporte para peregrinaciones y prensa de masas.</div>
+            <span class="event-tag">Siglo XIX</span>
+        </div>
+
+        <div class="node tec" data-title="Tecnología (1900): Radio, Cine y Medios de Comunicación de Masas" data-info="La radio (Vaticano Radio fundada en 1931 por Marconi y Pío XI) y el cine permiten llevar la voz del Papa a todo el planeta y evangelizar masivamente a través de las ondas y la pantalla.">
+            <div class="main-text">Radio Vaticano y Cine</div>
+            <div class="sub-text">Emisión pontificia global (Marconi) y cine católico.</div>
+            <span class="event-tag">1931</span>
+        </div>
+
+        <div class="node tec" data-title="Tecnología (Siglo XXI): Internet, Redes Sociales e Inteligencia Artificial" data-info="La revolución digital, internet y las redes sociales transforman la pastoral y la catequesis, planteando nuevos retos éticos con la inteligencia artificial y la evangelización en el continente virtual.">
+            <div class="main-text">Internet &amp; Era Digital</div>
+            <div class="sub-text">Redes sociales, catequesis virtual y ética de la inteligencia artificial.</div>
+            <span class="event-tag">Presente</span>
+        </div>
+
+        <!-- =========================================================
+             CARRIL 5: FORMACIÓN
+             ========================================================= -->
+        <div class="track-label track-for">
+            <span>📖 Formación</span>
+            <small>Teología y Escuela</small>
+        </div>
+
+        <div class="node for" data-title="Formación (1500): Seminarios, Catecismo y Ratio Studiorum (1599)" data-info="Trento crea los seminarios para la formación del clero y publica el Catecismo Romano. En 1599 se publica oficialmente la Ratio Studiorum, sistema pedagógico jesuita que unifica la educación humanista en todo el mundo católico.">
+            <div class="main-text">Seminarios &amp; Ratio Studiorum</div>
+            <div class="sub-text">Catecismo de Trento y pedagogía jesuita (1599).</div>
+            <span class="event-tag">1599</span>
+        </div>
+
+        <div class="node for" data-title="Formación (1600): Escuelas Pías y Educación Popular" data-info="San José de Calasanz funda las Escuelas Pías (1597/1617), primera escuela popular gratuita de Europa, uniendo piedad y letras para los niños pobres.">
+            <div class="main-text">Escuelas Pías</div>
+            <div class="sub-text">San José de Calasanz: educación gratuita y popular.</div>
+            <span class="event-tag">Calasanz</span>
+        </div>
+
+        <div class="node for" data-title="Formación (1789): Pedagogía Lasaliana y Teología Moral" data-info="Los Hermanos de las Escuelas Cristianas (San Juan Bautista de La Salle) consolidan las escuelas normales de maestros laicos, mientras San Alfonso María de Ligorio renueva la teología moral frente al rigorismo.">
+            <div class="main-text">La Salle &amp; Moral</div>
+            <div class="sub-text">Formación de maestros y teología moral benigna de S. Alfonso.</div>
+            <span class="event-tag">Siglo XVIII</span>
+        </div>
+
+        <div class="node for" data-title="Formación (1850): Doctrina Social y Sistema Preventivo" data-info="León XIII inaugura la Doctrina Social (Rerum Novarum, 1891). Don Bosco y Don Orione forman a jóvenes obreros y marginados mediante el Sistema Preventivo (razón, religión y amor).">
+            <div class="main-text">Doctrina Social &amp; Jóvenes</div>
+            <div class="sub-text">Rerum Novarum; escuelas de artes y oficios de Don Bosco.</div>
+            <span class="event-tag">1891</span>
+        </div>
+
+        <div class="node for" data-title="Formación (1962): Sacerdocio Común y Catequesis Bíblica" data-info="El Vaticano II recupera el protagonismo formativo de los laicos (llamada universal a la santidad), impulsa el acceso directo a la Biblia (Dei Verbum) y renueva los itinerarios catecumenales.">
+            <div class="main-text">Laicado &amp; Dei Verbum</div>
+            <div class="sub-text">Sacerdocio común de los fieles y renovación bíblica.</div>
+            <span class="event-tag">1965</span>
+        </div>
+
+        <div class="node for" data-title="Formación (Siglo XXI): Catecismo Juan Pablo II y Cultura Digital" data-info="Síntesis doctrinal del Catecismo de la Iglesia Católica (1992), Pacto Educativo Global, ecología integral (Laudato Si') y formación catequética en el continente digital.">
+            <div class="main-text">Catecismo &amp; Ecología</div>
+            <div class="sub-text">Catecismo (1992), Pacto Educativo y formación digital.</div>
+            <span class="event-tag">Presente</span>
+        </div>
+
+        <!-- =========================================================
+             CARRIL 6: MÍSTICA
+             ========================================================= -->
+        <div class="track-label track-mis">
+            <span>🕊️ Mística</span>
+            <small>Espiritualidad</small>
+        </div>
+
+        <div class="node mis" data-title="Mística (1500): Siglo de Oro — Carmelo e Ignacianos" data-info="Santa Teresa de Jesús y San Juan de la Cruz reforman el Carmelo hacia la oración contemplativa y la unión con Dios. San Ignacio ofrece los Ejercicios Espirituales para hallar a Dios en todas las cosas.">
+            <div class="main-text">Carmelo &amp; Ejercicios</div>
+            <div class="sub-text">Sta. Teresa, S. Juan de la Cruz y discernimiento ignaciano.</div>
+            <span class="event-tag">Siglo XVI</span>
+        </div>
+
+        <div class="node mis" data-title="Mística (1600): Sagrado Corazón y Santidad Laical" data-info="Frente al frío rigorismo jansenista, Santa Margarita María de Alacoque difunde la espiritualidad del Sagrado Corazón de Jesús, y San Francisco de Sales propone la santidad en la vida cotidiana.">
+            <div class="main-text">Sagrado Corazón</div>
+            <div class="sub-text">Amor misericordioso (Paray-le-Monial) y S. Francisco de Sales.</div>
+            <span class="event-tag">1675</span>
+        </div>
+
+        <div class="node mis" data-title="Mística (1789): Contemplación de la Pasión" data-info="Frente al racionalismo seco de la Ilustración, San Pablo de la Cruz (Pasionistas) y los Redentoristas centran la piedad popular en la contemplación de la Pasión de Cristo y la redención.">
+            <div class="main-text">Espiritualidad de la Cruz</div>
+            <div class="sub-text">Pasionistas y piedad afectiva frente al deísmo ilustrado.</div>
+            <span class="event-tag">Siglo XVIII</span>
+        </div>
+
+        <div class="node mis" data-title="Mística (1850): Era Mariana y Caminito de Lisieux" data-info="Desde 1830 (Medalla Milagrosa, La Salette, Lourdes 1858) y el dogma de la Inmaculada (1854), florece la mística mariana. Santa Teresita de Lisieux descubre la infancia espiritual.">
+            <div class="main-text">Lourdes &amp; Sta. Teresita</div>
+            <div class="sub-text">Apariciones marianas, Inmaculada (1854) y «Caminito».</div>
+            <span class="event-tag">Era Mariana</span>
+        </div>
+
+        <div class="node mis" data-title="Mística (1962): Fátima, Misericordia y Movimientos" data-info="Fátima (1917), Santa Faustina Kowalska (Divina Misericordia), San Pío de Pietrelcina y el auge de movimientos laicales de espiritualidad mariana y carismática (Focolares, Schoenstatt, Renovación).">
+            <div class="main-text">Fátima &amp; Carismas</div>
+            <div class="sub-text">Divina Misericordia, Padre Pío y movimientos eclesiales.</div>
+            <span class="event-tag">Siglo XX</span>
+        </div>
+
+        <div class="node mis" data-title="Mística (Siglo XXI): Misericordia y Adoración Eucarística" data-info="Renacimiento de la adoración eucarística juvenil, espiritualidad del encuentro y de la misericordia, y testimonio de santidad cotidiana de los «santos de la puerta de al lado» (ej. Carlo Acutis).">
+            <div class="main-text">Misericordia &amp; Eucaristía</div>
+            <div class="sub-text">Adoración eucarística, cultura del encuentro y santos jóvenes.</div>
+            <span class="event-tag">Presente</span>
+        </div>
+
+        <!-- =========================================================
+             CARRIL 7: MISIÓN
+             ========================================================= -->
+        <div class="track-label track-msn">
+            <span>🌍 Misión</span>
+            <small>Evangelización</small>
+        </div>
+
+        <div class="node msn" data-title="Misión (1500): Guadalupe (1531) y Evangelización Global" data-info="El acontecimiento guadalupano impulsa la inculturación mestiza de América. San Francisco Javier y Matteo Ricci abren la evangelización en India, Japón y China dialogando con las culturas.">
+            <div class="main-text">Guadalupe &amp; Asia</div>
+            <div class="sub-text">Inculturación en América (1531); S. Francisco Javier y M. Ricci.</div>
+            <span class="event-tag">1531</span>
+        </div>
+
+        <div class="node msn" data-title="Misión (1600): Reducciones Jesuíticas y Barroco Misional" data-info="Desarrollo de las Reducciones guaraníes en Sudamérica para proteger y evangelizar a los pueblos indígenas, y uso del arte barroco como lenguaje visual universal de la fe.">
+            <div class="main-text">Reducciones &amp; Barroco</div>
+            <div class="sub-text">Misiones guaraníes y evangelización a través de las artes.</div>
+            <span class="event-tag">Siglo XVII</span>
+        </div>
+
+        <div class="node msn" data-title="Misión (1789): Misiones Populares y Caridad Vicentina" data-info="Ante la descristianización rural y urbana, las misiones populares (Redentoristas, Vicentinos) llevan el anuncio sencillo a los pueblos abandonados y organizan la caridad.">
+            <div class="main-text">Misiones Populares</div>
+            <div class="sub-text">Predicación itinerante rural y caridad organizada vicentina.</div>
+            <span class="event-tag">Siglo XVIII</span>
+        </div>
+
+        <div class="node msn" data-title="Misión (1850): Gran Siglo Misionero en África y Asia" data-info="Auge de congregaciones misioneras (Combonianos, Padres Blancos, Salesianos en la Patagonia) y obras de caridad urbana para migrantes y obreros en las periferias industriales.">
+            <div class="main-text">África &amp; Periferias</div>
+            <div class="sub-text">Expansión misionera en África y atención a obreros y migrantes.</div>
+            <span class="event-tag">Siglo XIX</span>
+        </div>
+
+        <div class="node msn" data-title="Misión (1962): Ad Gentes, Ecumenismo y Diálogo" data-info="El decreto Ad Gentes afirma que la Iglesia es misionera por naturaleza. Se inicia el diálogo ecuménico con ortodoxos y protestantes (1965) y el diálogo interreligioso (Nostra Aetate).">
+            <div class="main-text">Ad Gentes &amp; Ecumenismo</div>
+            <div class="sub-text">Unidad de los cristianos, diálogo interreligioso y misión laical.</div>
+            <span class="event-tag">1965</span>
+        </div>
+
+        <div class="node msn" data-title="Misión (Siglo XXI): Nueva Evangelización e Iglesia en Salida" data-info="Anuncio del Kerigma en sociedades secularizadas y periferias existenciales; dinamismo misionero impulsado desde África, Asia y América Latina hacia todo el mundo.">
+            <div class="main-text">Iglesia en Salida</div>
+            <div class="sub-text">Nueva Evangelización y vitalidad misionera del Sur global.</div>
+            <span class="event-tag">Presente</span>
+        </div>
+    </div>
+</div>
+
+<!-- Panel flotante de información -->
+<div id="info-panel">
+    <button onclick="closeInfoPanel()">✕ Cerrar</button>
+    <h3 id="panel-title"></h3>
+    <p id="panel-desc"></p>
+</div>
+
+<!-- Script compartido -->
+<script src="arbol/info-panel.js"></script>
+
+</body>
+</html>
