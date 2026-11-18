@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Línea del Tiempo Bíblica</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      box-sizing: border-box;
+    }
+    .timeline-card {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      padding: 16px 16px 10px 10px;
+      width: 100%;
+      max-width: 950px;
+      box-sizing: border-box;
+    }
+    .timeline-container {
+      position: relative;
+      width: 100%;
+      height: 192px;
+      background: #ffffff;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .grid-line {
+      position: absolute;
+      top: 0;
+      bottom: 27px;
+      width: 0;
+      border-left: 2px dotted #cbd5e1;
+      z-index: 1;
+    }
+    .row {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 32px;
+      display: flex;
+      align-items: center;
+      z-index: 2;
+    }
+    .block {
+      position: absolute;
+      height: 26px;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 0 4px;
+      box-sizing: border-box;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      outline: none;
+      cursor: pointer;
+      transition: transform 0.1s ease, box-shadow 0.1s ease;
+    }
+    .block:hover {
+      transform: scale(1.03);
+      box-shadow: 0 3px 6px rgba(0,0,0,0.12);
+      z-index: 5;
+    }
+    .block:focus {
+      background-color: #fef08a !important;
+      box-shadow: 0 0 0 2px #eab308;
+    }
+    /* Estilos de colores por nivel */
+    .r1 { background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; }
+    .r2-main { background: #fee2e2; color: #991b1b; font-weight: 700; font-size: 12px; border: 1px solid #fecaca; }
+    .r2-sub { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+    
+    /* Profetas en violeta claro */
+    .r3 { background: #f3e8ff; color: #6b21a8; border: 1px solid #e9d5ff; }
+    
+    /* Colores bien diferenciados para Lugares */
+    .place-babel { background: #cffafe; color: #155e75; border: 1px solid #a5f3fc; }
+    .place-canaan { background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; }
+    .place-egypt { background: #fef08a; color: #854d0e; border: 1px solid #fde047; }
+    
+    /* Eje de tiempo inferior con flecha */
+    .axis-row {
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 24px;
+      top: 165px;
+      border-top: 2px solid #334155;
+      z-index: 2;
+    }
+    .axis-row::after {
+      content: "";
+      position: absolute;
+      right: -2px;
+      top: -5px;
+      width: 0; 
+      height: 0; 
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 8px solid #334155;
+    }
+    .tick {
+      position: absolute;
+      transform: translateX(-50%);
+      top: 5px;
+      font-size: 11px;
+      font-weight: 700;
+      color: #334155;
+      text-align: center;
+    }
+    .tick::before {
+      content: "";
+      position: absolute;
+      top: -7px;
+      left: 50%;
+      width: 2px;
+      height: 5px;
+      background: #334155;
+      transform: translateX(-50%);
+    }
+    /* Cortes // integrados */
+    .break-mark {
+      position: absolute;
+      transform: translateX(-50%);
+      top: -10px;
+      font-size: 13px;
+      font-weight: 900;
+      color: #334155;
+      background: #ffffff;
+      padding: 0 3px;
+      line-height: 1;
+      z-index: 4;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="timeline-card">
+    <div class="timeline-container">
+      
+      <!-- Líneas punteadas verticales -->
+      <div class="grid-line" style="left: 2.5%;"></div>
+      <div class="grid-line" style="left: 29.2%;"></div>
+      <div class="grid-line" style="left: 43.6%;"></div>
+      <div class="grid-line" style="left: 75.9%;"></div>
+      <div class="grid-line" style="left: 91.6%;"></div>
+
+      <!-- NIVEL 1: Etapas -->
+      <div class="row" style="top: 2px;">
+        <div class="block r1" style="left: 6.6%; width: 16.1%;"
+             data-title="Etapa: Patriarcas de Israel (c. 2000 - 1700 a.C.)"
+             data-info="Tiempo fundacional de Abraham, Isaac y Jacob (Israel). Dios sella con ellos la Alianza de la promesa —una tierra, una descendencia numerosa y la bendición para todas las naciones— antes de que la familia de Jacob descienda a Egipto.">Patriarcas de Israel</div>
+        <div class="block r1" style="left: 23.0%; width: 31.8%;"
+             data-title="Etapa: Las 12 Tribus y el Reino Unido"
+             data-info="Desde los doce hijos de Jacob (Israel), pasando por la esclavitud en Egipto, el Éxodo, la conquista de Canaán, los Jueces y la monarquía unida bajo Saúl, David y Salomón hasta el año 930 a.C.">12 Tribus</div>
+        <div class="block r1" style="left: 55.4%; width: 9.0%;"
+             data-title="Etapa: Los 2 Reinos Divididos (930 - 722 a.C.)"
+             data-info="Tras la muerte de Salomón, el reino se fractura en dos: el Reino del Norte (Israel, con capital en Samaria) y el Reino del Sur (Judá, con capital en Jerusalén).">2 Reinos</div>
+        <div class="block r1" style="left: 64.6%; width: 7.0%;"
+             data-title="Etapa: 1 Solo Reino — Judá (722 - 586 a.C.)"
+             data-info="Tras la caída y deportación del Reino del Norte ante el Imperio Asirio en el 722 a.C., sobrevive únicamente el Reino de Judá en el sur hasta la destrucción de Jerusalén por Babilonia en el 586 a.C.">1 Reino</div>
+        <div class="block r1" style="left: 72.0%; width: 26.6%;"
+             data-title="Etapa: El Resto de Israel (Desde 586 a.C.)"
+             data-info="El remanente fiel purificado en el exilio de Babilonia que regresa para reconstruir el Templo y aguarda la llegada del Mesías prometido.">El resto de Israel</div>
+      </div>
+
+      <!-- NIVEL 2A: Patriarcas y Reyes Principales -->
+      <div class="row" style="top: 31px;">
+        <div class="block r2-main" style="left: 2.5%; width: 10%;"
+             data-title="Abraham (c. 2000 - 1850 a.C.)"
+             data-info="Primer patriarca llamado por Dios a salir de Ur de los Caldeos (Mesopotamia) hacia Canaán con la promesa de una tierra y una descendencia numerosa como las estrellas.">ABRAHAM 🗣️</div>
+        <div class="block r2-main" style="left: 41.5%; width: 7.7%;"
+             data-title="Rey David (c. 1010 - 970 a.C.)"
+             data-info="Ungido por Samuel mientras Saúl aún reinaba; tras un periodo de persecución y convivencia conflictiva, unifica las doce tribus, conquista Jerusalén y recibe la promesa de una dinastía eterna.">DAVID 👑</div>
+        <div class="block r2-main" style="left: 73.3%; width: 11.2%;"
+             data-title="Zorobabel (c. 538 - 515 a.C.)"
+             data-info="Descendiente de la casa real de David que lideró el primer gran retorno de los exiliados desde Babilonia y dirigió la reconstrucción del Segundo Templo en Jerusalén.">ZOROBABEL 🕍</div>
+        <div class="block r2-main" style="left: 91.6%; width: 7.7%;"
+             data-title="Jesús de Nazaret (c. 4 a.C. - 30/33 d.C.)"
+             data-info="El Mesías prometido, Hijo de David e Hijo de Dios; plenitud de la Ley y los Profetas que inaugura la Nueva Alianza con su Pascua.">JESÚS ✝️</div>
+      </div>
+
+      <!-- NIVEL 2B: Personajes secundarios -->
+      <div class="row" style="top: 59px;">
+        <div class="block r2-sub" style="left: 10.7%; width: 6.7%;"
+             data-title="Isaac"
+             data-info="Hijo de la promesa nacido en la vejez de Abraham y Sara; padre de los mellizos Esaú y Jacob.">Isaac 🐑</div>
+        <div class="block r2-sub" style="left: 17.4%; width: 7.2%;"
+             data-title="Jacob (Israel)"
+             data-info="Hijo menor de Isaac que recibió el nombre de Israel tras luchar con Dios; padre de los doce patriarcas que dieron origen a las doce tribus y migraron a Egipto.">Jacob 💪</div>
+        <div class="block r2-sub" style="left: 36.4%; width: 7.4%;"
+             data-title="Rey Saúl (c. 1030 - 1010 a.C.)"
+             data-info="Primer rey de Israel, de la tribu de Benjamín. Su reinado se solapa con el ascenso del joven David, a quien persiguió por celos antes de morir en el monte Gelboé.">Saúl 🤴</div>
+        <div class="block r2-sub" style="left: 47.2%; width: 8.2%;"
+             data-title="Rey Salomón (c. 970 - 930 a.C.)"
+             data-info="Hijo y sucesor de David; llevó el reino a su máximo esplendor cultural y comercial, construyó el Primer Templo en Jerusalén, pero sus tributos e idolatría prepararon la división del reino.">Salomón 🕍</div>
+        <div class="block r2-sub" style="left: 65.1%; width: 6.5%;"
+             data-title="Rey Josías (640 - 609 a.C.)"
+             data-info="Rey reformador de Judá que halló el libro de la Ley en el Templo, erradicó los altares idolátricos y renovó la Alianza poco antes de la caída ante Babilonia.">Josías 📖</div>
+        <div class="block r2-sub" style="left: 88.5%; width: 7.7%;"
+             data-title="San José"
+             data-info="Descendiente de David y esposo de la Virgen María; padre adoptivo de Jesús que lo protegió en Belén, Egipto y Nazaret. Estuvo vivo en el nacimiento de Jesús y cruzó el año cero.">José 🧑‍🧒</div>
+      </div>
+
+      <!-- NIVEL 3: Profetas (Violeta claro) -->
+      <div class="row" style="top: 92px;">
+        <div class="block r3" style="left: 25.1%; width: 8.2%;"
+             data-title="Moisés (Siglo XIII a.C.)"
+             data-info="Gran libertador, legislador y profeta que condujo al pueblo de Israel fuera de la esclavitud de Egipto y recibió las Tablas de la Ley en el monte Sinaí.">Moisés ⚖️</div>
+        <div class="block r3" style="left: 56.9%; width: 5.6%;"
+             data-title="Profeta Elías (Siglo IX a.C.)"
+             data-info="Profeta del Reino del Norte que defendió la fidelidad al Dios único frente al culto de Baal promovido por el rey Ajab y Jezabel.">Elías 🔥</div>
+        <div class="block r3" style="left: 65.1%; width: 7.9%;"
+             data-title="Profeta Jeremías (c. 626 - 586 a.C.)"
+             data-info="Profeta que anunció la caída de Jerusalén ante Babilonia como consecuencia de la infidelidad y profetizó una 'Alianza Nueva' escrita en el corazón.">Jeremías💗</div>
+        <div class="block r3" style="left: 91.6%; width: 6.7%;"
+             data-title="San Juan Bautista"
+             data-info="El último y mayor de los profetas del Antiguo Testamento; precursor del Mesías que comienza junto a Jesús pero concluye mínimamente antes de su pasión.">Juan 🐍</div>
+      </div>
+
+      <!-- NIVEL 4: Lugares -->
+      <div class="row" style="top: 126px;">
+        <div class="block place-babel" style="left: 2.5%; width: 5.6%;"
+             data-title="Mesopotamia / Babel (Origen)"
+             data-info="Tierra de Ur de los Caldeos y Harán, de donde Dios llamó a Abraham a salir hacia la tierra prometida.">Babel</div>
+        <div class="block place-canaan" style="left: 8.1%; width: 13.3%;"
+             data-title="Canaán (Etapa Patriarcal)"
+             data-info="La Tierra Prometida recorrida como forasteros por Abraham, Isaac y Jacob antes de bajar a Egipto.">Canaán</div>
+        <div class="block place-egypt" style="left: 21.5%; width: 11.8%;"
+             data-title="Egipto (Estancia y Esclavitud)"
+             data-info="Lugar de refugio durante la hambruna en tiempos de José y posterior esclavitud hasta la liberación en el Éxodo.">Egipto</div>
+        <div class="block place-canaan" style="left: 33.3%; width: 38.0%;"
+             data-title="Canaán / Tierra de Israel (Conquista y Monarquía)"
+             data-info="Asentamiento de las doce tribus tras el cruce del Jordán, desarrollo de los Jueces, el Reino Unido y los Reinos Divididos hasta el destierro.">Canaán</div>
+        <div class="block place-babel" style="left: 71.3%; width: 5.6%;"
+             data-title="Babilonia (El Exilio, 586 - 538 a.C.)"
+             data-info="Destierro tras la destrucción de Jerusalén y del Primer Templo por Nabucodonosor; etapa clave de purificación espiritual y recopilación de las Escrituras.">Babel</div>
+        <div class="block place-canaan" style="left: 76.9%; width: 22.1%;"
+             data-title="Canaán / Judea y Galilea (Retorno y Plenitud)"
+             data-info="Regreso del exilio bajo el Imperio Persa, época helenística y romana, reconstrucción del Templo y escenario de la vida y predicación de Jesús.">Canaán</div>
+      </div>
+
+      <!-- NIVEL 5: Eje de Tiempo -->
+      <div class="axis-row">
+        <div class="tick" style="left: 2.5%;">-2000</div>
+        <div class="tick" style="left: 29.2%;">-1500</div>
+        <div class="break-mark" style="left: 36.4%;">//</div>
+        <div class="tick" style="left: 43.6%;">-1000</div>
+        <div class="tick" style="left: 75.9%;">-500</div>
+        <div class="break-mark" style="left: 83.7%;">//</div>
+        <div class="tick" style="left: 91.6%;">0</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Script compartido -->
+  <script src="arbol/info-panel.js"></script>
+
+</body>
+</html>

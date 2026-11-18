@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #ffffff;
+    color: #1e293b;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 100%;
+    background: white;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #0f172a;
+}
+
+h2 {
+    text-align: center;
+    font-size: 1rem;
+    margin-bottom: 25px;
+    color: #0f172a;
+}
+
+.tree-container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.row-block {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+}
+
+/* Columna contenedora con altura ajustada y distribución centrada */
+.pair-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 150px;
+    position: relative;
+    padding: 2px 4px;
+}
+
+/* Columna extendida para 3 niveles (Bloque de Éfeso) */
+.pair-column.extended-three {
+    min-height: 205px;
+    height: auto;
+    justify-content: flex-start;
+    gap: 5px;
+}
+.pair-column.extended-three .node.lower-line {
+    min-height: 36px;
+}
+.pair-column.extended-three .node.green-line,
+.pair-column.extended-three .node.red-line {
+    min-height: 36px;
+}
+.pair-column.extended-three .node.deep-line {
+    align-self: center;
+    margin-top: 2px;
+}
+
+/* Título superior de cada columna convertido en botón interactivo */
+.title-node {
+    font-size: 0.72rem;
+    font-weight: 700;
+    background: #e0f2fe; 
+    color: #0369a1; 
+    border: 1px dashed #94a3b8;
+    border-radius: 4px;
+    padding: 2px 6px;
+    white-space: nowrap;
+    text-align: center;
+    margin-bottom: 2px;
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+.title-node:hover {
+    transform: scale(1.03);
+    background: #bae6fd;
+}
+
+.node {
+    background: #ffffff;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+    padding: 4px 8px;
+    text-align: center;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    width: fit-content;
+    white-space: nowrap;
+    min-height: 36px;
+    cursor: pointer;
+    transition: transform 0.1s ease, box-shadow 0.1s ease;
+}
+
+.node:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.node.red-line {
+    background: #fbf3f4; 
+    border-color: #b54b58;
+}
+
+.node.red-linea {
+    background: #fffbeb; 
+    border-color: #f59e0b; 
+}
+
+/* Estilo para el tercer nodo (deep-line) */
+.node.green-line {
+    background-color: #f2f7f4;
+    border-color: #4d7c66;
+}
+
+.node.green-line .main-text {
+    color: #166534;
+    font-weight: 700;
+}
+
+.node.lower-line, .node.deep-line {
+    background: #eef2ff;
+    border-color: #6366f1;
+}
+
+.node.lower-line .main-text{
+    text-transform: uppercase;
+    color: #312e81;
+    font-weight: 800;
+}
+
+.node.upper-line {
+    background: #f8fafc;
+    border-color: #94a3b8;
+}
+
+.node.upper-line .main-text {
+    color: #334155;
+    font-weight: 700;
+}
+
+.main-text {
+    font-size: 0.82rem;
+    line-height: 1.1;
+    margin-bottom: 1px;
+}
+
+.sub-text {
+    font-size: 0.55rem;
+    color: #64748b;
+    line-height: 1;
+}
+
+/* Texto intermedio convertido en botón interactivo centrado */
+.mid-link {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    font-size: 0.48rem;
+    color: #475569;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 3px;
+    padding: 1px 5px;
+    white-space: nowrap;
+    text-align: center;
+    margin: 2px 0;
+    cursor: pointer;
+    transition: transform 0.1s ease, background-color 0.1s ease;
+}
+
+.mid-link:hover {
+    transform: scale(1.03);
+    background: #e2e8f0;
+}
+
+.mid-link .arrow-indicator {
+    font-size: 0.65rem;
+    color: #6366f1;
+    font-weight: bold;
+}
+
+.connector {
+    width: 30px;
+    height: 150px;
+    position: relative;
+    flex-shrink: 0;
+}
+
+/* Conector extendido para la tercera fila donde está el bloque de 3 niveles */
+.connector.extended-three {
+    height: 220px;
+}
+
+.connector svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+
+.arrow {
+    fill: none;
+    stroke: #64748b;
+    stroke-width: 2px;
+    marker-end: url(#arrowhead);
+}
+
+/* Panel de información flotante */
+#info-panel {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 360px;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    border-left: 5px solid #6366f1;
+    border-radius: 8px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    padding: 16px;
+    display: none;
+    z-index: 1000;
+    font-size: 0.85rem;
+}
+
+#info-panel h3 {
+    font-size: 0.98rem;
+    color: #0f172a;
+    margin-bottom: 8px;
+    padding-right: 65px;
+}
+
+#info-panel p {
+    color: #475569;
+    line-height: 1.45;
+    margin-bottom: 4px;
+}
+
+#info-panel button {
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    padding: 3px 8px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    color: #334155;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+}
+
+#info-panel button:hover {
+    background: #e2e8f0;
+}
+
+@media print {
+    body {
+        padding: 0;
+    }
+    #info-panel {
+        display: none !important;
+    }
+    @page {
+        size: A4 landscape;
+        margin: 1cm;
+    }
+}
