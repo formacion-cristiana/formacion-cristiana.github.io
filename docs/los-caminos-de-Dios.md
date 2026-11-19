@@ -987,7 +987,12 @@ Aunque hay profecías que parecen fijar el destino la Iglesia enseña que nuestr
 ### ❗️✝️ Historia de la Salvación
 Dios guía, conduce, participa de la historia del Hombre, REDUCIÉNDOSE, ABAJÁNDOSE, MATERIALIZÁNDOSE, REVELÁNDOSE, sin perder su plenitud.
 
-![timeline-historia-de-la-salvacion.jpeg](../../../trivia/public/images/timeline-historia-de-la-humanidad.png)
+
+<img
+  src="../../../trivia/public/images/timeline-historia-de-la-humanidad.png"
+  onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/formacion-cristiana/trivia/main/public/images/timeline-historia-de-la-humanidad.png';"
+  alt="timeline-historia-de-la-humanidad.png"
+/>
 
 #### ❗️❗️Hitos y Procesos en la vida del Hombre
 
@@ -1036,8 +1041,11 @@ Dios guía, conduce, participa de la historia del Hombre, REDUCIÉNDOSE, ABAJÁN
 
 
 
-![timeline-historia-pueblo-israel-iglesia](../../../trivia/public/images/timeline-historia-pueblo-israel-iglesia.png)
-
+<img
+  src="../../../trivia/public/images/timeline-historia-pueblo-israel-iglesia.png"
+  onerror="this.onerror=null; this.src='https://raw.githubusercontent.com/formacion-cristiana/trivia/main/public/images/timeline-historia-pueblo-israel-iglesia.png';"
+  alt="timeline-historia-pueblo-israel-iglesia.png"
+/>
 
 
 ##### 🏁 Hito 0️⃣: ⏳▶️ La creación - El principio del tiempo
