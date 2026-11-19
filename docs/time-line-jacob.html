@@ -27,7 +27,7 @@
     .timeline-container { 
       position: relative; 
       width: 100%; 
-      height: 215px; 
+      height: 196px; 
       background: #ffffff; 
       overflow: hidden; 
       border-radius: 8px; 
@@ -93,7 +93,7 @@
     /* Colores por Categoría Principal */ 
     .cat-milagro { background: #fef9c3; color: #713f12; border: 1px solid #fef08a; } 
     .cat-nacimiento { background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0; } 
-    .cat-maldicion { background: #f3e8ff; color: #6b21a8; border: 1px solid #e9d5ff; } 
+    .cat-maldicion { background: #e2e8f0; color: #475569; border: 1px solid #cbd5e1; } 
     .cat-bendicion { background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; } 
     .cat-astucia { background: #ffedd5; color: #c2410c; border: 1px solid #fed7aa; } 
     .cat-engano { background: #fee2e2; color: #991b1b; border: 1px solid #fecaca; } 
@@ -127,6 +127,7 @@
     } 
     .tick { 
       position: absolute; 
+      white-space: nowrap;
       transform: translateX(-50%); 
       top: 5px; 
       font-size: 10.5px; 
@@ -155,7 +156,7 @@
       <!-- Líneas punteadas verticales escaladas para cubrir el 100% del ancho --> 
       <div class="grid-line" style="left: 5.5%;"></div> 
       <div class="grid-line" style="left: 20.5%;"></div> 
-      <div class="grid-line" style="left: 36.5%;"></div> 
+      <div class="grid-line" style="left: 35%;"></div> 
       <div class="grid-line" style="left: 51.5%;"></div> 
       <div class="grid-line" style="left: 74%;"></div> 
       <div class="grid-line" style="left: 93%;"></div> 
@@ -185,6 +186,12 @@
              data-info="Nacimiento de Benjamín en el camino de Bethel a Efrata (Belén)."> 
           <span class="block-title">Nacimiento IV</span> 
           <span class="block-sub">(Benjamín)</span> 
+        </div> 
+          <div class="block cat-milagro" style="left: 86%; width: 9.5%;" 
+             data-title="Milagro III (Re-Nacimiento de José)" 
+             data-info="Jose se revela como gobernador de Egipto y recibe a la familia con honores. No solo resulta el milagro de que su hijo preferido quien consideraba muerte esta con vida sino que salva a su familia del hambre y los posiciona cómodamente en una nueva tierra."> 
+          <span class="block-title">Milagro III</span> 
+          <span class="block-sub">(Re-Nacimiento José)</span> 
         </div> 
       </div> 
 
@@ -236,17 +243,23 @@
           <span class="block-title">Bendición III</span> 
           <span class="block-sub">(Lucha en Penuel)</span> 
         </div> 
-        <div class="block cat-promesa" style="left: 59%; width: 9%;" 
+        <div class="block cat-promesa" style="left: 57%; width: 9%;" 
              data-title="Promesa II (Regreso a Bethel)" 
              data-info="Regreso a Bethel, renuncia a dioses extranjeros y renovación de la Alianza (antes del camino a Efrata)."> 
           <span class="block-title">Promesa II</span> 
           <span class="block-sub">(Renovación Bethel)</span> 
         </div> 
-        <div class="block cat-promesa" style="left: 88.5%; width: 9%;" 
+        <div class="block cat-promesa" style="left: 85%; width: 7%;" 
              data-title="Promesa III (Visión en Egipto)" 
              data-info="Al enterarse de que José vive, recibe la visión de Dios ('No temas descender a Egipto') y desciende."> 
           <span class="block-title">Promesa III</span> 
-          <span class="block-sub">(Visión -> Egipto)</span> 
+          <span class="block-sub">(Egipto)</span> 
+        </div> 
+          <div class="block cat-bendicion" style="left: 92.5%; width: 7.5%;" 
+             data-title="Bendición IV (12 Tribus)" 
+             data-info="Antes de morir bendice a cada una de las Tribus"> 
+          <span class="block-title">Bendición IV</span> 
+          <span class="block-sub">(12 Tribus)</span> 
         </div> 
       </div> 
 
@@ -289,37 +302,37 @@
         <div class="block" style="left: 0%; width: 24.5%; background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0;" 
              data-title="Canaán (Origen)" 
              data-info="Tierra natal, hogar de Isaac y Rebeca, escenario de la primogenitura y bendición."> 
-          <span class="block-title">Canaán (Origen)</span> 
-          <span class="block-sub">Beerseba</span> 
+          <span class="block-title">Canaán (Tierra prometida)</span> 
+          <span class="block-sub">Familia de Isaac en Beerseba</span> 
         </div> 
         <div class="block" style="left: 25%; width: 21.5%; background: #cffafe; color: #155e75; border: 1px solid #a5f3fc;" 
              data-title="Jarán (Mesopotamia)" 
              data-info="Casa de Labán, donde Jacob trabajó 14 años por sus esposas, formó su familia y acumuló bienes."> 
-          <span class="block-title">Jarán (Mesopotamia)</span> 
-          <span class="block-sub">Huésped de Labán</span> 
+          <span class="block-title">Babel (Mesopotamia)</span> 
+          <span class="block-sub">Huésped de Labán en Jarán</span> 
         </div> 
         <div class="block" style="left: 47%; width: 41%; background: #d1fae5; color: #065f46; border: 1px solid #a7f3d0;" 
              data-title="Retorno a Canaán (Penuel, Bethel, Efrata, Hebrón)" 
              data-info="Regreso a la tierra prometida: lucha en Penuel, alianza en Bethel, muerte de Raquel camino a Efrata y engaño sobre José en Canaán."> 
           <span class="block-title">Retorno a Canaán</span> 
-          <span class="block-sub">Penuel · Bethel · Efrata · Hebrón</span> 
+          <span class="block-sub">Penuel · Bethel · Bethelem</span> 
         </div> 
         <div class="block place-egypt" style="left: 88.5%; width: 11%;" 
-             data-title="Egipto (Gosén)" 
+             data-title="Egipto" 
              data-info="Descenso final tras saber que José vive y recibir la visión de Dios."> 
-          <span class="block-title">Egipto (Gosén)</span> 
+          <span class="block-title">Egipto</span> 
           <span class="block-sub">Plenitud</span> 
         </div> 
       </div> 
 
       <!-- EJE DE TIEMPO INFERIOR - Termina exactamente donde termina Egipto (right: 0) --> 
       <div class="axis-row"> 
-        <div class="tick" style="left: 5.5%;">Juventud y<br>Primogenitura</div> 
-        <div class="tick" style="left: 20.5%;">Partida y<br>Sueño en Bethel</div> 
-        <div class="tick" style="left: 36.5%;">Estancia y<br>Trabajo en Jarán</div> 
-        <div class="tick" style="left: 51.5%;">Penuel y<br>Alianza Bethel</div> 
-        <div class="tick" style="left: 74%;">Efrata y<br>Duelo en Canaán</div> 
-        <div class="tick" style="left: 93.5%;">Egipto y<br>Plenitud</div> 
+        <div class="tick" style="left: 5.5%;">NACIMIENTO </div> 
+        <div class="tick" style="left: 20.5%;">HUIDA</div> 
+        <div class="tick" style="left: 35%;">Formación de una FAMILIA</div> 
+        <div class="tick" style="left: 51.5%;">Nueva IDENTIDAD</div> 
+        <div class="tick" style="left: 74%;">DOLOR</div> 
+        <div class="tick" style="left: 93%;">RECONCILIACIÓN familiar</div> 
       </div> 
 
     </div> 
