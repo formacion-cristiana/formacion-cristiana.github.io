@@ -1100,6 +1100,7 @@ Salomón nos enseña que la sabiduría consiste en tener un corazón capaz de es
 
 **10** El temor del Señor es el principio de la sabiduría, y el conocimiento del Santo es la inteligencia.
 
+**Pr 1,7** El temor del Señor es el principio del conocimiento; los necios desprecian la sabiduría y la disciplina.
 
 <div style="page-break-after:always;"></div>
 
