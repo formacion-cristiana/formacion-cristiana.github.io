@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Línea del Tiempo: La Iglesia desde 1500</title>
+    <style>
+        :root {
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --border-light: #cbd5e1;
+
+            /* Colores por carril temático */
+            --c-est: #334155;      /* Gobierno · Estado */
+            --bg-est: #f1f5f9;
+            --c-igl: #1e3a8a;      /* Gobierno · Iglesia */
+            --bg-igl: #eff6ff;
+            --c-sec: #991b1b;      /* Secularización */
+            --bg-sec: #fef2f2;
+            --c-tec: #0369a1;      /* Tecnología */
+            --bg-tec: #f0f9ff;
+            --c-for: #065f46;      /* Formación */
+            --bg-for: #ecfdf5;
+            --c-mis: #6b21a8;      /* Mística */
+            --bg-mis: #faf5ff;
+            --c-msn: #b45309;      /* Misión */
+            --bg-msn: #fffbeb;
+            --c-mor: #be185d;      /* Moral - Magenta/Carmín profundo */
+            --bg-mor: #fdf2f8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            padding: 12px;
+            line-height: 1.2;
+        }
+
+        .timeline-wrapper {
+            max-width: 1560px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            padding: 12px 16px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 6px;
+        }
+
+        header h1 {
+            font-size: 1.22rem;
+            color: #0f172a;
+            letter-spacing: -0.02em;
+        }
+
+        header p {
+            font-size: 0.78rem;
+            font-style: italic;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        /* Estructura de Línea del Tiempo Continua (1500 a 2026 = 526 años) */
+        .timeline-container {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .lane-row {
+            display: grid;
+            grid-template-columns: 88px 1fr;
+            gap: 8px;
+            align-items: stretch;
+        }
+
+        .lane-label {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 4px 8px;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 0.72rem;
+            border-left: 4px solid;
+        }
+
+        .lane-label small {
+            font-size: 0.6rem;
+            font-weight: 600;
+            opacity: 0.85;
+        }
+
+        .l-est { background: var(--bg-est); color: var(--c-est); border-color: var(--c-est); }
+        .l-igl { background: var(--bg-igl); color: var(--c-igl); border-color: var(--c-igl); }
+        .l-sec { background: var(--bg-sec); color: var(--c-sec); border-color: var(--c-sec); }
+        .l-tec { background: var(--bg-tec); color: var(--c-tec); border-color: var(--c-tec); }
+        .l-for { background: var(--bg-for); color: var(--c-for); border-color: var(--c-for); }
+        .l-mis { background: var(--bg-mis); color: var(--c-mis); border-color: var(--c-mis); }
+        .l-msn { background: var(--bg-msn); color: var(--c-msn); border-color: var(--c-msn); }
+        .l-mor { background: var(--bg-mor); color: var(--c-mor); border-color: var(--c-mor); }
+
+        /* Pista temporal proporcional */
+        .track-canvas {
+            position: relative;
+            background: #fcfdfe;
+            border: 1px solid #e2e8f0;
+            border-radius: 5px;
+            min-height: 44px;
+            background-image: linear-gradient(
+                to right,
+                transparent 0%,
+                transparent calc(17.60% - 1px), #e2e8f0 17.60%, transparent calc(17.60% + 1px),
+                transparent calc(35.20% - 1px), #e2e8f0 35.20%, transparent calc(35.20% + 1px),
+                transparent calc(52.80% - 1px), #e2e8f0 52.80%, transparent calc(52.80% + 1px),
+                transparent calc(70.40% - 1px), #e2e8f0 70.40%, transparent calc(70.40% + 1px),
+                transparent calc(88.00% - 1px), #e2e8f0 88.00%, transparent calc(88.00% + 1px)
+            );
+        }
+
+        .track-canvas.tall {
+            min-height: 56px;
+        }
+
+        .track-canvas.moral {
+            min-height: 98px;
+        }
+
+        .track-canvas.medium {
+            min-height: 58px;
+        }
+
+        /* Barras de duración continua */
+        .span-bar {
+            position: absolute;
+            border-radius: 4px;
+            padding: 3px 6px;
+            font-size: 0.66rem;
+            cursor: pointer;
+            border: 1px solid;
+            border-left-width: 3px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            transition: transform 0.12s ease, box-shadow 0.12s ease, z-index 0s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .span-bar:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+            z-index: 30 !important;
+            white-space: normal;
+            overflow: visible;
+            min-width: max-content;
+        }
+
+        .span-bar strong {
+            font-weight: 700;
+            color: #0f172a;
+        }
+
+        .span-bar span {
+            font-size: 0.59rem;
+            color: #475569;
+        }
+
+        /* Bloque contenedor (Macro-proceso) vs Sub-bloque anidado */
+        .span-bar.macro {
+            background-opacity: 0.6;
+            border-style: dashed;
+            border-left-style: solid;
+            justify-content: flex-start;
+            padding-top: 2px;
+        }
+
+        .span-bar.nested {
+            box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+            z-index: 5;
+        }
+
+        /* Hitos puntuales (Eventos clave) */
+        .point-node {
+            position: absolute;
+            transform: translateX(-50%);
+            background: #ffffff;
+            border: 1.5px solid;
+            border-radius: 12px;
+            padding: 2px 7px;
+            font-size: 0.63rem;
+            font-weight: 700;
+            cursor: pointer;
+            white-space: nowrap;
+            z-index: 15;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.07);
+            transition: transform 0.12s ease;
+        }
+
+        .point-node:hover {
+            transform: translateX(-50%) scale(1.06);
+            z-index: 35;
+        }
+
+        /* Estilos por categoría */
+        .est-style { background: #f1f5f9; border-color: var(--c-est); color: var(--c-est); }
+        .igl-style { background: #eff6ff; border-color: var(--c-igl); color: var(--c-igl); }
+        .sec-style { background: #fef2f2; border-color: var(--c-sec); color: var(--c-sec); }
+        .tec-style { background: #f0f9ff; border-color: var(--c-tec); color: var(--c-tec); }
+        .for-style { background: #ecfdf5; border-color: var(--c-for); color: var(--c-for); }
+        .mis-style { background: #faf5ff; border-color: var(--c-mis); color: var(--c-mis); }
+        .msn-style { background: #fffbeb; border-color: var(--c-msn); color: var(--c-msn); }
+        .mor-style { background: #fdf2f8; border-color: var(--c-mor); color: var(--c-mor); padding: 1px 5px; font-size: 0.60rem; }
+        .mor-style.pre1500 { border-left-style: dotted; border-left-width: 4px; }
+        .mor-macro { background: rgba(253, 242, 248, 0.55); border-color: var(--c-mor); color: var(--c-mor); border-style: dashed; border-left-style: dotted; border-left-width: 4px; justify-content: flex-start; padding-top: 1px; padding-left: 5px; font-size: 0.60rem; }
+        .msn-macro { background: rgba(254, 243, 199, 0.55); border-color: var(--c-msn); color: var(--c-msn); }
+        .for-macro { background: rgba(209, 250, 229, 0.5); border-color: var(--c-for); color: var(--c-for); }
+
+        /* Eje Temporal Inferior (Estilo Línea de Jacob) */
+        .time-axis-row {
+            display: grid;
+            grid-template-columns: 88px 1fr;
+            gap: 8px;
+            margin-top: 2px;
+        }
+
+        .axis-corner {
+            background: #1e293b;
+            color: #ffffff;
+            border-radius: 5px;
+            font-size: 0.68rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4px;
+        }
+
+        .time-axis {
+            position: relative;
+            height: 28px;
+            background: #1e293b;
+            border-radius: 5px;
+            color: #ffffff;
+        }
+
+        .tick {
+            position: absolute;
+            top: 0;
+            height: 100%;
+            border-left: 1px solid rgba(255, 255, 255, 0.35);
+            padding-left: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            font-size: 0.68rem;
+            font-weight: 700;
+        }
+
+        .tick small {
+            font-size: 0.55rem;
+            font-weight: 400;
+            color: #94a3b8;
+        }
+
+        /* Panel flotante de información */
+        #info-panel {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 390px;
+            max-width: calc(100vw - 40px);
+            background: #ffffff;
+            border: 1px solid #cbd5e1;
+            border-left: 5px solid #1e293b;
+            border-radius: 8px;
+            padding: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            z-index: 1000;
+        }
+
+        #info-panel button {
+            float: right;
+            background: #f1f5f9;
+            border: none;
+            border-radius: 4px;
+            padding: 3px 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            color: #334155;
+        }
+
+        #panel-title {
+            font-size: 0.98rem;
+            color: #0f172a;
+            margin-bottom: 8px;
+            padding-right: 60px;
+        }
+
+        #panel-desc {
+            font-size: 0.84rem;
+            color: #334155;
+            line-height: 1.45;
+        }
+
+        /* Impresión A4 Horizontal */
+        @media print {
+            @page {
+                size: A4 landscape;
+                margin: 5mm;
+            }
+            body {
+                background: #ffffff;
+                padding: 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .timeline-wrapper {
+                box-shadow: none;
+                border: none;
+                padding: 0;
+                max-width: 100%;
+            }
+            header {
+                margin-bottom: 6px;
+                padding-bottom: 4px;
+            }
+            header h1 { font-size: 1.05rem; }
+            header p { font-size: 0.7rem; }
+            .lane-row, .time-axis-row {
+                grid-template-columns: 74px 1fr;
+                gap: 5px;
+            }
+            .lane-label { font-size: 0.64rem; padding: 3px 6px; }
+            .track-canvas { min-height: 38px; }
+            .track-canvas.medium { min-height: 50px; }
+            .track-canvas.tall { min-height: 68px; }
+            .track-canvas.moral { min-height: 86px; }
+            .span-bar { font-size: 0.58rem; padding: 2px 4px; }
+            .span-bar span { font-size: 0.52rem; }
+            .point-node { font-size: 0.56rem; padding: 1px 5px; }
+            #info-panel { display: none !important; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="timeline-wrapper">
+    <header>
+        <h1>Línea del Tiempo Continua: Estado, Secularización, Tecnología, Moral e Iglesia (1500 – Presente)</h1>
+        <p>«Id, pues, y haced discípulos a todas las gentes... y sabed que yo estoy con vosotros todos los días hasta el fin del mundo» (Mt 28, 19-20)</p>
+    </header>
+
+    <div class="timeline-container">
+
+        <!-- =========================================================
+             CARRIL 1: GOBIERNO · ESTADO (Formas políticas del mundo)
+             Escala: 1500 (0%) -> 2026 (100%) | 1 siglo = 19.01%
+             ========================================================= -->
+        <div class="lane-row">
+            <div class="lane-label l-est">
+                <span>🏛️ Gobierno</span>
+                <small>Estado / Mundo</small>
+            </div>
+            <div class="track-canvas">
+                <div class="span-bar est-style node" style="left: 0.0%; width: 26.02%; top: 4px; height: 34px;"
+                     data-title="Estado (1500–1648): Monarquías Nacionales e Imperios"
+                     data-info="Consolidación de monarquías autoritarias e imperios ultramarinos (España, Portugal) y guerras de religión en Europa hasta la Paz de Westfalia.">
+                    <strong>Monarquías Nacionales e Imperios</strong>
+                    <span>Expansionismo ultramarino y guerras de religión</span>
+                </div>
+
+                <div class="span-bar est-style node" style="left: 26.02%; width: 24.81%; top: 4px; height: 34px;"
+                     data-title="Estado (1648–1789): Absolutismo Monárquico"
+                     data-info="Tras la Paz de Westfalia (1648) nace el sistema moderno de Estados soberanos bajo el absolutismo real («El Estado soy yo») y el despotismo ilustrado.">
+                    <strong>Absolutismo Real (Westfalia)</strong>
+                    <span>Soberanía estatal y despotismo ilustrado</span>
+                </div>
+
+                <div class="span-bar est-style node" style="left: 50.83%; width: 22.03%; top: 4px; height: 34px;"
+                     data-title="Estado (1789–1914): Estados Constitucionales e Imperialismo"
+                     data-info="Desde la Revolución Francesa (1789) e independencias americanas surgen las repúblicas liberales, los Estados-nación burgueses (unificación de Italia y Alemania) y el reparto colonial.">
+                    <strong>Estados-Nación Constitucionales</strong>
+                    <span>Revoluciones liberales, unificaciones e imperialismo</span>
+                </div>
+
+                <div class="span-bar est-style node" style="left: 72.86%; width: 13.24%; top: 4px; height: 34px;"
+                     data-title="Estado (1914–1989): Totalitarismos y Guerra Fría"
+                     data-info="Guerras mundiales, choque entre democracias y regímenes totalitarios (fascismo, nazismo, comunismo soviético), fundación de la ONU y descolonización.">
+                    <strong>Totalitarismos &amp; ONU</strong>
+                    <span>Guerra Fría y descolonización</span>
+                </div>
+
+                <div class="span-bar est-style node" style="left: 86.1%; width: 13.9%; top: 4px; height: 34px;"
+                     data-title="Estado (1989–Presente): Globalización Multipolar"
+                     data-info="Poder supranacional de corporaciones tecnológicas, migraciones globales hacia Occidente y crisis de las democracias representativas.">
+                    <strong>Orden Global</strong>
+                    <span>Multipolaridad</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- =========================================================
+             CARRIL 2: GOBIERNO · IGLESIA (Autoridad eclesial)
+             ========================================================= -->
+        <div class="lane-row">
+            <div class="lane-label l-igl">
+                <span>👑 Gobierno</span>
+                <small>Iglesia</small>
+            </div>
+            <div class="track-canvas">
+                <div class="span-bar igl-style node" style="left: 7.87%; width: 13.61%; top: 4px; height: 34px;"
+                     data-title="Iglesia (1545–1622): Reforma Tridentina y Curia"
+                     data-info="El Concilio de Trento (1545–1563) reforma la disciplina del clero, obliga a la residencia episcopal y Sixto V reorganiza la Curia Romana.">
+                    <strong>Concilio de Trento</strong>
+                    <span>Reforma y Curia Romana</span>
+                </div>
+
+                <div class="span-bar igl-style node" style="left: 21.48%; width: 31.48%; top: 4px; height: 34px;"
+                     data-title="Iglesia (1622–1801): Propaganda Fide y Centralización Misionera"
+                     data-info="Gregorio XV funda Propaganda Fide (1622) para dirigir directamente las misiones mundiales sin depender de las coronas coloniales, resistiendo luego la presión ilustrado-regalista.">
+                    <strong>Propaganda Fide (1622) y Resistencia</strong>
+                    <span>Dirección pontificia directa frente al regalismo</span>
+                </div>
+
+                <div class="span-bar igl-style node" style="left: 52.96%; width: 12.13%; top: 4px; height: 34px;"
+                     data-title="Iglesia (1801–1870): Era de los Concordatos"
+                     data-info="Tras la tormenta napoleónica, el papado reconstruye la comunión diocesana mediante concordatos y defiende los Estados Pontificios.">
+                    <strong>Concordatos</strong>
+                    <span>Restauración</span>
+                </div>
+
+                <div class="span-bar igl-style node" style="left: 65.09%; width: 16.2%; top: 4px; height: 34px;"
+                     data-title="Iglesia (1870–1962): Vaticano I y Primado Espiritual"
+                     data-info="Tras perder el poder temporal en 1870, el Concilio Vaticano I define el primado de jurisdicción e infalibilidad papal, consolidando la unidad católica.">
+                    <strong>Concilio Vaticano I (1870)</strong>
+                    <span>Primado e infalibilidad; fin poder temporal</span>
+                </div>
+
+                <div class="span-bar igl-style node" style="left: 81.29%; width: 18.71%; top: 4px; height: 34px;"
+                     data-title="Iglesia (1962–Presente): Vaticano II, Colegialidad y Sinodalidad"
+                     data-info="El Vaticano II (1962–1965) equilibra el primado con la colegialidad episcopal y el Sínodo de los Obispos, abriendo paso a una Iglesia sinodal y policéntrica.">
+                    <strong>Vaticano II &amp; Sinodalidad</strong>
+                    <span>Colegialidad e Iglesia policéntrica</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- =========================================================
+             CARRIL 3: SECULARIZACIÓN (Tensión Estado vs. Iglesia)
+             ========================================================= -->
+        <div class="lane-row">
+            <div class="lane-label l-sec">
+                <span>⚖️ Secularización</span>
+                <small>Estado vs. Iglesia</small>
+            </div>
+            <div class="track-canvas">
+                <div class="span-bar sec-style node" style="left: 0.0%; width: 29.63%; top: 4px; height: 34px;"
+                     data-title="Secularización (1500–1668): Patronato Regio e Iglesias Nacionales"
+                     data-info="Heredera de la distinción jurídica inaugurada por la Reforma Gregoriana, la tensión gira hacia el control monárquico: iglesias nacionales bajo el rey en el norte protestante (cesaropapismo) y Patronato Regio en las coronas católicas.">
+                    <strong>Patronato Regio &amp; Cesaropapismo</strong>
+                    <span>Control real sobre obispos e iglesias nacionales</span>
+                </div>
+
+                <div class="span-bar sec-style node" style="left: 29.63%; width: 21.2%; top: 4px; height: 34px;"
+                     data-title="Secularización (1668–1789): Regalismo y Galicanismo"
+                     data-info="Las monarquías absolutas subordinan la jurisdicción externa de la Iglesia a la «razón de Estado», culminando en la expulsión de los jesuitas de las cortes borbónicas.">
+                    <strong>Regalismo &amp; Galicanismo</strong>
+                    <span>Subordinación a la razón de Estado</span>
+                </div>
+
+                <div class="span-bar sec-style node" style="left: 50.83%; width: 20.46%; top: 4px; height: 34px;"
+                     data-title="Secularización (1789–1905): Desamortización, Kulturkampf y Leyes Laicas"
+                     data-info="La Revolución Francesa confisca bienes eclesiásticos e instaura el matrimonio civil; en el siglo XIX el Kulturkampf alemán, la toma de Roma (1870) y la ley francesa de 1905 separan radicalmente Estado e Iglesia.">
+                    <strong>Desamortización &amp; Leyes Laicas</strong>
+                    <span>Confiscación, toma de Roma (1870) y laicismo</span>
+                </div>
+
+                <div class="span-bar sec-style node" style="left: 71.29%; width: 14.81%; top: 4px; height: 34px;"
+                     data-title="Secularización (1905–1989): Ateísmo de Estado y Sana Laicidad"
+                     data-info="Persecución abierta en regímenes comunistas, mientras en Occidente el Vaticano II (Dignitatis Humanae, 1965) reconoce la libertad religiosa y el fin de los Estados confesionales.">
+                    <strong>Libertad Religiosa (1965)</strong>
+                    <span>Fin de confesionalidad y ateísmo estatal</span>
+                </div>
+
+                <div class="span-bar sec-style node" style="left: 86.1%; width: 13.9%; top: 4px; height: 34px;"
+                     data-title="Secularización (Presente): Autofinanciamiento y Post-Cristiandad"
+                     data-info="El Estado deja de sostener económicamente a la Iglesia (autofinanciamiento de fieles) y surgen los primeros gobernantes musulmanes en países históricamente cristianos.">
+                    <strong>Autofinanciamiento</strong>
+                    <span>Post-cristiandad</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- =========================================================
+             CARRIL 4: TECNOLOGÍA (Innovación técnica e impacto en la fe)
+             ========================================================= -->
+        <div class="lane-row">
+            <div class="lane-label l-tec">
+                <span>💻 Tecnología</span>
+                <small>Técnica &amp; Difusión</small>
+            </div>
+            <div class="track-canvas">
+                <div class="span-bar tec-style node" style="left: 0.0%; width: 19.35%; top: 4px; height: 34px;"
+                     data-title="Tecnología (1500–1610): La Imprenta de Gutenberg"
+                     data-info="La masificación de la imprenta revoluciona la difusión de la Biblia en lenguas vernáculas, los panfletos de la Reforma y la rápida publicación de catecismos y decretos tridentinos.">
+                    <strong>La Imprenta</strong>
+                    <span>Difusión masiva de Biblias y catecismos</span>
+                </div>
+
+                <div class="span-bar tec-style node" style="left: 19.35%; width: 33.42%; top: 4px; height: 34px;"
+                     data-title="Tecnología (1610–1800): Telescopio y Prensa Periódica"
+                     data-info="El telescopio de Galileo transforma la cosmología (debate sobre la exégesis bíblica), seguido en el siglo XVIII por las gacetas y la prensa periódica.">
+                    <strong>Telescopio (1609) y Prensa Periódica</strong>
+                    <span>Nueva cosmología, exégesis y prensa ilustrada</span>
+                </div>
+
+                <div class="span-bar tec-style node" style="left: 52.77%; width: 22.69%; top: 4px; height: 34px;"
+                     data-title="Tecnología (1800–1929): Ferrocarril, Telégrafo y Rotativas"
+                     data-info="El tren y el barco de vapor permiten grandes peregrinaciones internacionales (Lourdes) y despliegues misioneros; el telégrafo y las rotativas crean la prensa católica de masas.">
+                    <strong>Ferrocarril, Telégrafo y Rotativas</strong>
+                    <span>Peregrinaciones masivas y prensa mundial</span>
+                </div>
+
+                <div class="span-bar tec-style node" style="left: 75.46%; width: 12.49%; top: 4px; height: 34px;"
+                     data-title="Tecnología (1931–1995): Radio Vaticano, Cine y Televisión"
+                     data-info="Guglielmo Marconi inaugura Radio Vaticano (1931) con Pío XI; el cine y la TV llevan el mensaje papal y conciliar en directo a todo el planeta.">
+                    <strong>Radio Vaticano (1931) y TV</strong>
+                    <span>Evangelización audiovisual global</span>
+                </div>
+
+                <div class="span-bar tec-style node" style="left: 87.95%; width: 12.05%; top: 4px; height: 34px;"
+                     data-title="Tecnología (1995–Presente): Internet e Inteligencia Artificial"
+                     data-info="Continente digital, redes sociales, catequesis online y desafíos éticos de la Inteligencia Artificial.">
+                    <strong>Internet &amp; IA</strong>
+                    <span>Era digital</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- =========================================================
+             CARRIL 8: MORAL (Asuntos morales e hitos doctrinales)
+             Escala exacta: 1500=0%, 1600=17.6%, 1700=35.2%, 1800=52.8%, 1900=70.4%, 2000=88.0%, 2026=100%
+             ========================================================= -->
+        <div class="lane-row">
+            <div class="lane-label l-mor">
+                <span>⚖️ Moral</span>
+                <small>Doctrina &amp; Bioética</small>
+            </div>
+            <div class="track-canvas moral">
+
+                <!-- MACRO ESCLAVITUD (Siglo I – 1888 -> termina en 68.29%) con INDÍGENAS (1511 – 1537 -> termina en 6.51%) anidado adentro -->
+                <div class="span-bar mor-macro macro node" style="left: 0.0%; width: 68.29%; top: 3px; height: 31px;"
+                     data-title="2. Esclavitud y trata de personas (Siglo I – 1888)"
+                     data-info="Hito doctrinal: In Plurimis (1888), con antecedente en In Supremo Apostolatus (1839). La esclavitud y la trata son incompatibles con la dignidad humana. Ninguna persona puede ser tratada como propiedad ni sometida a explotación.">
+                    <strong>◂ Esclavitud y Trata de Personas (In Supremo 1839 / In Plurimis 1888)</strong>
+                </div>
+
+                <div class="span-bar mor-style nested node" style="left: 1.94%; width: 8.6%; top: 18px; height: 14px;"
+                     data-title="1. Conquista de América y derechos de los indígenas (1511 – 1537)"
+                     data-info="Hito doctrinal: Bula Sublimis Deus (1537). Los pueblos indígenas poseen plena dignidad humana, libertad y derecho a sus bienes. No pueden ser esclavizados ni privados de su libertad con el pretexto de la evangelización.">
+                    <strong>Indígenas (1537)</strong>
+                </div>
+
+
+                <!-- PENA DE MUERTE (termina exactamente en 2018 = 96.31%, después de 2000) -->
+                <div class="span-bar mor-style pre1500 node" style="left: 76.56%; width: 19.75%; top: 19px; height: 14px;"
+                     data-title="5. Pena de muerte (Antigüedad – 2018)"
+                     data-info="Hito doctrinal: Reformulación del n.º 2267 del Catecismo (2018). Presente en la tradición jurídica y el debate cristiano antiguo, hoy la Iglesia enseña que la pena de muerte es inadmisible porque atenta contra la dignidad de la persona, y se compromete a trabajar por su abolición.">
+                    <strong>◂ Pena de Muerte (2018)</strong>
+                </div>
+
+                <!-- MISMA ALTURA (top: 36px): USURA (Antigüedad–1745 -> 43.12%) y JUSTICIA LABORAL & PROPIEDAD PRIVADA (s. XVIII–1891 -> 68.82%) -->
+                <div class="span-bar mor-style pre1500 node" style="left: 0.0%; width: 43.12%; top: 36px; height: 14px;"
+                     data-title="3. Usura e interés de los préstamos (Antigüedad bíblica – 1745)"
+                     data-info="Hito doctrinal: Vix Pervenit (1745). Se condena la usura, es decir, el cobro injusto que explota al prestatario. No todo interés es necesariamente usurario: pueden existir títulos legítimos para cobrarlo.">
+                    <strong>◂ Usura e Interés (1745)</strong>
+                </div>
+
+                <div class="span-bar mor-style node" style="left: 45.76%; width: 23.06%; top: 36px; height: 14px;"
+                     data-title="7 &amp; 8. Justicia laboral, derechos de los trabajadores y propiedad privada (s. XVIII – 1891)"
+                     data-info="Hito doctrinal: Rerum Novarum (1891). Se defienden el salario justo, las condiciones laborales dignas, el descanso, la asociación de trabajadores y la protección frente a la explotación. Se reconoce el derecho a la propiedad privada junto con su función social y el destino universal de los bienes, criticando tanto su negación como la explotación económica.">
+                    <strong>Justicia Laboral &amp; Propiedad Privada (1891)</strong>
+                </div>
+
+                <!-- FECUNDACIÓN ARTIFICIAL (termina en 1987 = 85.71%, antes de 2000) -->
+                <div class="span-bar mor-style node" style="left: 71.0%; width: 14.71%; top: 36px; height: 14px;"
+                     data-title="13. Fecundación artificial y reproducción asistida (1978 – 1987 / 2008)"
+                     data-info="Hito doctrinal: Donum Vitae (1987; ampliación en 2008). Se juzgan moralmente ilícitas las técnicas que sustituyen el acto conyugal o implican la instrumentalización y destrucción de embriones. Se defiende la dignidad del embrión humano desde la concepción.">
+                    <strong>Fecund. Artif. (1987)</strong>
+                </div>
+
+                <!-- BIOÉTICA Y GENÉTICA (termina exactamente en 2008 = 91.69%, después de 2000 y antes de Pena de Muerte 2018 = 96.31%) -->
+                <div class="span-bar mor-style node" style="left: 86.0%; width: 5.69%; top: 36px; height: 14px;"
+                     data-title="14. Bioética y manipulación genética (1970s – 2008)"
+                     data-info="Hito doctrinal: Dignitas Personae (2008). Se rechazan las intervenciones que lesionan la dignidad humana, la selección eugenésica y la destrucción de embriones. Las intervenciones terapéuticas pueden ser moralmente admisibles si respetan la integridad y dignidad de la persona.">
+                    <strong>Bioética (2008)</strong>
+                </div>
+
+
+                <div class="span-bar mor-style pre1500 node" style="left: 44.0%; width: 37.84%; top: 52px; height: 14px;"
+                     data-title="6. Libertad religiosa y de conciencia (Antigüedad tardía / s. XVIII–XIX – 1965)"
+                     data-info="Hito doctrinal: Dignitatis Humanae (1965). Toda persona tiene derecho a la libertad religiosa y no debe ser coaccionada en materia religiosa, dentro de los debidos límites del orden público.">
+                    <strong>◂ Libertad Religiosa y de Conciencia (1965)</strong>
+                </div>
+
+                <!-- EUTANASIA (termina exactamente en 1980 = 84.48%, antes de 2000) -->
+                <div class="span-bar mor-style pre1500 node" style="left: 13.0%; width: 71.48%; top: 68px; height: 14px;"
+                     data-title="12. Eutanasia y suicidio asistido (Antigüedad – 1980 / 1995)"
+                     data-info="Hito doctrinal: Iura et Bona (1980; reafirmación en 1995). Se rechazan la eutanasia y el suicidio asistido. Son legítimos los cuidados paliativos y puede renunciarse a tratamientos desproporcionados o extraordinarios.">
+                    <strong>◂ Eutanasia y Suicidio Asistido (1980)</strong>
+                </div>
+
+                <!-- ANTICONCEPCIÓN (termina en 1968 = 82.37%) y ABORTO PROVOCADO (termina exactamente en 1995 = 87.12%, claramente ANTES de la línea 2000 = 88.0%) -->
+                <div class="span-bar mor-style node" style="left: 56.0%; width: 26.37%; top: 83px; height: 13px;"
+                     data-title="10. Anticoncepción artificial (1930 – 1968)"
+                     data-info="Hito doctrinal: Humanae Vitae (1968). Se rechazan los actos anticonceptivos que separan deliberadamente los significados unitivo y procreador del acto conyugal. Se admite la regulación de la natalidad mediante métodos naturales.">
+                    <strong>Anticoncepción (1968)</strong>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- =========================================================
+             CARRIL 5: FORMACIÓN (Procesos pedagógicos y doctrinales)
+             ========================================================= -->
+        <div class="lane-row">
+            <div class="lane-label l-for">
+                <span>📖 Formación</span>
+                <small>Teología &amp; Escuela</small>
+            </div>
+            <div class="track-canvas medium">
+                <!-- Macro: Seminarios y Catecismo -->
+                <div class="span-bar for-style node" style="left: 11.02%; width: 19.44%; top: 3px; height: 24px;"
+                     data-title="Formación (1563–1673): Seminarios y Catecismo Romano"
+                     data-info="Trento funda los seminarios diocesanos para formar al clero y publica el Catecismo Romano (1566) para la instrucción doctrinal.">
+                    <strong>Seminarios &amp; Catecismo (1566)</strong>
+                </div>
+
+                <!-- Ratio Studiorum (1599) + Escuelas Pías (1617) + La Salle (1680) -->
+                <div class="span-bar for-style node nested" style="left: 17.41%; width: 30.64%; top: 30px; height: 24px;"
+                     data-title="Formación (1599–1773): Ratio Studiorum (1599) y Escuelas Populares"
+                     data-info="En 1599 los jesuitas publican la Ratio Studiorum (red mundial de colegios humanistas). Paralelamente nacen las Escuelas Pías de S. José de Calasanz (1617) y los Hermanos de La Salle (1680) para la educación popular gratuita.">
+                    <strong>Ratio Studiorum (1599), Calasanz &amp; La Salle</strong>
+                </div>
+
+                <!-- Teología Moral S. Alfonso -->
+                <div class="span-bar for-style node" style="left: 43.61%; width: 25.27%; top: 3px; height: 24px;"
+                     data-title="Formación (1748–1891): Teología Moral de S. Alfonso"
+                     data-info="San Alfonso María de Ligorio (Theologia Moralis, 1748) supera el rigorismo jansenista devolviendo el equilibrio entre ley y misericordia.">
+                    <strong>Moral de S. Alfonso (1748)</strong>
+                </div>
+
+                <!-- Doctrina Social y Sistema Preventivo -->
+                <div class="span-bar for-style node nested" style="left: 60.83%; width: 20.46%; top: 30px; height: 24px;"
+                     data-title="Formación (1846–1962): Sistema Preventivo y Doctrina Social"
+                     data-info="Don Bosco y Don Orione educan a jóvenes obreros con el Sistema Preventivo; León XIII inaugura la Doctrina Social con Rerum Novarum (1891).">
+                    <strong>Don Bosco &amp; Rerum Novarum (1891)</strong>
+                </div>
+
+                <!-- Dei Verbum y Catecismo 1992 -->
+                <div class="span-bar for-style node" style="left: 81.29%; width: 18.71%; top: 3px; height: 51px;"
+                     data-title="Formación (1965–Presente): Dei Verbum y Catecismo (1992)"
+                     data-info="El Vaticano II impulsa el acceso a la Biblia (Dei Verbum) y el protagonismo laical; San Juan Pablo II promulga el Catecismo de la Iglesia Católica (1992).">
+                    <strong>Dei Verbum &amp; CIC (1992)</strong>
+                    <span>Laicado y formación bíblica</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- =========================================================
+             CARRIL 6: MÍSTICA (Espiritualidad y santidad)
+             ========================================================= -->
+        <div class="lane-row">
+            <div class="lane-label l-mis">
+                <span>🕊️ Mística</span>
+                <small>Espiritualidad</small>
+            </div>
+            <div class="track-canvas">
+                <div class="span-bar mis-style node" style="left: 3.8%; width: 22.22%; top: 4px; height: 34px;"
+                     data-title="Mística (1522–1626): Siglo de Oro — Carmelo e Ignacianos"
+                     data-info="Ejercicios Espirituales de San Ignacio (1522), reforma del Carmelo por Santa Teresa de Jesús y San Juan de la Cruz, y espiritualidad laical de San Francisco de Sales.">
+                    <strong>Carmelo, Ignacianos &amp; S. Fco. Sales</strong>
+                    <span>Oración contemplativa y discernimiento</span>
+                </div>
+
+                <div class="span-bar mis-style node" style="left: 30.74%; width: 27.31%; top: 4px; height: 34px;"
+                     data-title="Mística (1675–1830): Sagrado Corazón y Pasión"
+                     data-info="Revelaciones del Sagrado Corazón a Santa Margarita María de Alacoque (1675) frente al rigorismo jansenista, y espiritualidad de la Pasión (San Pablo de la Cruz).">
+                    <strong>Sagrado Corazón (1675) &amp; Pasionistas</strong>
+                    <span>Amor misericordioso frente al rigorismo</span>
+                </div>
+
+                <div class="span-bar mis-style node" style="left: 58.05%; width: 23.24%; top: 4px; height: 34px;"
+                     data-title="Mística (1830–1962): Era Mariana, Lourdes y Fátima"
+                     data-info="Apariciones marianas (Medalla Milagrosa 1830, Lourdes 1858, Fátima 1917), dogmas de Inmaculada (1854) y Asunción (1950), y el «Caminito» de Santa Teresita.">
+                    <strong>Era Mariana (Lourdes, Fátima &amp; Sta. Teresita)</strong>
+                    <span>Apariciones marianas e infancia espiritual</span>
+                </div>
+
+                <div class="span-bar mis-style node" style="left: 81.29%; width: 18.71%; top: 4px; height: 34px;"
+                     data-title="Mística (1962–Presente): Movimientos Carismáticos y Misericordia"
+                     data-info="Auge de movimientos eclesiales laicales, espiritualidad de la Divina Misericordia y adoración eucarística juvenil.">
+                    <strong>Movimientos &amp; Misericordia</strong>
+                    <span>Carismas laicales y Eucaristía</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- =========================================================
+             CARRIL 7: MISIÓN (Con procesos contenedores y sub-etapas anidadas)
+             ========================================================= -->
+        <div class="lane-row">
+            <div class="lane-label l-msn">
+                <span>🌍 Misión</span>
+                <small>Evangelización</small>
+            </div>
+            <div class="track-canvas tall">
+                <!-- MACRO 1: Misiones en América (1500 - 1810) -->
+                <div class="span-bar msn-style node"  style="left: 0.0%; width: 54.53%; top: 3px; height: 16px;"
+                     data-title="Misión en América (1500–1810): Evangelización e Inculturación"
+                     data-info="Desde el descubrimiento y el acontecimiento guadalupano (1531), las órdenes mendicantes y jesuitas evangelizan todo el continente americano mediante la inculturación y defensa de los indígenas.">
+                    <strong>🌎 América (Guadalupe 1531) Mendicantes & Jesuitas</strong>
+                </div>
+
+
+                <!-- MACRO 2: Misiones en Asia (1542 - 1800) -->
+                <div class="span-bar msn-style node" style="left: 7.41%; width: 45.36%; top: 22px; height: 16px;"
+                     data-title="Misión en Asia (1542–1800): S. Francisco Javier y Matteo Ricci"
+                     data-info="Llegada de San Francisco Javier a India y Japón (1542–1549) y método de inculturación de Matteo Ricci en China (1582), seguido de la controversia de los ritos chinos.">
+                    <strong>🌏 Asia: S. Fco. Javier (1542) &amp; M. Ricci</strong>
+                </div>
+
+                <!-- MACRO 3: Misiones Populares (Inician con San Vicente en 1617/1625 y las continúa San Alfonso / Redentoristas) -->
+                <div class="span-bar msn-macro macro node" style="left: 20.55%; width: 41.02%; top: 38px; height: 18px;"
+                     data-title="Misiones Populares en Europa (1617–1850): S. Vicente de Paúl y S. Alfonso"
+                     data-info="Iniciadas por San Vicente de Paúl (1617/1625, Congregación de la Misión) para re-evangelizar los campos abandonados y atender a los pobres; continuadas y sistematizadas en el siglo XVIII por San Alfonso María de Ligorio (Redentoristas, 1732) y San Juan Bautista de La Salle en la educación popular.">
+                    <strong>🏘️ Misiones Populares: S. Vicente (1617) ➔ S. Alfonso / La Salle</strong>
+                </div>
+
+                <!-- Gran Siglo Misionero XIX: África, Asia (Mártires) y América (Fronteras/Migrantes) -->
+                <div class="span-bar msn-style node" style="left: 61.57%; width: 19.72%; top: 3px; height: 56px;"
+                     data-title="Gran Siglo Misionero (1850–1962): África, Asia y América"
+                     data-info="• África: Primera evangelización interior y lucha antiesclavista (Combonianos, Padres Blancos).&#10;• Asia: Iglesia de los mártires (Corea, Vietnam, China) y escuelas.&#10;• América: Misiones de frontera (Salesianos en Patagonia) y atención a millones de inmigrantes (Scalabrinianos).">
+                    <strong>Gran Siglo Misionero</strong>
+                    <span>• África (Comboni)</span>
+                    <span>• Asia (Mártires)</span>
+                    <span>• Amér. (Migrantes)</span>
+                </div>
+
+                <!-- Ad Gentes e Iglesia en Salida -->
+                <div class="span-bar msn-style node" style="left: 81.29%; width: 18.71%; top: 3px; height: 56px;"
+                     data-title="Misión (1965–Presente): Ad Gentes e Iglesia en Salida"
+                     data-info="Decreto Ad Gentes (1965), diálogo ecuménico e interreligioso, Nueva Evangelización y vitalidad misionera desde el Sur global (África, Asia y América).">
+                    <strong>Ad Gentes &amp; Salida</strong>
+                    <span>Ecumenismo</span>
+                    <span>misión del Sur global</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- =========================================================
+             EJE TEMPORAL INFERIOR (Estilo Línea de Jacob)
+             ========================================================= -->
+        <div class="time-axis-row">
+            <div class="axis-corner">Eje Temporal</div>
+            <div class="time-axis">
+                <div class="tick" style="left: 0.0%;">
+                    <span>1500</span>
+                    <small>Reforma &amp; Trento</small>
+                </div>
+                <div class="tick" style="left: 17.6%;">
+                    <span>1600</span>
+                    <small>Barroco &amp; Ciencia</small>
+                </div>
+                <div class="tick" style="left: 35.2%;">
+                    <span>1700</span>
+                    <small>Ilustración &amp; Rev.</small>
+                </div>
+                <div class="tick" style="left: 52.8%;">
+                    <span>1800</span>
+                    <small>Vaticano I &amp; Social</small>
+                </div>
+                <div class="tick" style="left: 70.4%;">
+                    <span>1900</span>
+                    <small>Vaticano II</small>
+                </div>
+                <div class="tick" style="left: 88.0%;">
+                    <span>2000</span>
+                    <small>S. XXI</small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Panel flotante de información -->
+<div id="info-panel">
+    <button onclick="closeInfoPanel()">✕ Cerrar</button>
+    <h3 id="panel-title"></h3>
+    <p id="panel-desc"></p>
+</div>
+
+<!-- Script compartido -->
+<script src="arbol/info-panel.js"></script>
+
+</body>
+</html>
